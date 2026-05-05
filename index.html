@@ -33,7 +33,7 @@
 
 <!-- ✅ STEP 4.1: Content Security Policy (Захист від злому та шкідливих скриптів) -->
 <!-- ✅ STEP 4.1: Content Security Policy (FIXED - дозволено blob) -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://storage.ko-fi.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob:;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://storage.ko-fi.com https://cdn.vercel-insights.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob: https://vitals.vercel-insights.com;">
 <!-- ✅ STEP 4.2: Referrer Policy (Не передаємо зайві дані при переході на інші сайти) -->
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
@@ -41,6 +41,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://cdn.vercel-insights.com">
 
     <!-- SEO -->
     <title>Pixel Craft Tool — Professional Image Editor (Paid License)</title>
@@ -114,6 +115,9 @@
   }
 }
 </script>
+
+    <!-- Vercel Web Analytics -->
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </head>
 
 <body class="theme-light">
