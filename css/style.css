@@ -2,44 +2,41 @@
    🎨 PixelCraft Tools — Unique Design System
    ============================================ */
 
-/* ✅ Фіксований хедер для всіх пристроїв */
+/* ✅ Хедер — частина потоку сторінки */
 .header {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000 !important;
+    position: relative !important; /* НЕ fixed! */
+    top: auto !important;
+    left: auto;
+    right: auto;
+    z-index: auto !important;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Темна тема для хедера */
+/* Темна тема */
 body.dark-mode .header {
     background: rgba(26, 26, 46, 0.9);
 }
 
-/* ✅ Додай відступ для основного контенту */
-main, .container {
-    margin-top: 120px; /* Відступ під розмір хедера */
+/* ✅ Прибрати зайвий відступ у body */
+body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
 
-/* ✅ Мобільна адаптація */
+/* ✅ Мобільна версія */
 @media (max-width: 768px) {
     .header {
-        position: fixed !important;
-        top: 0;
-        width: 100%;
+        position: relative !important;
+        margin-bottom: 15px;
     }
     
-    /* Збільш відступ для мобільних */
+    /* Контент йде одразу після хедера */
     main, .container {
-        margin-top: 140px;
-    }
-    
-    /* Якщо є hero section з градієнтом */
-    .hero-section {
-        padding-top: 20px;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 }
 
