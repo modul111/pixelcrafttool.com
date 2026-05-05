@@ -40,6 +40,54 @@ body {
     }
 }
 
+/* ✅ МОБІЛЬНА ВЕРСІЯ ХЕДЕРА */
+@media (max-width: 768px) {
+    /* Фіксуємо хедер, щоб не ламався */
+    .header {
+        padding: 15px 10px !important;
+        border-radius: 0 0 15px 15px !important; /* Закруглення тільки знизу */
+        overflow: hidden; /* Щоб нічого не вилазило */
+    }
+
+    /* Логотип */
+    .logo img {
+        height: 30px !important; /* Трохи менше */
+    }
+
+    /* Кнопка "Buy Me a Coffee" */
+    .btn-support {
+        padding: 8px 12px !important;
+        font-size: 0.8em !important;
+    }
+
+    /* Навігація - Робимо її компактною */
+    .nav {
+        display: flex;
+        flex-wrap: wrap; /* Дозволяємо перенос рядків */
+        justify-content: center;
+        gap: 5px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .nav a {
+        font-size: 0.85em; /* Зменшуємо шрифт */
+        padding: 5px 8px;
+        white-space: nowrap; /* Забороняємо ламати слова */
+    }
+
+    /* Головний контейнер контенту */
+    .container {
+        padding: 15px;
+    }
+    
+    /* Виправлення для блоків інструментів */
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки замість 4 */
+        gap: 10px;
+    }
+}
+
    /* 🔘 Стилізація навігаційних кнопок */
 .nav a {
     padding: 10px 20px;
