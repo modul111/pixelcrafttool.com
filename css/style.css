@@ -1,0 +1,1002 @@
+/* ============================================
+   🎨 PixelCraft Tools — Unique Design System
+   ============================================ */
+
+   /* 🔘 Стилізація навігаційних кнопок */
+.nav a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-primary, #333);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover ефект */
+.nav a:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Активна сторінка (Tools) */
+.nav a[href="#tools"]:hover,
+.nav a[href="#tools"].active {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Анімація підкреслення */
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 80%;
+}
+
+/* Кнопка Home - виділена */
+.nav a[href="#home"]:hover,
+.nav a[href="#home"].active {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+
+.nav a[href="#home"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* 🎨 CSS Variables (Light/Dark Theme) */
+:root {
+    /* Light Theme (default) */
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-glass: rgba(255, 255, 255, 0.7);
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    
+    /* Brand Colors */
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary: #a855f7;
+    --accent: #06b6d4;
+    --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
+    
+    /* Effects */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+    --blur: blur(12px);
+    --radius: 16px;
+    --radius-lg: 24px;
+    
+    /* Animation */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 🌙 Dark Theme */
+.theme-dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-glass: rgba(30, 41, 59, 0.7);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --shadow-glow: 0 0 40px rgba(168, 85, 247, 0.3);
+}
+
+/* 🔄 Theme Transition */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 🌟 Animated Background Blobs */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    animation: float 20s infinite ease-in-out;
+}
+
+.blob-1 {
+    width: 600px;
+    height: 600px;
+    background: var(--primary);
+    top: -200px;
+    left: -200px;
+    animation-delay: 0s;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--secondary);
+    bottom: -150px;
+    right: -150px;
+    animation-delay: -7s;
+}
+
+.blob-3 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: -14s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(30px, -30px) scale(1.05); }
+    50% { transform: translate(-20px, 20px) scale(0.95); }
+    75% { transform: translate(20px, 30px) scale(1.02); }
+}
+
+/* 🧱 Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ✨ Glassmorphism Effect */
+.glass {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+}
+/* 🔘 Theme Toggle Button */
+.theme-toggle {
+    /* ❌ Видаляємо ВСІ рядки з position: fixed, top, right! */
+    position: static;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    transition: var(--transition);
+    z-index: auto;
+}
+
+.theme-toggle .icon-moon { display: none; }
+.theme-dark .theme-toggle .icon-sun { display: none; }
+.theme-dark .theme-toggle .icon-moon { display: block; }
+
+/* 🌐 Language Selector - переміщуємо в самий правий кут */
+.lang-selector {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lang-selector select {
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* 🚀 Header */
+.header {
+    position: sticky;
+    top: 20px;
+    margin: 20px;
+    padding: 16px 24px;
+    z-index: 50;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* 🎯 Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.4em;
+    color: var(--text-primary);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo:hover img {
+    filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.3));
+}
+
+/* Темна тема */
+.theme-dark .logo img {
+    filter: brightness(1.1);
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    color: var(--primary);
+}
+
+.btn-primary {
+    padding: 12px 24px;
+    background: var(--gradient);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* 🎯 Hero Section */
+.hero {
+    padding: 15px 0 30px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5em;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-desc {
+    font-size: 1.3em;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* ✨ Quick Actions Cards */
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.action-card {
+    padding: 24px 20px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.action-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.action-icon {
+    font-size: 2em;
+}
+
+.action-name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* 🔒 Privacy Badge */
+.privacy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.badge-icon {
+    font-size: 1.2em;
+}
+
+/* 🛠️ Tools Section (Compact) */
+.tools-section {
+    padding: 20px 0 40px; /* 🔽 Зменшено відступи (було 40px 0 80px) */
+}
+
+.tool-container {
+    min-height: 200px; /* 🔽 Зменшено мінімальну висоту (було 400px) */
+    padding: 20px;     /* 🔽 Зменшено внутрішні відступи (було 40px) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-placeholder {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 10px; /* 🔽 Додано компактний відступ всередині */
+}
+
+/* 📊 Stats Section */
+.stats {
+    padding: 40px 0;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.95em;
+}
+
+/* 📝 Footer */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-copy {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* 🎭 Ad Container */
+.ad-container {
+    text-align: center;
+    padding: 20px;
+    min-height: 90px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        padding-top: 16px;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .hero-title {
+        font-size: 2.5em;
+    }
+    
+    .hero-desc {
+        font-size: 1.1em;
+    }
+    
+    .tool-container {
+        padding: 24px;
+    }
+    
+    .theme-toggle {
+        right: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2em;
+    }
+    
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+    
+    .theme-toggle,
+    .lang-selector {
+        top: 12px;
+        right: 12px;
+    }
+    
+    .theme-toggle {
+        right: 60px;
+    }
+}
+
+/* 🎬 Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title,
+.hero-desc,
+.quick-actions {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hero-desc { animation-delay: 0.1s; }
+.quick-actions { animation-delay: 0.2s; }
+
+/* 🖱️ Hover Effects */
+.action-card,
+.btn-primary,
+.nav a,
+.footer-links a {
+    will-change: transform;
+}
+
+/* ♿ Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 🎨 Focus States */
+:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   🛠️ Tool-Specific Styles
+   ============================================ */
+
+.tool-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tool-header h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tool-header p {
+    color: var(--text-secondary);
+    font-size: 1.1em;
+}
+
+/* Upload Area */
+.upload-area {
+    border: 3px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 60px 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-area:hover,
+.upload-area.dragover {
+    border-color: var(--primary);
+    background: rgba(99, 102, 241, 0.05);
+    transform: translateY(-2px);
+}
+
+.upload-area input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 4em;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.upload-content h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.upload-content p {
+    color: var(--text-secondary);
+}
+
+/* Options Panel */
+.options-panel {
+    margin-top: 30px;
+    padding: 30px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+}
+
+.option-group {
+    margin-bottom: 20px;
+}
+
+.option-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.option-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1em;
+    transition: var(--transition);
+}
+
+.option-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Results Area */
+.results-area {
+    margin-top: 30px;
+}
+
+.file-preview,
+.results-success {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 1px solid var(--border-color);
+}
+
+.file-list {
+    margin-top: 16px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.file-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.file-size {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+}
+
+.file-more {
+    text-align: center;
+    padding: 12px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.rename-list {
+    margin: 20px 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.rename-item {
+    padding: 16px;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.rename-original {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    word-break: break-all;
+}
+
+.rename-arrow {
+    text-align: center;
+    color: var(--primary);
+    margin: 8px 0;
+    font-size: 1.2em;
+}
+
+.rename-new {
+    color: var(--primary);
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.stat-box {
+    padding: 20px;
+    background: var(--bg-primary);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-box.highlight {
+    background: var(--gradient);
+    color: white;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.stat-box.highlight .stat-label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-box.highlight .stat-value {
+    color: white;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+    font-size: 1.1em;
+}
+
+/* Dragover State */
+.dragover {
+    border-color: var(--primary) !important;
+    background: rgba(99, 102, 241, 0.1) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .upload-area {
+        padding: 40px 20px;
+    }
+    
+    .options-panel {
+        padding: 20px;
+    }
+    
+    .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 🛡️ Фікс: щоб хедер не перекривав контент при скролі */
+#how, #tools, #home {
+    scroll-margin-top: 110px; /* Висота хедера + невеликий запас */
+}
+
+/* 🔘 Кнопка "How it works" — білий текст при наведенні */
+.nav a[href="#how"]:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+/* 🔒 Кнопка "Privacy" — білий текст при наведенні */
+.nav a[href="privacy.html"]:hover,
+.nav a[data-i18n="nav_privacy"]:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* 🎨 Dark Mode: Рожево-багряні плитки */
+.theme-dark .action-card {
+    background: linear-gradient(135deg, #f472b6 0%, #c084fc 50%, #e879f9 100%) !important;
+    border: 2px solid rgba(232, 121, 249, 0.3) !important;
+    color: #1a1a2e !important; /* Чорний/темний текст */
+}
+
+/* Текст іконок та назв */
+.theme-dark .action-card .action-icon,
+.theme-dark .action-card span:last-child {
+    color: #1a1a2e !important;
+}
+
+/* Hover ефект */
+.theme-dark .action-card:hover {
+    background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #d946ef 100%) !important;
+    border-color: rgba(232, 121, 249, 0.6) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(232, 121, 249, 0.4) !important;
+}
+
+/* 🔤 Назви інструментів: збільшений шрифт та жирність */
+.action-card > span:last-child {
+    font-size: 1.15em;      /* 🔼 Трохи більший розмір */
+    font-weight: 700;       /* 🔼 Жирний текст (Bold) */
+    letter-spacing: 0.02em; /* 🌬️ Легкий розряджувач для кращої читабельності */
+}
+
+/* ============================================ */
+/* ✅ ЧИСТИЙ БЛОК (Заміни всі попередні фікси на це) */
+/* ============================================ */
+
+/* 1. Skip Link (Доступність) */
+.skip-link {
+  position: absolute;
+  top: -100px; /* Сховано далеко за екраном */
+  left: 0;
+  background: #6366f1;
+  color: white;
+  padding: 10px 20px;
+  z-index: 9999;
+  transition: top 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+}
+.skip-link:focus {
+  top: 10px; /* З'являється тільки при Tab */
+}
+
+/* 2. Фонові Blobs */
+.blob {
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: float 20s infinite ease-in-out;
+  pointer-events: none;
+}
+.blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, #6366f1, #8b5cf6); }
+.blob-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, #a855f7, #ec4899); animation-delay: -5s; }
+.blob-3 { top: 40%; left: 40%; width: 300px; height: 300px; background: radial-gradient(circle, #3b82f6, #06b6d4); animation-delay: -10s; }
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+/* 3. Кнопка Buy Me a Coffee */
+.btn-support {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 24px; background: linear-gradient(135deg, #FF5E5B 0%, #FFA07A 100%);
+    color: white; text-decoration: none; border-radius: 12px;
+    font-weight: 600; font-size: 0.95em; white-space: nowrap;
+    transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(255, 94, 91, 0.3);
+    border: none; cursor: pointer;
+}
+.btn-support:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 94, 91, 0.4); }
+
+/* 4. Сітка інструментів */
+.quick-actions {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px;
+}
+
+/* 5. СТИЛІ ДЛЯ ПРОВ'Ю І CANVAS (Чисті, без дебагу) */
+.preview-container, .live-preview, #previewContainer, .tool-preview {
+  background: var(--bg-primary, #f8f9fa);
+  border: 2px dashed var(--border-color, #dee2e6);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  min-height: 300px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+
+canvas {
+  max-width: 100%; height: auto;
+  background: white; border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: block;
+}
+
+/* Спеціально для Crop Tool (шаховий фон) */
+#selectionArea {
+  background: 
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%), 
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%), 
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  background-color: white;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  min-height: 300px;
+}
+
+/* 🔒 Тимчасово ховаємо перемикач мов */
+.lang-selector {
+    display: none !important;
+}
+
+.copyright {
+    text-align: center !important;
+    margin-top: 30px;
+    padding-top: 20px;
+    color: var(--footer-text);
+    font-size: 0.9em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright p {
+    margin: 5px 0 !important;
+    text-align: center !important;
+    width: 100%;
+}

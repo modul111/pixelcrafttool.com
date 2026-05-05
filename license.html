@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ✅ Title & Description -->
+    <title>License Agreement - Pixel Craft Tool</title>
+    <meta name="description" content="Pixel Craft Tool Software License Agreement — Commercial license terms, pricing, and legal conditions for professional image editing software.">
+    
+    <!-- ✅ FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+    <!-- ✅ PWA / Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Pixel Craft Tool">
+    
+    <!-- ✅ Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixelcrafttool.com/license.html">
+    <meta property="og:title" content="License Agreement - Pixel Craft Tool">
+    <meta property="og:description" content="Commercial license terms for Pixel Craft Tool — professional browser-based image editing software.">
+    <meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
+    <meta property="og:site_name" content="Pixel Craft Tool">
+    
+    <!-- ✅ Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pixelcrafttool.com/license.html">
+    <meta property="twitter:title" content="License Agreement - Pixel Craft Tool">
+    <meta property="twitter:description" content="Commercial license terms for Pixel Craft Tool — professional browser-based image editing software.">
+    <meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
+    
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://pixelcrafttool.com/license.html">
+    
+    <!-- ✅ Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ✅ Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- ✅ Page-specific styles -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        /* ✅ FIXED HEADER - Static position, no floating */
+        .header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    /* НІЯКОГО position: sticky або fixed! */
+    position: static; /* або просто видали цю властивість */
+    background: transparent; /* або видали background */
+    border-bottom: none; /* прибрати лінію */
+    z-index: auto; /* прибрати z-index */
+       }
+        
+        .logo { margin-bottom: 10px; }
+        .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #1a1a2e;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        .last-updated {
+            background: #f3f4f6;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        h2 {
+            color: #1a1a2e;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+        }
+        h3 {
+            color: #4b5563;
+            margin: 25px 0 10px 0;
+            font-size: 1.3em;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        .warning-box strong { color: #991b1b; }
+        .license-types {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        .license-tier {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #6366f1;
+        }
+        .license-tier h4 {
+            color: #6366f1;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .license-tier ul { margin-left: 20px; margin-top: 10px; }
+        .license-tier li { margin: 8px 0; }
+        ul { margin-left: 20px; margin-bottom: 15px; }
+        li { margin: 8px 0; }
+        .important {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .contact-box {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .contact-box h3 { color: white; margin-bottom: 15px; }
+        .contact-box a {
+            color: #fcd34d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-nav {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+        .footer-nav a {
+            color: #6366f1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        .footer-nav a:hover { text-decoration: underline; }
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        /* Кнопка "Back to Home" */
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.05em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            margin-top: 25px;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 25px; }
+            h1 { font-size: 2em; }
+            .footer-nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- ✅ Header (FIXED: no sticky, no border) -->
+        <div class="header">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="images/logo.png" alt="Pixel Craft Tool" style="height: 40px; width: auto;">
+                </a>
+            </div>
+            <h1>Software License Agreement</h1>
+            <p class="subtitle">Pixel Craft Tool — Commercial License Terms</p>
+            <div class="last-updated">Last Updated: May 4, 2026</div>
+        </div>
+        
+        <!-- Warning -->
+        <div class="warning-box">
+            <strong>⚠️ IMPORTANT NOTICE:</strong> This software is distributed under a <strong>paid commercial license only</strong>. 
+            By downloading, installing, or using Pixel Craft Tool, you agree to be bound by the terms of this agreement. 
+            Unauthorized copying, redistribution, or use without a valid license is strictly prohibited and will result in legal action.
+        </div>
+        
+        <!-- Introduction -->
+        <h2>1. Agreement Overview</h2>
+        <p>
+            This Software License Agreement ("Agreement") is a legal agreement between you ("Licensee") and 
+            Pixel Craft Tool ("Licensor") for the use of Pixel Craft Tool software ("Software").
+        </p>
+        <p>
+            By installing, copying, or otherwise using the Software, you agree to be bound by the terms of this Agreement. 
+            If you do not agree to the terms of this Agreement, do not install or use the Software.
+        </p>
+        
+        <!-- License Types -->
+        <h2>2. License Types</h2>
+        <div class="license-types">
+            <h3 style="margin-top: 0;">Available License Tiers:</h3>
+            
+            <div class="license-tier">
+                <h4>👤 Personal License</h4>
+                <ul>
+                    <li><strong>Price:</strong> $29 USD (one-time payment)</li>
+                    <li><strong>Usage:</strong> Single user, non-commercial use only</li>
+                    <li><strong>Installations:</strong> 1 device</li>
+                    <li><strong>Updates:</strong> 1 year of free updates</li>
+                    <li><strong>Support:</strong> Email support</li>
+                    <li><strong>Commercial use:</strong> Not permitted</li>
+                </ul>
+            </div>
+            
+            <div class="license-tier">
+                <h4>💼 Commercial License</h4>
+                <ul>
+                    <li><strong>Price:</strong> $99 USD (one-time payment)</li>
+                    <li><strong>Usage:</strong> Business and commercial use permitted</li>
+                    <li><strong>Installations:</strong> Up to 3 devices</li>
+                    <li><strong>Client work:</strong> Permitted for client projects</li>
+                    <li><strong>Updates:</strong> Lifetime updates</li>
+                    <li><strong>Support:</strong> Priority email support</li>
+                    <li><strong>Resale:</strong> Not permitted</li>
+                </ul>
+            </div>
+            
+            <div class="license-tier">
+                <h4>🏢 Enterprise License</h4>
+                <ul>
+                    <li><strong>Price:</strong> $299 USD (one-time payment)</li>
+                    <li><strong>Usage:</strong> Unlimited commercial use</li>
+                    <li><strong>Installations:</strong> Up to 10 devices</li>
+                    <li><strong>Team use:</strong> Up to 5 team members</li>
+                    <li><strong>Custom features:</strong> Available upon request</li>
+                    <li><strong>Updates:</strong> Lifetime updates + priority features</li>
+                    <li><strong>Support:</strong> Priority support + dedicated manager</li>
+                    <li><strong>White-label:</strong> Available with additional fee</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Grant of License -->
+        <h2>3. Grant of License</h2>
+        <p>
+            Subject to the terms and conditions of this Agreement and payment of the applicable license fee, 
+            Licensor grants Licensee a non-exclusive, non-transferable, non-sublicensable license to use the Software 
+            solely in accordance with the license type purchased.
+        </p>
+        
+        <!-- Restrictions -->
+        <h2>4. Restrictions</h2>
+        <p><strong>You MAY NOT:</strong></p>
+        <ul>
+            <li>Copy, modify, or create derivative works of the Software</li>
+            <li>Reverse engineer, decompile, or disassemble the Software</li>
+            <li>Remove, alter, or obscure any proprietary notices or labels on the Software</li>
+            <li>Rent, lease, lend, sell, sublicense, or distribute the Software</li>
+            <li>Use the Software for any illegal or unauthorized purpose</li>
+            <li>Share your license key with others or use someone else's license key</li>
+            <li>Use the Software on more devices than permitted by your license type</li>
+            <li>Offer the Software as part of a service bureau or timesharing arrangement</li>
+        </ul>
+        
+        <div class="important">
+            <strong>🚫 Franchise & Resale Prohibition:</strong> Franchise, white-label, and reseller distribution of Pixel Craft Tool 
+            require explicit written permission from Pixel Craft Tool and additional licensing fees. 
+            Any attempt to rebrand or resell this software without authorization will result in immediate license termination and legal action.
+        </div>
+        
+        <!-- Ownership -->
+        <h2>5. Ownership</h2>
+        <p>
+            The Software is licensed, not sold. Licensor retains all right, title, and interest in and to the Software, 
+            including all intellectual property rights. This Agreement does not grant you any ownership rights to the Software.
+        </p>
+        
+        <!-- Term and Termination -->
+        <h2>6. Term and Termination</h2>
+        <p>
+            This Agreement is effective until terminated. Your rights under this Agreement will terminate automatically 
+            without notice from Licensor if you fail to comply with any term of this Agreement.
+        </p>
+        <p>
+            Upon termination, you must cease all use of the Software and destroy all copies of the Software in your possession.
+        </p>
+        
+        <!-- Disclaimer -->
+        <h2>7. Disclaimer of Warranty</h2>
+        <p>
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+            TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+            THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+            CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+            DEALINGS IN THE SOFTWARE.
+        </p>
+        
+        <!-- Limitation of Liability -->
+        <h2>8. Limitation of Liability</h2>
+        <p>
+            IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, 
+            OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, 
+            NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE SOFTWARE.
+        </p>
+        
+        <!-- Refund Policy -->
+        <h2>9. Refund Policy</h2>
+        <p>
+            Due to the digital nature of the Software, all sales are final. However, if you experience technical issues 
+            that cannot be resolved by our support team within 14 days of purchase, you may be eligible for a full refund. 
+            Refunds are at the sole discretion of Pixel Craft Tool.
+        </p>
+        
+        <!-- Updates -->
+        <h2>10. Software Updates</h2>
+        <p>
+            Licensor may, at its sole discretion, provide updates, upgrades, or modifications to the Software. 
+            Licensee agrees to install all updates to ensure proper functionality and security. Some updates may require 
+            additional fees depending on your license type.
+        </p>
+        
+        <!-- Governing Law -->
+        <h2>11. Governing Law</h2>
+        <p>
+            This Agreement shall be governed by and construed in accordance with the laws of the jurisdiction in which 
+            Pixel Craft Tool is registered, without regard to its conflict of law provisions.
+        </p>
+        
+        <!-- Contact -->
+        <div class="contact-box">
+            <h3>📧 Questions About Licensing?</h3>
+            <p>
+                If you have any questions about this Agreement, license types, or need assistance with purchasing, 
+                please contact us at:<br><br>
+                <a href="mailto:modulh1@gmail.com">modulh1@gmail.com</a>
+            </p>
+        </div>
+        
+        <!-- Footer Navigation -->
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="license.html">License Agreement</a>
+            <a href="mailto:modulh1@gmail.com">Contact</a>
+        </div>
+        
+        <!-- 🏠 Back to Home Button -->
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" class="btn-home">
+                <span>←</span> Back to Home
+            </a>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2026 Pixel Craft Tool. All rights reserved worldwide.</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Made with ❤️ for creators</p>
+        </div>
+    </div>
+
+</body>
+</html>

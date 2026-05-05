@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ✅ Title & Description -->
+    <title>Privacy Policy - Pixel Craft Tool</title>
+    <meta name="description" content="Pixel Craft Tool Privacy Policy — Learn how we protect your data. 100% client-side processing, no uploads, no tracking.">
+    
+    <!-- ✅ FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+    <!-- ✅ PWA / Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Pixel Craft Tool">
+    
+    <!-- ✅ Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixelcrafttool.com/privacy.html">
+    <meta property="og:title" content="Privacy Policy - Pixel Craft Tool">
+    <meta property="og:description" content="Your privacy matters. Pixel Craft Tool processes all images locally in your browser — no uploads, no servers, no tracking.">
+    <meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
+    <meta property="og:site_name" content="Pixel Craft Tool">
+    
+    <!-- ✅ Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pixelcrafttool.com/privacy.html">
+    <meta property="twitter:title" content="Privacy Policy - Pixel Craft Tool">
+    <meta property="twitter:description" content="Your privacy matters. Pixel Craft Tool processes all images locally in your browser — no uploads, no servers, no tracking.">
+    <meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
+    
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://pixelcrafttool.com/privacy.html">
+    
+    <!-- ✅ Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ✅ Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- ✅ Page-specific styles with Light/Dark Mode -->
+    <style>
+        :root {
+            /* Light Mode (Default) */
+            --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --bg-container: #ffffff;
+            --text-primary: #1a1a2e;
+            --text-secondary: #666;
+            --border-color: #e0e0e0;
+            --highlight-bg: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            --highlight-text: #065f46;
+            --contact-bg: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --contact-text: #ffffff;
+            --license-bg: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            --tier-bg: #ffffff;
+            --tier-border: #6366f1;
+            --tier-text: #6366f1;
+            --warning-bg: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            --warning-text: #991b1b;
+            --important-bg: #fef3c7;
+            --important-border: #f59e0b;
+            --footer-bg: transparent;
+            --footer-text: #666;
+            --link-color: #6366f1;
+            --box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --bg-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --bg-container: #1a1a2e;
+            --text-primary: #f0f0f0;
+            --text-secondary: #aaa;
+            --border-color: #333;
+            --highlight-bg: linear-gradient(135deg, #065f46 0%, #047857 100%);
+            --highlight-text: #6ee7b7;
+            --contact-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --contact-text: #ffffff;
+            --license-bg: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
+            --tier-bg: #1a1a2e;
+            --tier-border: #818cf8;
+            --tier-text: #818cf8;
+            --warning-bg: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+            --warning-text: #fecaca;
+            --important-bg: #422006;
+            --important-border: #fbbf24;
+            --footer-bg: transparent;
+            --footer-text: #aaa;
+            --link-color: #818cf8;
+            --box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.3s ease;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-container);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+            flex: 1;
+            transition: background 0.3s ease;
+        }
+        
+        /* ✅ FIXED HEADER - Static, no floating */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative; /* NOT sticky or fixed! */
+        }
+        
+        .logo { 
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: var(--text-primary);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1em;
+        }
+        
+        .last-updated {
+            background: var(--bg-container);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+        
+        h2 {
+            color: var(--text-primary);
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: var(--text-secondary);
+            margin: 25px 0 10px 0;
+            font-size: 1.3em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: var(--text-primary);
+        }
+        
+        .privacy-highlight {
+            background: var(--highlight-bg);
+            border-left: 4px solid var(--highlight-text);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .privacy-highlight strong { 
+            color: var(--highlight-text);
+        }
+        
+        ul { 
+            margin-left: 20px; 
+            margin-bottom: 15px; 
+            color: var(--text-primary);
+        }
+        
+        li { 
+            margin: 8px 0; 
+            color: var(--text-primary);
+        }
+        
+        .contact-box {
+            background: var(--contact-bg);
+            color: var(--contact-text);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .contact-box h3 { 
+            color: var(--contact-text);
+            margin-bottom: 15px; 
+        }
+        
+        .contact-box a {
+            color: #fcd34d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer-nav {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border-color);
+        }
+        
+        .footer-nav a {
+            color: var(--link-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        
+        .footer-nav a:hover { 
+            text-decoration: underline; 
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--footer-text);
+            font-size: 0.9em;
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-container);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--box-shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Кнопка "Back to Home" */
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: var(--contact-bg);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.05em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            margin-top: 25px;
+        }
+        
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 25px; }
+            h1 { font-size: 2em; }
+            .footer-nav a { display: block; margin: 10px 0; }
+            .theme-toggle {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">🌙</button>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <img src="images/logo.png" alt="Pixel Craft Tool" style="height: 40px; width: auto;">
+                </a>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Your data never leaves your device</p>
+            <div class="last-updated">Last Updated: May 4, 2026</div>
+        </div>
+
+        <!-- Key Privacy Promise -->
+        <div class="privacy-highlight">
+            <strong>🔒 Our Privacy Promise:</strong> Pixel Craft Tool processes all images <strong>100% locally in your browser</strong>. 
+            No uploads. No servers. No tracking. Your photos never leave your device.
+        </div>
+
+        <!-- Section 1 -->
+        <h2>1. What We Don't Collect</h2>
+        <p>
+            Unlike most online tools, Pixel Craft Tool does NOT:
+        </p>
+        <ul>
+            <li>❌ Upload your images to any server</li>
+            <li>❌ Store your photos or editing history</li>
+            <li>❌ Track your IP address or location</li>
+            <li>❌ Use cookies for advertising or analytics (except essential PWA cookies)</li>
+            <li>❌ Share your data with third parties</li>
+        </ul>
+
+        <!-- Section 2 -->
+        <h2>2. How Pixel Craft Tool Works</h2>
+        <p>
+            All image processing happens directly in your browser using modern web technologies 
+            (Canvas API, WebAssembly). When you edit a photo:
+        </p>
+        <ol style="margin-left: 20px; margin-bottom: 15px; color: var(--text-primary);">
+            <li>You select a file from your device</li>
+            <li>The file is loaded into your browser's memory</li>
+            <li>All edits are applied locally</li>
+            <li>The result is downloaded back to your device</li>
+            <li>Your browser automatically clears the temporary data</li>
+        </ol>
+        <p>
+            <strong>No data is ever transmitted to our servers</strong> because we don't have servers for image processing.
+        </p>
+
+        <!-- Section 3 -->
+        <h2>3. What Data We Might See</h2>
+        <p>
+            The only information we might receive is:
+        </p>
+        <ul>
+            <li>📊 Anonymous usage statistics via Google Analytics (if enabled) — no personal data</li>
+            <li>🐛 Error reports if you choose to submit a bug report (optional)</li>
+            <li>💬 Messages if you contact us via email</li>
+        </ul>
+        <p>
+            You can disable analytics in your browser settings or by using privacy-focused extensions.
+        </p>
+
+        <!-- Section 4 -->
+        <h2>4. Cookies & Local Storage</h2>
+        <p>
+            Pixel Craft Tool uses minimal browser storage for:
+        </p>
+        <ul>
+            <li>🎨 Theme preference (light/dark mode)</li>
+            <li>⚙️ Tool settings (last used size, format, etc.)</li>
+            <li>🔐 PWA installation status</li>
+        </ul>
+        <p>
+            All data is stored locally on your device and can be cleared anytime via browser settings.
+        </p>
+
+        <!-- Section 5 -->
+        <h2>5. Children's Privacy</h2>
+        <p>
+            Pixel Craft Tool is designed to be safe for all ages. Since we don't collect personal data, 
+            there are no special restrictions for users under 13 (COPPA compliant by design).
+        </p>
+
+        <!-- Section 6 -->
+        <h2>6. Changes to This Policy</h2>
+        <p>
+            We may update this Privacy Policy occasionally. Any changes will be posted on this page 
+            with an updated "Last Updated" date. Continued use of Pixel Craft Tool constitutes acceptance 
+            of the updated policy.
+        </p>
+
+        <!-- Contact Box -->
+        <div class="contact-box">
+            <h3>📧 Questions About Privacy?</h3>
+            <p>
+                If you have any questions about this Privacy Policy or how Pixel Craft Tool handles data, 
+                please contact us at:<br><br>
+                <a href="mailto:modulh1@gmail.com">modulh1@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- Footer Navigation -->
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="license.html">License Agreement</a>
+            <a href="mailto:modulh1@gmail.com">Contact</a>
+        </div>
+
+        <!-- 🏠 Back to Home Button -->
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" class="btn-home">
+                <span>←</span> Back to Home
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2026 Pixel Craft Tool. All rights reserved worldwide.</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Made with ❤️ for creators</p>
+        </div>
+    </div>
+
+    <!-- ✅ Theme Toggle Script -->
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '🌙';
+        }
+        
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            themeToggle.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
+</body>
+</html>

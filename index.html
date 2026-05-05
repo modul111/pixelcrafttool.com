@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- ✅ FAVICONS & PWA (Complete) -->
+<!-- Standard Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- PWA / Web App Manifest -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6366f1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="PixelCraft">
+
+<!-- ✅ STEP 4.1: Content Security Policy (Захист від злому та шкідливих скриптів) -->
+<!-- ✅ STEP 4.1: Content Security Policy (FIXED - дозволено blob) -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://storage.ko-fi.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob:;">
+<!-- ✅ STEP 4.2: Referrer Policy (Не передаємо зайві дані при переході на інші сайти) -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- ✅ STEP 2.1: Preconnect (Прискорення підключення до зовнішніх серверів) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- SEO -->
+    <title>Pixel Craft Tool — Professional Image Editor (Paid License)</title>
+    <meta name="description" content="Professional image tools: rename, compress, convert, crop, blur. 100% private, works in your browser. No uploads, no watermarks.">
+    <meta name="keywords" content="image editor, rename images, compress photos, convert format, crop images, blur tool, privacy editor, batch tools">
+    <meta name="author" content="PixelCraft">
+    <meta name="robots" content="index, follow">
+
+    <!-- ✅ STEP 1.4: Social Meta (OG + Twitter) -->
+<meta property="og:title" content="Pixel Craft Tool — Edit Images Instantly & Privately">
+<meta property="og:description" content="15 professional image tools. No uploads, no watermarks. Works entirely in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pixelcraft.tools">
+<meta property="og:image" content="https://pixelcraft.tools/og-image.jpg">
+
+<!-- Додаткові параметри для кращої відображення -->
+<meta property="og:site_name" content="Pixel Craft Tool">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pixel Craft Tool — Edit Images Instantly & Privately">
+<meta name="twitter:description" content="15+ professional image tools. No uploads, no watermarks. Works entirely in your browser.">
+<meta name="twitter:image" content="https://pixelcraft.tools/og-image.jpg">
+
+        <!-- ✅ STEP 1.2: Hreflang для мультиязичності -->
+    <!--<link rel="alternate" hreflang="en" href="https://pixelcraft.tools/?lang=en">
+    <link rel="alternate" hreflang="uk" href="https://pixelcraft.tools/?lang=uk">
+    <link rel="alternate" hreflang="ru" href="https://pixelcraft.tools/?lang=ru">
+    <link rel="alternate" hreflang="es" href="https://pixelcraft.tools/?lang=es">
+    <link rel="alternate" hreflang="fr" href="https://pixelcraft.tools/?lang=fr">
+    <link rel="alternate" hreflang="de" href="https://pixelcraft.tools/?lang=de">
+    <link rel="alternate" hreflang="pt" href="https://pixelcraft.tools/?lang=pt">
+    <link rel="alternate" hreflang="pl" href="https://pixelcraft.tools/?lang=pl">
+    <link rel="alternate" hreflang="tr" href="https://pixelcraft.tools/?lang=tr">
+    <link rel="alternate" hreflang="zh" href="https://pixelcraft.tools/?lang=zh">
+    <link rel="alternate" hreflang="x-default" href="https://pixelcraft.tools/?lang=en">
+   
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=3">
+    
+    <!-- JSZip (для ZIP завантаження) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+      <!-- ✅ STEP 1.1: Canonical URL -->
+<link rel="canonical" href="https://pixelcraft.tools/">
+
+<!-- ✅ STEP 1.3: JSON-LD Structured Data (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PixelCraft Tools",
+  "url": "https://pixelcraft.tools",
+  "image": "https://pixelcraft.tools/og-image.jpg",
+  "description": "Professional image tools: rename, compress, convert, crop, blur. 100% private, works in your browser. No uploads.",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to use in browser. Commercial license required for business use."
+  }
+}
+</script>
+</head>
+
+<body class="theme-light">
+    <!-- ✅ STEP 3.1: Skip Link (Для навігації клавіатурою) -->
+<a href="#home" class="skip-link">Перейти до основного змісту</a>
+    
+    <!-- 🌟 Animated Background -->
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- 🚀 Header -->
+    <header class="header glass">
+        <div class="container header-content">
+            
+            <!-- Logo -->
+            <!-- Стало: Логотип з картинкою -->
+<a href="#home" class="logo" style="text-decoration: none;">
+    <img src="images/logo.png" alt="PixelCraft Tools — Cat-free online image editor" style="height: 40px; width: auto;">
+</a>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <a href="#home" data-i18n="nav_home">Home</a>
+                <a href="#tools" data-i18n="nav_tools">Tools</a>
+                <a href="#how" data-i18n="nav_how">How it works</a>
+                <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+            </nav>
+
+            <!-- Right side: Theme + Support + Language -->
+            <div style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
+                
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"
+                        style="background: transparent; border: 2px solid var(--border-color); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.3em;">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+                
+                <!-- Support Button -->
+<a href="https://ko-fi.com/modul1" target="_blank" 
+   class="btn-support" 
+   style="
+       display: inline-flex;
+       align-items: center;
+       gap: 8px;
+       padding: 12px 24px;
+       background: linear-gradient(135deg, #FF5E5B 0%, #FFA07A 100%);
+       color: white;
+       text-decoration: none;
+       border-radius: 12px;
+       font-weight: 600;
+       font-size: 0.95em;
+       white-space: nowrap;
+       transition: all 0.3s ease;
+       box-shadow: 0 4px 12px rgba(255, 94, 91, 0.3);
+       border: none;
+       cursor: pointer;
+   "
+   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255, 94, 91, 0.4)'"
+   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(255, 94, 91, 0.3)'">
+    <span style="font-size: 1.2em;">☕</span>
+    <span>Buy Me a Coffee</span>
+</a>
+
+                <!-- Language Selector -->
+                <!-- <div class="lang-selector">
+                    <select id="langSelect" aria-label="Select language"
+                            style="padding: 10px 14px; border: 2px solid var(--border-color); border-radius: 12px; background: var(--bg-secondary); color: var(--text-primary); font-family: inherit; font-size: 0.95em; cursor: pointer; min-width: 85px;">
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="uk">🇺🇦 UA</option>
+                        <option value="ru">🇷🇺 RU</option>
+                        <option value="es">🇪🇸 ES</option>
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="de">🇩🇪 DE</option>
+                        <option value="pt">🇵🇹 PT</option>
+                        <option value="pl">🇵🇱 PL</option>
+                        <option value="tr">🇹🇷 TR</option>
+                        <option value="zh">🇨🇳 ZH</option>
+                    </select>
+                </div>
+            </div>
+            -->
+        </div>
+    </header>
+
+    <!-- 🎯 Hero Section -->
+    <!-- ✅ STEP 3.4: Головний контент -->
+    <section id="home" class="hero" role="main">
+        <div class="container">
+            <h1 class="hero-title" data-i18n="hero_title">
+                Edit Images <span class="gradient-text">Instantly</span> & <span class="gradient-text">Privately</span>
+            </h1>
+            <p class="hero-desc" data-i18n="hero_desc">
+                Professional image tools that work entirely in your browser. 
+                No uploads, no watermarks, no compromises.
+            </p>
+            
+            <!-- Quick Actions (15 Tools) -->
+            <div class="quick-actions" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+                <button class="action-card" onclick="loadTool('rename')"><span class="action-icon">📁</span><span>Renamer</span></button>
+                <button class="action-card" onclick="loadTool('compress')"><span class="action-icon">🗜️</span><span>Compress</span></button>
+                <button class="action-card" onclick="loadTool('convert')"><span class="action-icon">🔄</span><span>Converter</span></button>
+                <button class="action-card" onclick="loadTool('resize')"><span class="action-icon">📏</span><span>Resizer</span></button>
+                <button class="action-card" onclick="loadTool('corners')"><span class="action-icon">🖼️</span><span>Corners</span></button>
+                <button class="action-card" onclick="loadTool('watermark')"><span class="action-icon">💧</span><span>Watermark</span></button>
+                <button class="action-card" onclick="loadTool('faces')"><span class="action-icon">🙈</span><span>Hide Faces</span></button>
+                <button class="action-card" onclick="loadTool('video')"><span class="action-icon">🎥</span><span>Video</span></button>
+                <button class="action-card" onclick="loadTool('blur')"><span class="action-icon">🔲</span><span>Blur</span></button>
+                <button class="action-card" onclick="loadTool('crop')"><span class="action-icon">✂️</span><span>Crop</span></button>
+                <button class="action-card" onclick="loadTool('rotate')"><span class="action-icon">↺</span><span>Rotate</span></button>
+                <button class="action-card" onclick="loadTool('faceExtract')"><span class="action-icon">👤</span><span>Face Extract</span></button>
+                <button class="action-card" onclick="loadTool('protect')"><span class="action-icon">🔒</span><span>Protect</span></button>
+                <button class="action-card" onclick="loadTool('gif')"><span class="action-icon">🎬</span><span>GIF Split</span></button>
+                <button class="action-card" onclick="loadTool('font')"><span class="action-icon">🔤</span><span>Fonts</span></button>
+            </div>
+            
+            <!-- Privacy Badge (FIXED) -->
+            <div class="privacy-badge glass">
+                <span class="badge-icon">🔐</span>
+                <span data-i18n="privacy_badge">Your files never leave your device</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🛠️ Tools Section (ОБОВ'ЯЗКОВО - тут завантажуються інструменти) -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <div id="tool-container" class="tool-container glass">
+                <div class="tool-placeholder">
+                    <span class="placeholder-icon">👆</span>
+                    <p data-i18n="select_tool">Select a tool above to get started</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📊 Stats Section -->
+<section class="stats">
+    <div class="container stats-grid">
+        <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label" data-i18n="stat_client">Client-side processing</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">0</span>
+            <span class="stat-label" data-i18n="stat_uploads">Files uploaded to server</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">⚡</span>
+            <span class="stat-label">Instant Processing</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">🔒</span>
+            <span class="stat-label">Zero Data Storage</span>
+        </div>
+    </div>
+</section>
+    </section>
+
+    <!-- ℹ️ How It Works Section -->
+    <section id="how" class="tools-section" style="display: none;">
+        <div class="container">
+            <div class="tool-container glass" style="text-align: center; padding: 40px;">
+                <h2 style="margin-bottom: 20px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">How PixelCraft Works</h2>
+                <p style="font-size: 1.2em; margin-bottom: 30px;">1️⃣ Choose a tool → 2️⃣ Upload images → 3️⃣ Edit → 4️⃣ Download</p>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                    All processing happens entirely in your browser using WebAssembly and Canvas API. 
+                    Your files never leave your device — guaranteed privacy. 🔒
+                </p>
+                <button onclick="showTools()" class="btn-primary" style="margin-top: 30px; max-width: 250px;">
+                    ← Back to Tools
+                </button>
+            </div>
+        </div>
+    </section>
+    
+ <!-- 🔒 Footer - Paid License (Fixed) -->
+<footer class="footer" style="
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #aaa;
+    padding: 30px 20px 15px;
+    margin-top: 40px;
+    font-size: 0.9em;
+">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        
+        <!-- Brand -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span style="font-weight: 700; color: #fff; margin-left: 15px;">Pixel Craft Tool</span>
+        </div>
+        
+        <!-- PAID LICENSE Warning -->
+        <div style="
+            background: rgba(112, 214, 11, 0.15); 
+            padding: 20px 25px; 
+            border-radius: 10px; 
+            margin-bottom: 20px;
+            border: 2px solid #25bdeb;
+            text-align: center;
+        ">
+            <p style="margin: 0 0 10px 0; font-weight: 700; color: #0fb349; font-size: 1.05em;">
+                🔒 COMMERCIAL LICENSE ONLY
+            </p>
+            <p style="margin: 0; line-height: 1.6; font-size: 0.9em;">
+                This software is distributed under a <strong>paid commercial license only</strong>. 
+                Unauthorized copying, redistribution, or use without a valid license is strictly prohibited. 
+                Each installation requires a separate paid license. Franchise and reseller distribution 
+                require explicit written permission. Violations will result in legal action.
+            </p>
+        </div>
+        
+        <!-- License Tiers -->
+        <div style="
+            background: rgba(99, 102, 241, 0.1); 
+            padding: 15px 20px; 
+            border-radius: 10px; 
+            margin-bottom: 20px;
+            text-align: center;
+        ">
+            <p style="margin: 0 0 12px 0; font-weight: 600; color: #fff;">
+                📋 Available Licenses:
+            </p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;">
+                    <strong style="color: #6366f1;">Personal</strong> — Single user
+                </span>
+                <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;">
+                    <strong style="color: #6366f1;">Commercial</strong> — Business use
+                </span>
+                <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;">
+                    <strong style="color: #6366f1;">Enterprise</strong> — Custom terms
+                </span>
+            </div>
+        </div>
+        
+        <!-- Warning -->
+        <p style="
+            background: rgba(255, 193, 7, 0.1); 
+            color: #fcd34d; 
+            padding: 12px 15px; 
+            border-radius: 8px; 
+            font-size: 0.85em;
+            margin-bottom: 20px;
+            border-left: 3px solid #ffc107;
+            text-align: center;
+        ">
+            ⚠️ <strong>License Verification:</strong> This software includes license verification. 
+            Use without a valid paid license violates copyright law.
+        </p>
+
+        <!-- Legal Links -->
+        <div style="text-align: center; margin-bottom: 15px;">
+            <a href="terms.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+            <span style="color: #555;">|</span>
+            <a href="privacy.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+            <span style="color: #555;">|</span>
+            <a href="license.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">License Agreement</a>
+            <span style="color: #555;">|</span>
+            <a href="mailto:hello@pixelcraft.tools" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Purchase License</a>
+        </div>
+        
+        <!-- Bottom Bar - COMPACT (FIXED) -->
+        <div style="text-align: center; padding-top: 10px;">
+            <!-- ❤️ Heart line - minimal spacing -->
+            <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 1.00em;">
+                Made with ❤️ for creators
+            </p>
+            <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">
+                Pixel Craft Tool Technologies.
+            </p>
+            <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">
+                Version <span id="appVersion">2.0.0</span> | Licensed Software — Not Free
+            </p>
+            <!-- ✅ Copyright - NO border-top (FIXED) -->
+            <p style="margin: 8px 0 0 0; color: #ffffff; font-size: 1.20em; border-top: none;">
+                © 2026 <strong>Pixel Craft Tool</strong>. All rights reserved worldwide.
+            </p>
+        </div>
+        
+    </div>
+    
+    <script>
+        document.getElementById('appVersion').textContent = '2.0.0';
+    </script>
+</footer>
+
+<!-- Scripts (Original - DO NOT CHANGE) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+<script src="js/tools.js?v=2" defer></script>
+<script src="js/app.js?v=2" defer></script>
+
+<!-- Smooth Scroll + Show/Hide Functions -->
+<script>
+    // Плавна прокрутка для навігації
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            e.preventDefault();
+            var target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+    
+    // Показати секцію Tools
+    function showTools() {
+        document.getElementById('how').style.display = 'none';
+        document.getElementById('tools').style.display = 'block';
+        document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Показати секцію How It Works
+    function showHow() {
+        document.getElementById('tools').style.display = 'none';
+        document.getElementById('how').style.display = 'block';
+        document.getElementById('how').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Прив'язка кнопки "How it works"
+    document.querySelector('a[href="#how"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        showHow();
+    });
+</script>
+
+<!-- Ko-fi Widget -->
+<script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+
+<div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:rgba(26,26,46,0.95); color:#fff; padding:15px 20px; display:none; z-index:9999; box-shadow:0 -4px 20px rgba(0,0,0,0.3);">
+  <div class="container" style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+    <p style="margin:0; font-size:0.9em; flex:1;">
+      🍪 We use cookies to improve the site and analytics. By continuing to use the site, you agree to our
+      <a href="privacy.html" style="color:#a78bfa; text-decoration:underline;">Privacy Policy</a>.
+    </p>
+    <button id="accept-cookies" style="background:#6366f1; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer; font-weight:600;">Прийняти</button>
+  </div>
+</div>
+<script>
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+  document.getElementById('accept-cookies').addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  });
+</script>
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pixelcrafttool.com/">
+<meta property="og:title" content="PixelCraft Tools - Professional Image Editor">
+<meta property="og:description" content="15+ free browser-based image tools. No uploads, 100% private.">
+<meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://pixelcrafttool.com/">
+<meta property="twitter:title" content="PixelCraft Tools - Professional Image Editor">
+<meta property="twitter:description" content="15+ free browser-based image tools. No uploads, 100% private.">
+<meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
+
+</body>
+</html>

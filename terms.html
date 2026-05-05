@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ✅ Title & Description -->
+    <title>Terms of Service - Pixel Craft Tool</title>
+    <meta name="description" content="Pixel Craft Tool Terms of Service — Legal terms for using our browser-based image editing tools. 100% client-side, no uploads.">
+    
+    <!-- ✅ FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    
+    <!-- ✅ PWA / Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Pixel Craft Tool">
+    
+    <!-- ✅ Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixelcrafttool.com/terms.html">
+    <meta property="og:title" content="Terms of Service - Pixel Craft Tool">
+    <meta property="og:description" content="Legal terms for using Pixel Craft Tool — professional browser-based image editing software.">
+    <meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
+    <meta property="og:site_name" content="Pixel Craft Tool">
+    
+    <!-- ✅ Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pixelcrafttool.com/terms.html">
+    <meta property="twitter:title" content="Terms of Service - Pixel Craft Tool">
+    <meta property="twitter:description" content="Legal terms for using Pixel Craft Tool — professional browser-based image editing software.">
+    <meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
+    
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://pixelcrafttool.com/terms.html">
+    
+    <!-- ✅ Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ✅ Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- ✅ Page-specific styles with Light/Dark Mode -->
+    <style>
+        :root {
+            /* Light Mode (Default) */
+            --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --bg-container: #ffffff;
+            --text-primary: #1a1a2e;
+            --text-secondary: #666;
+            --border-color: #e0e0e0;
+            --highlight-bg: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            --highlight-text: #065f46;
+            --contact-bg: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --contact-text: #ffffff;
+            --footer-bg: transparent;
+            --footer-text: #666;
+            --link-color: #6366f1;
+            --box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --bg-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --bg-container: #1a1a2e;
+            --text-primary: #f0f0f0;
+            --text-secondary: #aaa;
+            --border-color: #333;
+            --highlight-bg: linear-gradient(135deg, #065f46 0%, #047857 100%);
+            --highlight-text: #6ee7b7;
+            --contact-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --contact-text: #ffffff;
+            --footer-bg: transparent;
+            --footer-text: #aaa;
+            --link-color: #818cf8;
+            --box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.3s ease;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-container);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+            flex: 1;
+            transition: background 0.3s ease;
+        }
+        
+        /* ✅ FIXED HEADER - Static, no floating */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative; /* NOT sticky or fixed! */
+        }
+        
+        .logo { 
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: var(--text-primary);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1em;
+        }
+        
+        .date {
+            background: var(--bg-container);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+        
+        h2 {
+            color: var(--text-primary);
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: var(--text-primary);
+        }
+        
+        ul { 
+            margin-left: 20px; 
+            margin-bottom: 15px; 
+            color: var(--text-primary);
+        }
+        
+        li { 
+            margin: 8px 0; 
+            color: var(--text-primary);
+        }
+        
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-nav {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border-color);
+        }
+        
+        .footer-nav a {
+            color: var(--link-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        
+        .footer-nav a:hover { 
+            text-decoration: underline; 
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--footer-text);
+            font-size: 0.9em;
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-container);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--box-shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            color: var(--text-primary);
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Кнопка "Back to Home" */
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: var(--contact-bg);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.05em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            margin-top: 25px;
+        }
+        
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 25px; }
+            h1 { font-size: 2em; }
+            .footer-nav a { display: block; margin: 10px 0; }
+            .theme-toggle {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">🌙</button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;">
+                <img src="images/logo.png" alt="Pixel Craft Tool" style="height: 40px; width: auto;">
+            </a>
+        </div>
+        <h1>Terms of Service</h1>
+        <p class="subtitle">Legal terms for using Pixel Craft Tool</p>
+        <span class="date">Last updated: May 04, 2026</span>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <p>Welcome to <strong>Pixel Craft Tool</strong> ("Pixel Craft Tool", "we", "us", or "our"). By accessing or using our website (pixelcrafttool.com) and the tools provided therein, you agree to comply with and be bound by these Terms of Service ("Terms").</p>
+
+        <h2>1. Service Description</h2>
+        <p>Pixel Craft Tool provides a suite of browser-based image editing tools (e.g., resizing, cropping, watermarking, face extraction). All processing is performed locally on your device ("Client-Side"). <strong>No images are uploaded to our servers.</strong></p>
+
+        <h2>2. Intellectual Property Rights</h2>
+        <p>The software, design, logos, and code of Pixel Craft Tool are proprietary and protected by copyright laws. You may use the tools for personal and commercial purposes, but you may not:</p>
+        <ul>
+            <li>Copy, clone, or reproduce our source code.</li>
+            <li>Resell the software or offer it as a service without a commercial license.</li>
+            <li>Reverse engineer or decompile the software.</li>
+        </ul>
+
+        <h2>3. User Data and Privacy</h2>
+        <p>Since all processing is local, we do not collect, store, or have access to your images. Your files remain entirely on your device. Please refer to our <a href="privacy.html">Privacy Policy</a> for more details regarding analytics cookies.</p>
+
+        <h2>4. Acceptable Use</h2>
+        <p>You agree not to use Pixel Craft Tool to:</p>
+        <ul>
+            <li>Create content that violates any law (e.g., copyright infringement, non-consensual edits).</li>
+            <li>Distribute malware or attempt to hack our website.</li>
+            <li>Interfere with the operation of the site.</li>
+        </ul>
+
+        <h2>5. Disclaimer of Warranties</h2>
+        <p>The service is provided on an "AS IS" and "AS AVAILABLE" basis. We make no warranties, expressed or implied, regarding the functionality of the tools or the accuracy of the results.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Pixel Craft Tool shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use or inability to use our service. You are solely responsible for the content you create and export.</p>
+
+        <h2>7. Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. Continued use of the site after changes constitutes acceptance of the new Terms.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us at:</p>
+        <p>📧 <a href="mailto:modulh1@gmail.com">modulh1@gmail.com</a></p>
+    </main>
+
+    <!-- Footer Navigation -->
+    <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="license.html">License Agreement</a>
+        <a href="mailto:modulh1@gmail.com">Contact</a>
+    </div>
+
+    <!-- 🏠 Back to Home Button -->
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="index.html" class="btn-home">
+            <span>←</span> Back to Home
+        </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&copy; 2026 Pixel Craft Tool. All rights reserved worldwide.</p>
+        <p style="margin-top: 10px; font-size: 0.85em;">Made with ❤️ for creators</p>
+    </div>
+
+    <!-- ✅ Theme Toggle Script -->
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '🌙';
+        }
+        
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            themeToggle.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
+</body>
+</html>
