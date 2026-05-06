@@ -33,9 +33,9 @@
 
 <!-- ✅ STEP 4.1: Content Security Policy (Захист від злому та шкідливих скриптів) -->
 <!-- ✅ STEP 4.1: Content Security Policy (FIXED - дозволено blob) -->
-<!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://storage.ko-fi.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob:;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://storage.ko-fi.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob:;">
 <!-- ✅ STEP 4.2: Referrer Policy (Не передаємо зайві дані при переході на інші сайти) -->
-<!--<meta name="referrer" content="strict-origin-when-cross-origin">-->
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- ✅ STEP 2.1: Preconnect (Прискорення підключення до зовнішніх серверів) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -466,11 +466,7 @@
     document.getElementById('cookie-banner').style.display = 'none';
   });
 </script>
-
-    <meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               frame-src 'self' https://revolvermaps2.com; 
-               connect-src 'self' https://revolvermaps2.com https://www.google-analytics.com;">
+ 
 <!-- Revolver Maps Analytics -->
 <iframe src="https://revolvermaps2.com/widget/d1e30699-77a1-4e20-bf44-18906a1fc4f9" 
         width="320" height="320" style="border:0; display:none;" 
