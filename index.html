@@ -15,7 +15,7 @@
       gtag('config', 'G-FVWPWMJK1Q');
     </script>
  
-    <!-- ✅ FAVICONS & PWA (Original - НЕ ЗМІНЮВАТИ) -->
+    <!-- ✅ FAVICONS & PWA -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -29,10 +29,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="PixelCraft">
-
-    <!-- ✅ CSP (РОЗШИРЕНИЙ ДЛЯ РЕКЛАМИ) -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' https: data:; connect-src 'self' https: blob:; frame-src 'self' https: blob:;">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +44,7 @@
 
     <!-- Social Meta -->
     <meta property="og:title" content="Pixel Craft Tool — Edit Images Instantly & Privately">
-    <meta property="og:description" content="15+ professional image tools. No uploads, no watermarks. Works entirely in your browser.">
+    <meta property="og:description" content="15 professional image tools. No uploads, no watermarks. Works entirely in your browser.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pixelcrafttool.com">
     <meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
@@ -56,13 +52,6 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-
-    <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://pixelcrafttool.com/">
-<meta property="og:title" content="Pixel Craft Tool - Professional Image Editor">
-<meta property="og:description" content="15+ free browser-based image tools. No uploads, no watermarks. Works entirely in your browser 100% private.">
-<meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -75,6 +64,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS для сітки банерів -->
+    <style>
+    .hero-layout-grid {
+        display: grid;
+        grid-template-columns: 160px 1fr 160px;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .sidebar-left, .sidebar-right {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .ad-slot {
+        text-align: center;
+        margin: 15px auto;
+        background: rgba(255,255,255,0.05);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .ad-sidebar { width: 160px; min-height: 300px; }
+    .ad-center { max-width: 728px; }
+    @media (max-width: 1024px) {
+        .hero-layout-grid { grid-template-columns: 1fr !important; }
+        .sidebar-right { display: none !important; }
+        .sidebar-left { flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; order: -1; }
+        .ad-sidebar { width: 100% !important; max-width: 320px !important; }
+    }
+    </style>
     
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css?v=3">
@@ -144,25 +169,28 @@
         </div>
     </header>
 
-    <!-- 🏠 HERO SECTION (3 Columns with Ads Placeholders) -->
+    <!-- 🏠 HERO SECTION -->
     <section id="home" class="hero" role="main">
         <div class="hero-layout-grid">
             
-            <!-- Left Sidebar (Placeholders) -->
+            <!-- 🔷 LEFT SIDEBAR -->
             <aside class="sidebar-left">
                 <div id="ad-left-top" class="ad-slot ad-sidebar">
-                    <div class="placeholder" style="height: 600px;"></div>
+                    <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
                 </div>
                 <div id="ad-left-bottom" class="ad-slot ad-sidebar">
-                    <div class="placeholder" style="height: 300px;"></div>
+                    <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
                 </div>
             </aside>
 
-            <!-- Center Content -->
+            <!-- 🔷 CENTER CONTENT -->
             <main class="center-content">
-                <!-- Top Banner Placeholder -->
+                <!-- Top Banner 728x90 -->
                 <div id="ad-top" class="ad-slot ad-center">
-                    <div class="placeholder" style="height: 90px;"></div>
+                    <script>atOptions={'key':'205524dc89db034ed70eb6d3c5dfc0ac','format':'iframe','height':90,'width':728,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/205524dc89db034ed70eb6d3c5dfc0ac/invoke.js"></script>
                 </div>
 
                 <div class="container">
@@ -200,25 +228,34 @@
                     </div>
                 </div>
 
-                <!-- Middle Banner Placeholder -->
+                <!-- Mobile Banner 320x50 -->
                 <div id="ad-mobile" class="ad-slot ad-center" style="max-width:320px;">
-                    <div class="placeholder" style="height: 50px;"></div>
+                    <script>atOptions={'key':'fddf2b3e9b3ffbd9f006cc62e9537775','format':'iframe','height':50,'width':320,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js"></script>
                 </div>
+
+                <!-- Middle Banner 468x60 -->
                 <div id="ad-middle" class="ad-slot ad-center" style="max-width:468px;">
-                    <div class="placeholder" style="height: 60px;"></div>
+                    <script>atOptions={'key':'9e4c2f9f08b132bae32b4875e30fa906','format':'iframe','height':60,'width':468,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js"></script>
                 </div>
+
+                <!-- Bottom Banner 300x250 -->
                 <div id="ad-bottom" class="ad-slot ad-center" style="max-width:300px;">
-                    <div class="placeholder" style="height: 250px;"></div>
+                    <script>atOptions={'key':'a5f29426fb5495e569d6d182b6509a9c','format':'iframe','height':250,'width':300,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
                 </div>
             </main>
 
-            <!-- Right Sidebar (Placeholders) -->
+            <!-- 🔷 RIGHT SIDEBAR -->
             <aside class="sidebar-right">
                 <div id="ad-right-top" class="ad-slot ad-sidebar">
-                    <div class="placeholder" style="height: 600px;"></div>
+                    <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
                 </div>
                 <div id="ad-right-bottom" class="ad-slot ad-sidebar">
-                    <div class="placeholder" style="height: 300px;"></div>
+                    <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
                 </div>
             </aside>
         </div>
@@ -275,7 +312,7 @@
         </div>
     </section>
     
-    <!-- 🔒 Footer (Original - НЕ ЗМІНЮВАТИ) -->
+    <!-- 🔒 Footer -->
     <footer class="footer" style="
         background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         color: #aaa;
@@ -284,21 +321,10 @@
         font-size: 0.9em;
     ">
         <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            
-            <!-- Brand -->
             <div style="text-align: center; margin-bottom: 20px;">
                 <span style="font-weight: 700; color: #fff; margin-left: 15px;">Pixel Craft Tool</span>
             </div>
-            
-            <!-- PAID LICENSE Warning -->
-            <div style="
-                background: rgba(112, 214, 11, 0.15); 
-                padding: 20px 25px; 
-                border-radius: 10px; 
-                margin-bottom: 20px;
-                border: 2px solid #25bdeb;
-                text-align: center;
-            ">
+            <div style="background: rgba(112, 214, 11, 0.15); padding: 20px 25px; border-radius: 10px; margin-bottom: 20px; border: 2px solid #25bdeb; text-align: center;">
                 <p style="margin: 0 0 10px 0; font-weight: 700; color: #0fb349; font-size: 1.05em;">
                     🔒 COMMERCIAL LICENSE ONLY
                 </p>
@@ -309,15 +335,7 @@
                     require explicit written permission. Violations will result in legal action.
                 </p>
             </div>
-            
-            <!-- License Tiers -->
-            <div style="
-                background: rgba(99, 102, 241, 0.1); 
-                padding: 15px 20px; 
-                border-radius: 10px; 
-                margin-bottom: 20px;
-                text-align: center;
-            ">
+            <div style="background: rgba(99, 102, 241, 0.1); padding: 15px 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
                 <p style="margin: 0 0 12px 0; font-weight: 600; color: #fff;">
                     📋 Available Licenses:
                 </p>
@@ -333,23 +351,10 @@
                     </span>
                 </div>
             </div>
-            
-            <!-- Warning -->
-            <p style="
-                background: rgba(255, 193, 7, 0.1); 
-                color: #fcd34d; 
-                padding: 12px 15px; 
-                border-radius: 8px; 
-                font-size: 0.85em;
-                margin-bottom: 20px;
-                border-left: 3px solid #ffc107;
-                text-align: center;
-            ">
+            <p style="background: rgba(255, 193, 7, 0.1); color: #fcd34d; padding: 12px 15px; border-radius: 8px; font-size: 0.85em; margin-bottom: 20px; border-left: 3px solid #ffc107; text-align: center;">
                 ⚠️ <strong>License Verification:</strong> This software includes license verification. 
                 Use without a valid paid license violates copyright law.
             </p>
-
-            <!-- Legal Links -->
             <div style="text-align: center; margin-bottom: 15px;">
                 <a href="terms.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Terms of Service</a>
                 <span style="color: #555;">|</span>
@@ -359,8 +364,6 @@
                 <span style="color: #555;">|</span>
                 <a href="mailto:hello@pixelcraft.tools" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Purchase License</a>
             </div>
-            
-            <!-- Bottom Bar -->
             <div style="text-align: center; padding-top: 10px;">
                 <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 1.00em;">
                     Made with ❤️ for creators
@@ -375,22 +378,17 @@
                     © 2026 <strong>Pixel Craft Tool</strong>. All rights reserved worldwide.
                 </p>
             </div>
-            
         </div>
-        
-        <script>
-            document.getElementById('appVersion').textContent = '2.0.0';
-        </script>
+        <script>document.getElementById('appVersion').textContent = '2.0.0';</script>
     </footer>
 
-    <!-- ✅ 1. ОСНОВНІ СКРИПТИ (ЗАВАНТАЖУЮТЬСЯ ПЕРШИМИ) -->
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
     <script src="js/tools.js?v=2" defer></script>
     <script src="js/app.js?v=2" defer></script>
 
-    <!-- ✅ 2. ОСНОВНИЙ JS (НАВІГАЦІЯ) -->
+    <!-- Navigation Scripts -->
     <script>
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(function(link) {
         link.addEventListener('click', function(e) {
             var targetId = this.getAttribute('href');
@@ -403,14 +401,12 @@
         });
     });
     
-    // Show Tools
     function showTools() {
         document.getElementById('how').style.display = 'none';
         document.getElementById('tools').style.display = 'block';
         document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
     }
     
-    // Show How It Works
     function showHow() {
         document.getElementById('tools').style.display = 'none';
         document.getElementById('how').style.display = 'block';
@@ -422,17 +418,9 @@
         showHow();
     });
 
-    // Theme Toggle
     document.getElementById('themeToggle').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
     });
-
-    // Check if tools.js loaded
-    if (typeof loadTool !== 'function') {
-        console.error('⚠️ tools.js not loaded!');
-    } else {
-        console.log('✅ tools.js loaded successfully');
-    }
     </script>
 
     <!-- Ko-fi Widget -->
@@ -458,122 +446,18 @@
       });
     </script>
 
-        });
-    </script>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixelcrafttool.com/">
+    <meta property="og:title" content="Pixel Craft Tool - Professional Image Editor">
+    <meta property="og:description" content="15+ free browser-based image tools. No uploads, no watermarks. Works entirely in your browser 100% private.">
+    <meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
 
-    <!-- ✅ РЕКЛАМНІ СКРИПТИ (ПРЯМО ПЕРЕД </body>) -->
-    
-    <!-- Банер 320x50 -->
-    <div id="ad-mobile" style="text-align:center; margin:20px auto;">
-        <script>
-        atOptions = {
-            'key' : 'fddf2b3e9b3ffbd9f006cc62e9537775',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-        };
-        </script>
-        <script src="https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js"></script>
-    </div>
-
-    <!-- Банер 468x60 -->
-    <div id="ad-middle" style="text-align:center; margin:20px auto;">
-        <script>
-        atOptions = {
-            'key' : '9e4c2f9f08b132bae32b4875e30fa906',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
-        };
-        </script>
-        <script src="https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js"></script>
-    </div>
-
-    <!-- Банер 300x250 -->
-    <div id="ad-bottom" style="text-align:center; margin:20px auto;">
-        <script>
-        atOptions = {
-            'key' : 'a5f29426fb5495e569d6d182b6509a9c',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-        };
-        </script>
-        <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
-    </div>
-
-    <!-- Банер 160x600 (лівий) -->
-    <div id="ad-left-top" style="position:fixed; left:10px; top:100px; width:160px;">
-        <script>
-        atOptions = {
-            'key' : '8ddb4b91889423b36431a72105303245',
-            'format' : 'iframe',
-            'height' : 600,
-            'width' : 160,
-            'params' : {}
-        };
-        </script>
-        <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
-    </div>
-
-    <!-- Банер 160x300 (лівий низ) -->
-    <div id="ad-left-bottom" style="position:fixed; left:10px; bottom:10px; width:160px;">
-        <script>
-        atOptions = {
-            'key' : '0e4c001440fee7d648d0150df40eb138',
-            'format' : 'iframe',
-            'height' : 300,
-            'width' : 160,
-            'params' : {}
-        };
-        </script>
-        <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
-    </div>
-
-    <!-- Банер 160x600 (правий) -->
-    <div id="ad-right-top" style="position:fixed; right:10px; top:100px; width:160px;">
-        <script>
-        atOptions = {
-            'key' : '8ddb4b91889423b36431a72105303245',
-            'format' : 'iframe',
-            'height' : 600,
-            'width' : 160,
-            'params' : {}
-        };
-        </script>
-        <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
-    </div>
-
-    <!-- Банер 160x300 (правий низ) -->
-    <div id="ad-right-bottom" style="position:fixed; right:10px; bottom:10px; width:160px;">
-        <script>
-        atOptions = {
-            'key' : '0e4c001440fee7d648d0150df40eb138',
-            'format' : 'iframe',
-            'height' : 300,
-            'width' : 160,
-            'params' : {}
-        };
-        </script>
-        <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
-    </div>
-
-    <!-- Банер 728x90 (верх) -->
-    <div id="ad-top" style="text-align:center; margin:20px auto;">
-        <script>
-        atOptions = {
-            'key' : '205524dc89db034ed70eb6d3c5dfc0ac',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-        };
-        </script>
-        <script src="https://daubwhereupon.com/205524dc89db034ed70eb6d3c5dfc0ac/invoke.js"></script>
-    </div>
-
+    <!-- Twitter Card --> 
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pixelcrafttool.com/">
+    <meta property="twitter:title" content="Pixel Craft Tool - Professional Image Editor">
+    <meta property="twitter:description" content="15+ free browser-based image tools. No uploads, no watermarks. Works entirely in your browser 100% private.">
+    <meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
 </body>
 </html>
