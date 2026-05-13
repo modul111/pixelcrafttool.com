@@ -192,20 +192,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    position: sticky;  /* ← Замість fixed */
-    top: 120px;        /* ← Починають "прилипати" коли доскролиш */
-    height: fit-content;
-    align-self: start;
+    /* position: fixed ← ВИДАЛИЛИ */
+    /* left/right/top ← ТЕЖ ВИДАЛИЛИ */
 }
 
+/* На мобільних */
 @media (max-width: 1024px) {
     .sidebar-left, .sidebar-right {
-        position: static !important;
-        top: auto !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-    }
 }
 
 /* 🔄 Theme Transition */
