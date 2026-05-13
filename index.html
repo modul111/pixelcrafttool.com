@@ -14,8 +14,9 @@
       gtag('config', 'G-FVWPWMJK1Q');
     </script>
 
-    <!-- CSP -->
-   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://storage.ko-fi.com https://daubwhereupon.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob: https://daubwhereupon.com https://www.google-analytics.com; frame-src https://daubwhereupon.com;">
+    <!-- ✅ FIX: РОЗШИРЕНИЙ CSP ДЛЯ РЕКЛАМИ -->
+    <!-- Дозволяємо скрипти, фрейми та підключення з будь-яких https джерел для реклами -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' https:; connect-src 'self' https:; frame-src 'self' https:;">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -169,6 +170,7 @@
         padding: 8px;
         margin: 10px auto;
         text-align: center;
+        min-height: 50px; /* Мінімальна висота щоб не схлопувалось */
     }
 
     .ad-sidebar { width: 160px; min-height: 300px; }
@@ -454,4 +456,5 @@
     <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
     <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
 </body>
+</html>
 </html>
