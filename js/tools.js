@@ -2217,7 +2217,7 @@ var hideFacesTool = {
         var canvas = document.getElementById('previewCanvas');
         var ctx = canvas.getContext('2d');
         
-        var maxW = 600;
+        var maxW = 800;
         var scale = Math.min(1, maxW / self.previewImg.width);
         canvas.width = self.previewImg.width * scale;
         canvas.height = self.previewImg.height * scale;
@@ -4543,7 +4543,7 @@ var faceExtractTool = {
             self.image = img;
             var canvas = document.getElementById('faceCanvas');
             
-            var maxW = 600;
+            var maxW = 800;
             var maxH = 600;
             var scale = Math.min(1, maxW / img.width, maxH / img.height);
             canvas.width = Math.floor(img.width * scale);
@@ -5198,7 +5198,7 @@ var protectTool = {
         var ctx = canvas.getContext('2d');
         if (!ctx) return;
         
-        var maxW = 400;
+        var maxW = 800;
         var scale = Math.min(1, maxW / this.previewImg.width);
         canvas.width = this.previewImg.width * scale;
         canvas.height = this.previewImg.height * scale;
