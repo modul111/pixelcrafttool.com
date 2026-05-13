@@ -65,26 +65,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<style>
 .sidebar-left, .sidebar-right {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* position: fixed ← ВИДАЛИЛИ */
-    /* left/right/top ← ТЕЖ ВИДАЛИЛИ */
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+    align-self: start;
 }
 
-/* На мобільних */
 @media (max-width: 1024px) {
     .sidebar-left, .sidebar-right {
+        position: static !important;
+        top: auto !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
     }
 }
-    </style>
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css?v=3">
+</style>
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css?v=3">
     
     <!-- JSZip -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
