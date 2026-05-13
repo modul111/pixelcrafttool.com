@@ -513,86 +513,122 @@
       });
     </script>
 
-    <!-- ✅ 3. ЗАВАНТАЖЕННЯ РЕКЛАМИ (ВІДКЛАДЕНЕ - ЧЕРЕЗ 1.5 СЕКУНДИ) -->
-    <script>
-    // Функція для завантаження реклами
-    function loadAd(containerId, scriptSrc, atOptions) {
-        var container = document.getElementById(containerId);
-        if (!container) return;
-        
-        var script = document.createElement('script');
-        script.src = scriptSrc;
-        script.async = true;
-        
-        if (atOptions && typeof window.atOptions === 'undefined') {
-            window.atOptions = atOptions;
-        } else if (atOptions) {
-            Object.assign(window.atOptions || {}, atOptions);
-        }
-        
-        container.innerHTML = '';
-        container.appendChild(script);
-        container.style.display = 'block';
-    }
-
-    // Завантажуємо рекламу після завантаження сторінки
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            
-            // Left sidebar (160x600)
-            loadAd('ad-left-top',
-                'https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js',
-                {'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}}
-            );
-            
-            // Left sidebar bottom (160x300)
-            loadAd('ad-left-bottom',
-                'https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js',
-                {'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}}
-            );
-            
-            // Top banner (728x90)
-            loadAd('ad-top',
-                'https://daubwhereupon.com/205524dc89db034ed70eb6d3c5dfc0ac/invoke.js',
-                {'key':'205524dc89db034ed70eb6d3c5dfc0ac','format':'iframe','height':90,'width':728,'params':{}}
-            );
-            
-            // Mobile banner (320x50)
-            loadAd('ad-mobile',
-                'https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js',
-                {'key':'fddf2b3e9b3ffbd9f006cc62e9537775','format':'iframe','height':50,'width':320,'params':{}}
-            );
-            
-            // Middle banner (468x60)
-            loadAd('ad-middle',
-                'https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js',
-                {'key':'9e4c2f9f08b132bae32b4875e30fa906','format':'iframe','height':60,'width':468,'params':{}}
-            );
-            
-            // Bottom banner (300x250)
-            loadAd('ad-bottom',
-                'https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js',
-                {'key':'a5f29426fb5495e569d6d182b6509a9c','format':'iframe','height':250,'width':300,'params':{}}
-            );
-            
-            // Right sidebar (160x600)
-            loadAd('ad-right-top',
-                'https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js',
-                {'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}}
-            );
-            
-            // Right sidebar bottom (160x300)
-            loadAd('ad-right-bottom',
-                'https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js',
-                {'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}}
-            );
-    });
+        });
     </script>
 
-    <!-- Додаткові рекламні скрипти (асинхронні) -->
-    <script async src="https://daubwhereupon.com/4c/47/09/4c4709843b623f25c474accca1abc4ae.js"></script>
-    <script async src="https://daubwhereupon.com/ed/98/cf/ed98cf0ad9e7625589fea17f1d68d91b.js"></script>
-    <script async src="https://daubwhereupon.com/4845853b50959d706e3074623425da77/invoke.js"></script>
+    <!-- ✅ РЕКЛАМНІ СКРИПТИ (ПРЯМО ПЕРЕД </body>) -->
+    
+    <!-- Банер 320x50 -->
+    <div id="ad-mobile" style="text-align:center; margin:20px auto;">
+        <script>
+        atOptions = {
+            'key' : 'fddf2b3e9b3ffbd9f006cc62e9537775',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+        };
+        </script>
+        <script src="https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js"></script>
+    </div>
+
+    <!-- Банер 468x60 -->
+    <div id="ad-middle" style="text-align:center; margin:20px auto;">
+        <script>
+        atOptions = {
+            'key' : '9e4c2f9f08b132bae32b4875e30fa906',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+        };
+        </script>
+        <script src="https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js"></script>
+    </div>
+
+    <!-- Банер 300x250 -->
+    <div id="ad-bottom" style="text-align:center; margin:20px auto;">
+        <script>
+        atOptions = {
+            'key' : 'a5f29426fb5495e569d6d182b6509a9c',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+        </script>
+        <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
+    </div>
+
+    <!-- Банер 160x600 (лівий) -->
+    <div id="ad-left-top" style="position:fixed; left:10px; top:100px; width:160px;">
+        <script>
+        atOptions = {
+            'key' : '8ddb4b91889423b36431a72105303245',
+            'format' : 'iframe',
+            'height' : 600,
+            'width' : 160,
+            'params' : {}
+        };
+        </script>
+        <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
+    </div>
+
+    <!-- Банер 160x300 (лівий низ) -->
+    <div id="ad-left-bottom" style="position:fixed; left:10px; bottom:10px; width:160px;">
+        <script>
+        atOptions = {
+            'key' : '0e4c001440fee7d648d0150df40eb138',
+            'format' : 'iframe',
+            'height' : 300,
+            'width' : 160,
+            'params' : {}
+        };
+        </script>
+        <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
+    </div>
+
+    <!-- Банер 160x600 (правий) -->
+    <div id="ad-right-top" style="position:fixed; right:10px; top:100px; width:160px;">
+        <script>
+        atOptions = {
+            'key' : '8ddb4b91889423b36431a72105303245',
+            'format' : 'iframe',
+            'height' : 600,
+            'width' : 160,
+            'params' : {}
+        };
+        </script>
+        <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
+    </div>
+
+    <!-- Банер 160x300 (правий низ) -->
+    <div id="ad-right-bottom" style="position:fixed; right:10px; bottom:10px; width:160px;">
+        <script>
+        atOptions = {
+            'key' : '0e4c001440fee7d648d0150df40eb138',
+            'format' : 'iframe',
+            'height' : 300,
+            'width' : 160,
+            'params' : {}
+        };
+        </script>
+        <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
+    </div>
+
+    <!-- Банер 728x90 (верх) -->
+    <div id="ad-top" style="text-align:center; margin:20px auto;">
+        <script>
+        atOptions = {
+            'key' : '205524dc89db034ed70eb6d3c5dfc0ac',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+        </script>
+        <script src="https://daubwhereupon.com/205524dc89db034ed70eb6d3c5dfc0ac/invoke.js"></script>
+    </div>
 
 </body>
 </html>
