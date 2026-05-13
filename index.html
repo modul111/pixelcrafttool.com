@@ -632,10 +632,32 @@
         <script>document.getElementById('appVersion').textContent = '2.0.0';</script>
     </footer>
 
-    <!-- ✅ MAIN JS FILES (load BEFORE ads to avoid conflicts) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
-    <script src="js/tools.js?v=2" defer></script>
-    <script src="js/app.js?v=2" defer></script>
+   <!-- JSZip -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+<!-- Main Tools Scripts -->
+<script src="js/tools.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
+
+<!-- ✅ FIX: Ensure loadTool is available immediately -->
+<script>
+// Перевіряємо чи завантажились скрипти
+if (typeof loadTool !== 'function') {
+    console.error('⚠️ tools.js не завантажився! Перевір файл js/tools.js');
+    
+    // Fallback функція
+    window.loadTool = function(toolName) {
+        console.log('Fallback: Loading tool:', toolName);
+        var toolsSection = document.getElementById('tools');
+        if (toolsSection) {
+            toolsSection.style.display = 'block';
+            toolsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+} else {
+    console.log('✅ tools.js завантажився успішно');
+}
+</script>
 
     <!-- ✅ Navigation & UI Scripts -->
     <script>
