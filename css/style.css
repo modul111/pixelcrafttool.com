@@ -187,6 +187,27 @@ body {
     --shadow-glow: 0 0 40px rgba(168, 85, 247, 0.3);
 }
 
+/* РЕКЛАМА */
+.sidebar-left, .sidebar-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: sticky;  /* ← Замість fixed */
+    top: 120px;        /* ← Починають "прилипати" коли доскролиш */
+    height: fit-content;
+    align-self: start;
+}
+
+@media (max-width: 1024px) {
+    .sidebar-left, .sidebar-right {
+        position: static !important;
+        top: auto !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+}
+
 /* 🔄 Theme Transition */
 body {
     transition: background-color 0.3s, color 0.3s;
