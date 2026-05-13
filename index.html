@@ -3,44 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="canonical" href="https://pixelcrafttool.com/">
     
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWPWMJK1Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FVWPWMJK1Q');
-</script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWPWMJK1Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FVWPWMJK1Q');
+    </script>
  
-<!-- ✅ FAVICONS & PWA (Complete) -->
-<!-- Standard Favicons -->
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
-<link rel="shortcut icon" href="images/favicon.ico">
+    <!-- FAVICONS & PWA -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="PixelCraft">
 
-<!-- PWA / Web App Manifest -->
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#6366f1">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="PixelCraft">
+    <!-- CSP: дозволено все необхідне -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://storage.ko-fi.com https://daubwhereupon.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self'  blob: https: data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob: https://daubwhereupon.com https://www.google-analytics.com; frame-src https://daubwhereupon.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://storage.ko-fi.com https://daubwhereupon.com https://www.googletagmanager.com https://www.google-analytics.com;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 
-<!-- ✅ STEP 4.1: Content Security Policy (Захист від злому та шкідливих скриптів) -->
-<!-- ✅ STEP 4.1: Content Security Policy (FIXED - дозволено blob) -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://storage.ko-fi.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob:;">
-<!-- ✅ STEP 4.2: Referrer Policy (Не передаємо зайві дані при переході на інші сайти) -->
-<meta name="referrer" content="strict-origin-when-cross-origin">
-
-    <!-- ✅ STEP 2.1: Preconnect (Прискорення підключення до зовнішніх серверів) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- SEO -->
     <title>Pixel Craft Tool — Professional Image Editor (Paid License)</title>
@@ -49,194 +43,508 @@
     <meta name="author" content="PixelCraft">
     <meta name="robots" content="index, follow">
 
-    <!-- ✅ STEP 1.4: Social Meta (OG + Twitter) -->
-<meta property="og:title" content="Pixel Craft Tool — Edit Images Instantly & Privately">
-<meta property="og:description" content="15 professional image tools. No uploads, no watermarks. Works entirely in your browser.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://pixelcraft.tools">
-<meta property="og:image" content="https://pixelcraft.tools/og-image.jpg">
+    <!-- Social Meta -->
+    <meta property="og:title" content="Pixel Craft Tool — Edit Images Instantly & Privately">
+    <meta property="og:description" content="15 professional image tools. No uploads, no watermarks. Works entirely in your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixelcrafttool.com">
+    <meta property="og:image" content="https://pixelcrafttool.com/images/og-image.jpg">
+    <meta property="og:site_name" content="Pixel Craft Tool">
+    <meta property="og:locale" content="en_US">
 
-<!-- Додаткові параметри для кращої відображення -->
-<meta property="og:site_name" content="Pixel Craft Tool">
-<meta property="og:locale" content="en_US">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pixelcrafttool.com/">
+    <meta property="twitter:title" content="Pixel Craft Tool - Professional Image Editor">
+    <meta property="twitter:description" content="15+ free browser-based image tools. No uploads, no watermarks. Works entirely in your browser 100% private.">
+    <meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
 
-        <!-- ✅ STEP 1.2: Hreflang для мультиязичності -->
-    <!--<link rel="alternate" hreflang="en" href="https://pixelcraft.tools/?lang=en">
-    <link rel="alternate" hreflang="uk" href="https://pixelcraft.tools/?lang=uk">
-    <link rel="alternate" hreflang="ru" href="https://pixelcraft.tools/?lang=ru">
-    <link rel="alternate" hreflang="es" href="https://pixelcraft.tools/?lang=es">
-    <link rel="alternate" hreflang="fr" href="https://pixelcraft.tools/?lang=fr">
-    <link rel="alternate" hreflang="de" href="https://pixelcraft.tools/?lang=de">
-    <link rel="alternate" hreflang="pt" href="https://pixelcraft.tools/?lang=pt">
-    <link rel="alternate" hreflang="pl" href="https://pixelcraft.tools/?lang=pl">
-    <link rel="alternate" hreflang="tr" href="https://pixelcraft.tools/?lang=tr">
-    <link rel="alternate" hreflang="zh" href="https://pixelcraft.tools/?lang=zh">
-    <link rel="alternate" hreflang="x-default" href="https://pixelcraft.tools/?lang=en">
-   
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css?v=3">
-    
-    <!-- JSZip (для ZIP завантаження) -->
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PixelCraft Tools",
+      "url": "https://pixelcrafttool.com",
+      "description": "Professional image tools: rename, compress, convert, crop, blur. 100% private.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any"
+    }
+    </script>
+
+    <!-- ✅ ВСІ СТИЛІ В ОДНОМУ МІСЦІ (з твого CSS + адаптація для реклами) -->
+    <style>
+    /* ============================================
+    🎨 PixelCraft Tools — Design System + Ads Layout
+    ============================================ */
+
+    /* CSS Variables */
+    :root {
+        --bg-primary: #f8fafc;
+        --bg-secondary: #ffffff;
+        --bg-glass: rgba(255, 255, 255, 0.7);
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --border-color: #e2e8f0;
+        --primary: #6366f1;
+        --primary-hover: #4f46e5;
+        --secondary: #a855f7;
+        --accent: #06b6d4;
+        --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+        --blur: blur(12px);
+        --radius: 16px;
+        --radius-lg: 24px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .theme-dark, body.dark-mode {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-glass: rgba(30, 41, 59, 0.7);
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --border-color: #334155;
+        --shadow-glow: 0 0 40px rgba(168, 85, 247, 0.3);
+    }
+
+    /* Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+        min-height: 100vh;
+        overflow-x: hidden;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Glassmorphism */
+    .glass {
+        background: var(--bg-glass);
+        backdrop-filter: var(--blur);
+        -webkit-backdrop-filter: var(--blur);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+    }
+
+    /* Animated Background */
+    .bg-animation {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        z-index: -1; overflow: hidden; pointer-events: none;
+    }
+    .blob {
+        position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.5;
+        animation: float 20s infinite ease-in-out;
+    }
+    .blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, #6366f1, #8b5cf6); }
+    .blob-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, #a855f7, #ec4899); animation-delay: -5s; }
+    .blob-3 { top: 40%; left: 40%; width: 300px; height: 300px; background: radial-gradient(circle, #3b82f6, #06b6d4); animation-delay: -10s; }
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+    }
+
+    /* Skip Link */
+    .skip-link {
+        position: absolute; top: -100px; left: 0; background: #6366f1; color: white;
+        padding: 10px 20px; z-index: 9999; transition: top 0.3s; text-decoration: none; font-weight: bold;
+    }
+    .skip-link:focus { top: 10px; }
+
+    /* Header */
+    .header {
+        position: sticky; top: 20px; margin: 20px; padding: 16px 24px; z-index: 50;
+        background: var(--bg-glass); backdrop-filter: blur(10px);
+        border: 1px solid var(--border-color); border-radius: var(--radius-lg);
+    }
+    .header-content { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo {
+        display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.4em;
+        color: var(--text-primary); text-decoration: none; transition: transform 0.3s ease;
+    }
+    .logo:hover { transform: scale(1.05); }
+    .logo img { height: 40px; width: auto; transition: all 0.3s ease; }
+    .nav { display: flex; gap: 24px; }
+    .nav a {
+        color: var(--text-secondary); text-decoration: none; font-weight: 500;
+        padding: 10px 20px; border-radius: 8px; transition: var(--transition); position: relative;
+    }
+    .nav a:hover {
+        background: var(--gradient); color: white; transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    }
+    .nav a::after {
+        content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+        width: 0; height: 2px; background: linear-gradient(90deg, #6366f1, #a855f7);
+        transition: width 0.3s ease;
+    }
+    .nav a:hover::after { width: 80%; }
+
+    /* Theme Toggle */
+    .theme-toggle {
+        width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--border-color);
+        background: var(--bg-secondary); cursor: pointer; display: flex; align-items: center;
+        justify-content: center; font-size: 1.2em; transition: var(--transition);
+    }
+    .theme-toggle .icon-moon { display: none; }
+    .theme-dark .theme-toggle .icon-sun { display: none; }
+    .theme-dark .theme-toggle .icon-moon { display: block; }
+
+    /* Support Button */
+    .btn-support {
+        display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px;
+        background: linear-gradient(135deg, #FF5E5B 0%, #FFA07A 100%); color: white;
+        text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 0.95em;
+        white-space: nowrap; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(255, 94, 91, 0.3);
+        border: none; cursor: pointer;
+    }
+    .btn-support:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 94, 91, 0.4); }
+
+    /* Hero */
+    .hero { padding: 15px 0 30px; text-align: center; }
+    .hero-title {
+        font-size: 3.5em; font-weight: 800; line-height: 1.1; margin-bottom: 24px;
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+    .gradient-text {
+        background: var(--gradient); -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-desc {
+        font-size: 1.3em; color: var(--text-secondary); max-width: 600px;
+        margin: 0 auto 40px; animation: fadeInUp 0.6s ease-out forwards 0.1s both;
+    }
+
+    /* Quick Actions */
+    .quick-actions {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px; max-width: 900px; margin: 0 auto 30px;
+        animation: fadeInUp 0.6s ease-out forwards 0.2s both;
+    }
+    .action-card {
+        padding: 24px 20px; background: var(--bg-secondary); border: 2px solid var(--border-color);
+        border-radius: var(--radius); cursor: pointer; transition: var(--transition);
+        display: flex; flex-direction: column; align-items: center; gap: 12px;
+    }
+    .action-card:hover {
+        border-color: var(--primary); transform: translateY(-4px); box-shadow: var(--shadow-lg);
+    }
+    .theme-dark .action-card {
+        background: linear-gradient(135deg, #f472b6 0%, #c084fc 50%, #e879f9 100%) !important;
+        border: 2px solid rgba(232, 121, 249, 0.3) !important; color: #1a1a2e !important;
+    }
+    .theme-dark .action-card:hover {
+        background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #d946ef 100%) !important;
+        border-color: rgba(232, 121, 249, 0.6) !important;
+        box-shadow: 0 8px 20px rgba(232, 121, 249, 0.4) !important;
+    }
+    .action-icon { font-size: 2em; }
+    .action-card > span:last-child {
+        font-size: 1.15em; font-weight: 700; letter-spacing: 0.02em;
+    }
+
+    /* Privacy Badge */
+    .privacy-badge {
+        display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px;
+        font-weight: 500; color: var(--text-secondary);
+    }
+
+    /* === 3-COLUMN LAYOUT FOR ADS === */
+    .hero-layout-grid {
+        display: grid !important;
+        grid-template-columns: 160px 1fr 160px !important;
+        gap: 20px;
+        align-items: start;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .sidebar-col {
+        display: flex; flex-direction: column; gap: 15px;
+        /* Sidebars scroll naturally — NO sticky/fixed */
+    }
+    .center-col {
+        display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%;
+    }
+
+    /* Ad Slots */
+    .ad-slot {
+        background: rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 8px;
+        display: flex; justify-content: center; align-items: center; overflow: hidden;
+        margin: 10px auto;
+    }
+    .ad-slot.sidebar-ad { width: 160px; min-height: 300px; }
+    .ad-slot.center-ad { width: 100%; max-width: 728px; min-height: 90px; }
+
+    /* Tools Section */
+    .tools-section { padding: 20px 0 40px; }
+    .tool-container {
+        background: var(--bg-secondary); border-radius: var(--radius-lg);
+        padding: 40px; margin: 0 auto; max-width: 900px; min-height: 400px;
+    }
+    .tool-placeholder { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .placeholder-icon { font-size: 4em; display: block; margin-bottom: 20px; }
+
+    /* Stats */
+    .stats { padding: 40px 0; background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
+    .stat-item { padding: 20px; }
+    .stat-number {
+        display: block; font-size: 2.5em; font-weight: 800;
+        background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .stat-label { color: var(--text-secondary); font-size: 0.95em; }
+
+    /* Footer */
+    .footer {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #aaa; padding: 40px 20px; text-align: center; margin-top: 60px;
+    }
+    .footer a { color: #6366f1; text-decoration: none; margin: 0 10px; }
+
+    /* Buttons */
+    .btn-primary {
+        background: var(--primary); color: white; border: none; padding: 14px 32px;
+        border-radius: var(--radius-md); font-weight: 600; cursor: pointer;
+        transition: var(--transition); font-family: inherit; font-size: 1em;
+    }
+    .btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+    /* Tool-specific styles */
+    .tool-header { text-align: center; margin-bottom: 40px; }
+    .tool-header h2 {
+        font-size: 2em; margin-bottom: 10px;
+        background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .upload-area {
+        border: 3px dashed var(--border-color); border-radius: var(--radius-lg);
+        padding: 60px 40px; text-align: center; cursor: pointer; transition: var(--transition);
+        background: var(--bg-secondary); position: relative; overflow: hidden;
+    }
+    .upload-area:hover, .upload-area.dragover {
+        border-color: var(--primary); background: rgba(99, 102, 241, 0.05); transform: translateY(-2px);
+    }
+    .upload-area input[type="file"] {
+        position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0; cursor: pointer;
+    }
+    .upload-icon { font-size: 4em; display: block; margin-bottom: 20px; }
+
+    /* Canvas/Preview */
+    canvas {
+        max-width: 100%; height: auto; background: white; border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: block;
+    }
+    #selectionArea {
+        background:
+            linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+            linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+            linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+        background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        background-color: white; border: 2px solid var(--border-color); border-radius: 8px; min-height: 300px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+    :focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+
+    /* Scroll margin for anchor links */
+    #how, #tools, #home { scroll-margin-top: 110px; }
+
+    /* === MOBILE RESPONSIVE === */
+    @media (max-width: 1024px) {
+        .hero-layout-grid { grid-template-columns: 1fr !important; }
+        .sidebar-right { display: none !important; }
+        .sidebar-left {
+            position: relative !important; top: 0 !important;
+            flex-direction: row !important; flex-wrap: wrap !important;
+            justify-content: center !important; order: -1 !important;
+        }
+        .ad-slot { min-height: auto !important; width: 100% !important; max-width: 320px !important; }
+        .hero-title { font-size: 2.5em; }
+        .quick-actions { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+    }
+
+    @media (max-width: 768px) {
+        .header { margin: 10px; padding: 12px 16px; }
+        .header-content { flex-wrap: wrap; gap: 16px; }
+        .nav { order: 3; width: 100%; justify-content: center; padding-top: 16px; border-top: 1px solid var(--border-color); }
+        .hero-title { font-size: 2em; }
+        .hero-desc { font-size: 1.1em; }
+        .tool-container { padding: 24px; }
+        .quick-actions { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+        .ad-slot.center-ad[style*="728px"],
+        .ad-slot.center-ad[style*="468px"] { display: none !important; }
+        .sidebar-left { flex-direction: column !important; }
+        .quick-actions { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+        .hero-title { font-size: 1.8em; }
+        .action-card > span:last-child { font-size: 1em; }
+    }
+
+    /* Hide language selector temporarily */
+    .lang-selector { display: none !important; }
+    </style>
+
+    <!-- JSZip -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-
-      <!-- ✅ STEP 1.1: Canonical URL -->
-<link rel="canonical" href="https://pixelcraft.tools/">
-
-<!-- ✅ STEP 1.3: JSON-LD Structured Data (Schema.org) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "PixelCraft Tools",
-  "url": "https://pixelcraft.tools",
-  "image": "https://pixelcraft.tools/og-image.jpg",
-  "description": "Professional image tools: rename, compress, convert, crop, blur. 100% private, works in your browser. No uploads.",
-  "applicationCategory": "MultimediaApplication",
-  "operatingSystem": "Any",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "description": "Free to use in browser. Commercial license required for business use."
-  }
-}
-</script>
 </head>
 
 <body class="theme-light">
-    <!-- ✅ STEP 3.1: Skip Link (Для навігації клавіатурою) -->
-<a href="#home" class="skip-link">Перейти до основного змісту</a>
+    <!-- Skip Link -->
+    <a href="#home" class="skip-link">Перейти до основного змісту</a>
     
-    <!-- 🌟 Animated Background -->
+    <!-- Background Animation -->
     <div class="bg-animation">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
     </div>
 
-    <!-- 🚀 Header -->
+    <!-- Header -->
     <header class="header glass">
         <div class="container header-content">
-            
-            <!-- Logo -->
-            <!-- Стало: Логотип з картинкою -->
-<a href="#home" class="logo" style="text-decoration: none;">
-    <img src="images/logo.png" alt="PixelCraft Tools — Cat-free online image editor" style="height: 40px; width: auto;">
-</a>
-
-            <!-- Navigation -->
+            <a href="#home" class="logo" style="text-decoration: none;">
+                <img src="images/logo.png" alt="PixelCraft Tools" style="height: 40px; width: auto;">
+            </a>
             <nav class="nav">
                 <a href="#home" data-i18n="nav_home">Home</a>
                 <a href="#tools" data-i18n="nav_tools">Tools</a>
                 <a href="#how" data-i18n="nav_how">How it works</a>
                 <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
             </nav>
-
-            <!-- Right side: Theme + Support + Language -->
             <div style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
-                
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"
-                        style="background: transparent; border: 2px solid var(--border-color); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.3em;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <span class="icon-sun">☀️</span>
                     <span class="icon-moon">🌙</span>
                 </button>
-                
-                <!-- Support Button -->
-<a href="https://ko-fi.com/modul1" target="_blank" 
-   class="btn-support" 
-   style="
-       display: inline-flex;
-       align-items: center;
-       gap: 8px;
-       padding: 12px 24px;
-       background: linear-gradient(135deg, #FF5E5B 0%, #FFA07A 100%);
-       color: white;
-       text-decoration: none;
-       border-radius: 12px;
-       font-weight: 600;
-       font-size: 0.95em;
-       white-space: nowrap;
-       transition: all 0.3s ease;
-       box-shadow: 0 4px 12px rgba(255, 94, 91, 0.3);
-       border: none;
-       cursor: pointer;
-   "
-   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255, 94, 91, 0.4)'"
-   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(255, 94, 91, 0.3)'">
-    <span style="font-size: 1.2em;">☕</span>
-    <span>Buy Me a Coffee</span>
-</a>
-
-                <!-- Language Selector -->
-                <!-- <div class="lang-selector">
-                    <select id="langSelect" aria-label="Select language"
-                            style="padding: 10px 14px; border: 2px solid var(--border-color); border-radius: 12px; background: var(--bg-secondary); color: var(--text-primary); font-family: inherit; font-size: 0.95em; cursor: pointer; min-width: 85px;">
-                        <option value="en">🇬🇧 EN</option>
-                        <option value="uk">🇺🇦 UA</option>
-                        <option value="ru">🇷🇺 RU</option>
-                        <option value="es">🇪🇸 ES</option>
-                        <option value="fr">🇫🇷 FR</option>
-                        <option value="de">🇩🇪 DE</option>
-                        <option value="pt">🇵🇹 PT</option>
-                        <option value="pl">🇵🇱 PL</option>
-                        <option value="tr">🇹🇷 TR</option>
-                        <option value="zh">🇨🇳 ZH</option>
-                    </select>
-                </div>
+                <a href="https://ko-fi.com/modul1" target="_blank" class="btn-support">
+                    <span style="font-size: 1.2em;">☕</span>
+                    <span>Buy Me a Coffee</span>
+                </a>
             </div>
-            -->
         </div>
     </header>
 
-    <!-- 🎯 Hero Section -->
-    <!-- ✅ STEP 3.4: Головний контент -->
+    <!-- 🏠 HERO SECTION: 3 Columns + ALL BANNERS -->
     <section id="home" class="hero" role="main">
-        <div class="container">
-            <h1 class="hero-title" data-i18n="hero_title">
-                Edit Images <span class="gradient-text">Instantly</span> & <span class="gradient-text">Privately</span>
-            </h1>
-            <p class="hero-desc" data-i18n="hero_desc">
-                Professional image tools that work entirely in your browser. 
-                No uploads, no watermarks, no compromises.
-            </p>
+        <div class="hero-layout-grid">
             
-            <!-- Quick Actions (15 Tools) -->
-            <div class="quick-actions" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
-                <button class="action-card" onclick="loadTool('rename')"><span class="action-icon">📁</span><span>Renamer</span></button>
-                <button class="action-card" onclick="loadTool('compress')"><span class="action-icon">🗜️</span><span>Compress</span></button>
-                <button class="action-card" onclick="loadTool('convert')"><span class="action-icon">🔄</span><span>Converter</span></button>
-                <button class="action-card" onclick="loadTool('resize')"><span class="action-icon">📏</span><span>Resizer</span></button>
-                <button class="action-card" onclick="loadTool('corners')"><span class="action-icon">🖼️</span><span>Corners</span></button>
-                <button class="action-card" onclick="loadTool('watermark')"><span class="action-icon">💧</span><span>Watermark</span></button>
-                <button class="action-card" onclick="loadTool('faces')"><span class="action-icon">🙈</span><span>Hide Faces</span></button>
-                <button class="action-card" onclick="loadTool('video')"><span class="action-icon">🎥</span><span>Video</span></button>
-                <button class="action-card" onclick="loadTool('blur')"><span class="action-icon">🔲</span><span>Blur</span></button>
-                <button class="action-card" onclick="loadTool('crop')"><span class="action-icon">✂️</span><span>Crop</span></button>
-                <button class="action-card" onclick="loadTool('rotate')"><span class="action-icon">↺</span><span>Rotate</span></button>
-                <button class="action-card" onclick="loadTool('faceExtract')"><span class="action-icon">👤</span><span>Face Extract</span></button>
-                <button class="action-card" onclick="loadTool('protect')"><span class="action-icon">🔒</span><span>Protect</span></button>
-                <button class="action-card" onclick="loadTool('gif')"><span class="action-icon">🎬</span><span>GIF Split</span></button>
-                <button class="action-card" onclick="loadTool('font')"><span class="action-icon">🔤</span><span>Fonts</span></button>
-            </div>
-            
-            <!-- Privacy Badge (FIXED) -->
-            <div class="privacy-badge glass">
-                <span class="badge-icon">🔐</span>
-                <span data-i18n="privacy_badge">Your files never leave your device</span>
-            </div>
+            <!-- 🔷 LEFT SIDEBAR (scrolls naturally) -->
+            <aside class="sidebar-col sidebar-left">
+                <div class="ad-slot sidebar-ad">
+                    <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
+                </div>
+                <div class="ad-slot sidebar-ad">
+                    <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
+                </div>
+            </aside>
+
+            <!-- 🔷 CENTER CONTENT -->
+            <main class="center-col">
+                <!-- Banner 728x90 (Top) -->
+                <div class="ad-slot center-ad">
+                    <script>atOptions={'key':'205524dc89db034ed70eb6d3c5dfc0ac','format':'iframe','height':90,'width':728,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/205524dc89db034ed70eb6d3c5dfc0ac/invoke.js"></script>
+                </div>
+
+                <h1 class="hero-title" data-i18n="hero_title">
+                    Edit Images <span class="gradient-text">Instantly</span> & <span class="gradient-text">Privately</span>
+                </h1>
+                <p class="hero-desc" data-i18n="hero_desc">
+                    Professional image tools that work entirely in your browser.<br>
+                    No uploads, no watermarks, no compromises.
+                </p>
+                
+                <!-- 15 Tools Buttons -->
+                <div class="quick-actions">
+                    <button class="action-card" onclick="loadTool('rename')"><span class="action-icon">📁</span><span>Renamer</span></button>
+                    <button class="action-card" onclick="loadTool('compress')"><span class="action-icon">🗜️</span><span>Compress</span></button>
+                    <button class="action-card" onclick="loadTool('convert')"><span class="action-icon">🔄</span><span>Converter</span></button>
+                    <button class="action-card" onclick="loadTool('resize')"><span class="action-icon">📏</span><span>Resizer</span></button>
+                    <button class="action-card" onclick="loadTool('corners')"><span class="action-icon">🖼️</span><span>Corners</span></button>
+                    <button class="action-card" onclick="loadTool('watermark')"><span class="action-icon">💧</span><span>Watermark</span></button>
+                    <button class="action-card" onclick="loadTool('faces')"><span class="action-icon">🙈</span><span>Hide Faces</span></button>
+                    <button class="action-card" onclick="loadTool('video')"><span class="action-icon">🎥</span><span>Video</span></button>
+                    <button class="action-card" onclick="loadTool('blur')"><span class="action-icon">🔲</span><span>Blur</span></button>
+                    <button class="action-card" onclick="loadTool('crop')"><span class="action-icon">✂️</span><span>Crop</span></button>
+                    <button class="action-card" onclick="loadTool('rotate')"><span class="action-icon">↺</span><span>Rotate</span></button>
+                    <button class="action-card" onclick="loadTool('faceExtract')"><span class="action-icon">👤</span><span>Face Extract</span></button>
+                    <button class="action-card" onclick="loadTool('protect')"><span class="action-icon">🔒</span><span>Protect</span></button>
+                    <button class="action-card" onclick="loadTool('gif')"><span class="action-icon">🎬</span><span>GIF Split</span></button>
+                    <button class="action-card" onclick="loadTool('font')"><span class="action-icon">🔤</span><span>Fonts</span></button>
+                </div>
+
+                <!-- Banner 320x50 (Mobile) -->
+                <div class="ad-slot center-ad" style="max-width:320px; min-height:50px; margin:15px auto;">
+                    <script>atOptions={'key':'fddf2b3e9b3ffbd9f006cc62e9537775','format':'iframe','height':50,'width':320,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js"></script>
+                </div>
+
+                <!-- Privacy Badge -->
+                <div class="privacy-badge glass">
+                    <span class="badge-icon">🔐</span>
+                    <span data-i18n="privacy_badge">Your files never leave your device</span>
+                </div>
+
+                <!-- Banner 468x60 -->
+                <div class="ad-slot center-ad" style="max-width:468px; min-height:60px; margin:15px auto;">
+                    <script>atOptions={'key':'9e4c2f9f08b132bae32b4875e30fa906','format':'iframe','height':60,'width':468,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js"></script>
+                </div>
+
+                <!-- Banner 300x250 -->
+                <div class="ad-slot center-ad" style="max-width:300px; min-height:250px; margin:25px auto;">
+                    <script>atOptions={'key':'a5f29426fb5495e569d6d182b6509a9c','format':'iframe','height':250,'width':300,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
+                </div>
+            </main>
+
+            <!-- 🔷 RIGHT SIDEBAR (scrolls naturally) -->
+            <aside class="sidebar-col sidebar-right">
+                <div class="ad-slot sidebar-ad">
+                    <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
+                </div>
+                <div class="ad-slot sidebar-ad">
+                    <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
+                </div>
+            </aside>
         </div>
     </section>
 
-    <!-- 🛠️ Tools Section (ОБОВ'ЯЗКОВО - тут завантажуються інструменти) -->
-    <section id="tools" class="tools-section">
+    <!-- 🛠️ TOOLS SECTION -->
+    <section id="tools" class="tools-section" style="display: none;">
         <div class="container">
             <div id="tool-container" class="tool-container glass">
                 <div class="tool-placeholder">
@@ -248,26 +556,25 @@
     </section>
 
     <!-- 📊 Stats Section -->
-<section class="stats">
-    <div class="container stats-grid">
-        <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label" data-i18n="stat_client">Client-side processing</span>
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label" data-i18n="stat_client">Client-side processing</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">0</span>
+                <span class="stat-label" data-i18n="stat_uploads">Files uploaded to server</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">⚡</span>
+                <span class="stat-label">Instant Processing</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">🔒</span>
+                <span class="stat-label">Zero Data Storage</span>
+            </div>
         </div>
-        <div class="stat-item">
-            <span class="stat-number">0</span>
-            <span class="stat-label" data-i18n="stat_uploads">Files uploaded to server</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">⚡</span>
-            <span class="stat-label">Instant Processing</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">🔒</span>
-            <span class="stat-label">Zero Data Storage</span>
-        </div>
-    </div>
-</section>
     </section>
 
     <!-- ℹ️ How It Works Section -->
@@ -287,129 +594,56 @@
         </div>
     </section>
     
- <!-- 🔒 Footer - Paid License (Fixed) -->
-<footer class="footer" style="
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #aaa;
-    padding: 30px 20px 15px;
-    margin-top: 40px;
-    font-size: 0.9em;
-">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-        
-        <!-- Brand -->
-        <div style="text-align: center; margin-bottom: 20px;">
-            <span style="font-weight: 700; color: #fff; margin-left: 15px;">Pixel Craft Tool</span>
-        </div>
-        
-        <!-- PAID LICENSE Warning -->
-        <div style="
-            background: rgba(112, 214, 11, 0.15); 
-            padding: 20px 25px; 
-            border-radius: 10px; 
-            margin-bottom: 20px;
-            border: 2px solid #25bdeb;
-            text-align: center;
-        ">
-            <p style="margin: 0 0 10px 0; font-weight: 700; color: #0fb349; font-size: 1.05em;">
-                🔒 COMMERCIAL LICENSE ONLY
-            </p>
-            <p style="margin: 0; line-height: 1.6; font-size: 0.9em;">
-                This software is distributed under a <strong>paid commercial license only</strong>. 
-                Unauthorized copying, redistribution, or use without a valid license is strictly prohibited. 
-                Each installation requires a separate paid license. Franchise and reseller distribution 
-                require explicit written permission. Violations will result in legal action.
-            </p>
-        </div>
-        
-        <!-- License Tiers -->
-        <div style="
-            background: rgba(99, 102, 241, 0.1); 
-            padding: 15px 20px; 
-            border-radius: 10px; 
-            margin-bottom: 20px;
-            text-align: center;
-        ">
-            <p style="margin: 0 0 12px 0; font-weight: 600; color: #fff;">
-                📋 Available Licenses:
-            </p>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-                <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;">
-                    <strong style="color: #6366f1;">Personal</strong> — Single user
-                </span>
-                <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;">
-                    <strong style="color: #6366f1;">Commercial</strong> — Business use
-                </span>
-                <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;">
-                    <strong style="color: #6366f1;">Enterprise</strong> — Custom terms
-                </span>
+    <!-- 🔒 Footer -->
+    <footer class="footer">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <span style="font-weight: 700; color: #fff;">Pixel Craft Tool</span>
+            </div>
+            <div style="background: rgba(112, 214, 11, 0.15); padding: 20px 25px; border-radius: 10px; margin-bottom: 20px; border: 2px solid #25bdeb; text-align: center;">
+                <p style="margin: 0 0 10px 0; font-weight: 700; color: #0fb349; font-size: 1.05em;">🔒 COMMERCIAL LICENSE ONLY</p>
+                <p style="margin: 0; line-height: 1.6; font-size: 0.9em;">This software is distributed under a <strong>paid commercial license only</strong>. Unauthorized copying, redistribution, or use without a valid license is strictly prohibited. Each installation requires a separate paid license. Franchise and reseller distribution require explicit written permission. Violations will result in legal action.</p>
+            </div>
+            <div style="background: rgba(99, 102, 241, 0.1); padding: 15px 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                <p style="margin: 0 0 12px 0; font-weight: 600; color: #fff;">📋 Available Licenses:</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;"><strong style="color: #6366f1;">Personal</strong> — Single user</span>
+                    <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;"><strong style="color: #6366f1;">Commercial</strong> — Business use</span>
+                    <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;"><strong style="color: #6366f1;">Enterprise</strong> — Custom terms</span>
+                </div>
+            </div>
+            <p style="background: rgba(255, 193, 7, 0.1); color: #fcd34d; padding: 12px 15px; border-radius: 8px; font-size: 0.85em; margin-bottom: 20px; border-left: 3px solid #ffc107; text-align: center;">⚠️ <strong>License Verification:</strong> This software includes license verification. Use without a valid paid license violates copyright law.</p>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <a href="terms.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+                <span style="color: #555;">|</span>
+                <a href="privacy.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+                <span style="color: #555;">|</span>
+                <a href="license.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">License Agreement</a>
+                <span style="color: #555;">|</span>
+                <a href="mailto:hello@pixelcrafttool.com" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Purchase License</a>
+            </div>
+            <div style="text-align: center; padding-top: 10px;">
+                <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 1.00em;">Made with ❤️ for creators</p>
+                <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">Pixel Craft Tool Technologies.</p>
+                <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">Version <span id="appVersion">2.0.0</span> | Licensed Software — Not Free</p>
+                <p style="margin: 8px 0 0 0; color: #ffffff; font-size: 1.00em; border-top: none;">© 2026 <strong>Pixel Craft Tool</strong>. All rights reserved worldwide.</p>
             </div>
         </div>
-        
-        <!-- Warning -->
-        <p style="
-            background: rgba(255, 193, 7, 0.1); 
-            color: #fcd34d; 
-            padding: 12px 15px; 
-            border-radius: 8px; 
-            font-size: 0.85em;
-            margin-bottom: 20px;
-            border-left: 3px solid #ffc107;
-            text-align: center;
-        ">
-            ⚠️ <strong>License Verification:</strong> This software includes license verification. 
-            Use without a valid paid license violates copyright law.
-        </p>
+        <script>document.getElementById('appVersion').textContent = '2.0.0';</script>
+    </footer>
 
-        <!-- Legal Links -->
-        <div style="text-align: center; margin-bottom: 15px;">
-            <a href="terms.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-            <span style="color: #555;">|</span>
-            <a href="privacy.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
-            <span style="color: #555;">|</span>
-            <a href="license.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">License Agreement</a>
-            <span style="color: #555;">|</span>
-            <a href="mailto:hello@pixelcraft.tools" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Purchase License</a>
-        </div>
-        
-        <!-- Bottom Bar - COMPACT (FIXED) -->
-        <div style="text-align: center; padding-top: 10px;">
-            <!-- ❤️ Heart line - minimal spacing -->
-            <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 1.00em;">
-                Made with ❤️ for creators
-            </p>
-            <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">
-                Pixel Craft Tool Technologies.
-            </p>
-            <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">
-                Version <span id="appVersion">2.0.0</span> | Licensed Software — Not Free
-            </p>
-            <!-- ✅ Copyright - NO border-top (FIXED) -->
-            <p style="margin: 8px 0 0 0; color: #ffffff; font-size: 1.00em; border-top: none;">
-                © 2026 <strong>Pixel Craft Tool</strong>. All rights reserved worldwide.
-            </p>
-        </div>
-        
-    </div>
-    
+    <!-- ✅ MAIN JS FILES (load BEFORE ads to avoid conflicts) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+    <script src="js/tools.js?v=2" defer></script>
+    <script src="js/app.js?v=2" defer></script>
+
+    <!-- ✅ Navigation & UI Scripts -->
     <script>
-        document.getElementById('appVersion').textContent = '2.0.0';
-    </script>
-</footer>
-
-<!-- Scripts (Original - DO NOT CHANGE) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
-<script src="js/tools.js?v=2" defer></script>
-<script src="js/app.js?v=2" defer></script>
-
-<!-- Smooth Scroll + Show/Hide Functions -->
-<script>
-    // Плавна прокрутка для навігації
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(function(link) {
         link.addEventListener('click', function(e) {
             var targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
             e.preventDefault();
             var target = document.querySelector(targetId);
             if (target) {
@@ -417,63 +651,81 @@
             }
         });
     });
-    
-    // Показати секцію Tools
+
+    // Show Tools section
     function showTools() {
         document.getElementById('how').style.display = 'none';
         document.getElementById('tools').style.display = 'block';
         document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
     }
-    
-    // Показати секцію How It Works
+
+    // Show How It Works section
     function showHow() {
         document.getElementById('tools').style.display = 'none';
         document.getElementById('how').style.display = 'block';
         document.getElementById('how').scrollIntoView({ behavior: 'smooth' });
     }
-    
-    // Прив'язка кнопки "How it works"
+
+    // Bind "How it works" button
     document.querySelector('a[href="#how"]').addEventListener('click', function(e) {
         e.preventDefault();
         showHow();
     });
-</script>
 
-<!-- Ko-fi Widget -->
-<script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    // Theme Toggle
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('theme-dark');
+    });
 
-<div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:rgba(26,26,46,0.95); color:#fff; padding:15px 20px; display:none; z-index:9999; box-shadow:0 -4px 20px rgba(0,0,0,0.3);">
-  <div class="container" style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
-    <p style="margin:0; font-size:0.9em; flex:1;">
-      🍪 We use cookies to improve the site and analytics. By continuing to use the site, you agree to our
-      <a href="privacy.html" style="color:#a78bfa; text-decoration:underline;">Privacy Policy</a>.
-    </p>
-    <button id="accept-cookies" style="background:#6366f1; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer; font-weight:600;">Accept</button>
-  </div>
-</div>
-<script>
-  if (!localStorage.getItem('cookieConsent')) {
-    document.getElementById('cookie-banner').style.display = 'block';
-  }
-  document.getElementById('accept-cookies').addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'true');
-    document.getElementById('cookie-banner').style.display = 'none';
-  });
-</script>
- 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://pixelcrafttool.com/">
-<meta property="og:title" content="Pixel Craft Tool - Professional Image Editor">
-<meta property="og:description" content="15+ free browser-based image tools. No uploads, 100% private.">
-<meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
+    // Ensure loadTool is globally available (fix for ad conflicts)
+    if (typeof window.loadTool !== 'function') {
+        window.loadTool = function(toolName) {
+            console.log('Loading tool:', toolName);
+            var toolsSection = document.getElementById('tools');
+            var toolContainer = document.getElementById('tool-container');
+            if (toolsSection && toolContainer) {
+                toolsSection.style.display = 'block';
+                setTimeout(function() {
+                    toolsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        };
+    }
+    </script>
 
-<!-- Twitter Card --> 
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://pixelcrafttool.com/">
-<meta property="twitter:title" content="Pixel Craft Tool - Professional Image Editor">
-<meta property="twitter:description" content="15+ free browser-based image tools. No uploads, no watermarks. Works entirely in your browser 100% private.">
-<meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
-<iframe src="https://revolvermaps2.com/widget/d1e30699-77a1-4e20-bf44-18906a1fc4f9" width="320" height="320" style="border:0;" loading="lazy"></iframe>
+    <!-- Ko-fi Widget -->
+    <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:rgba(26,26,46,0.95); color:#fff; padding:15px 20px; display:none; z-index:9999; box-shadow:0 -4px 20px rgba(0,0,0,0.3);">
+      <div class="container" style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+        <p style="margin:0; font-size:0.9em; flex:1;">
+          🍪 We use cookies to improve the site and analytics. By continuing to use the site, you agree to our
+          <a href="privacy.html" style="color:#a78bfa; text-decoration:underline;">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies" style="background:#6366f1; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer; font-weight:600;">Accept</button>
+      </div>
+    </div>
+    <script>
+      if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+      document.getElementById('accept-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+      });
+    </script>
+
+    <!-- ⚠️ AD SCRIPTS — LOADED LAST TO NOT BLOCK MAIN JS -->
+    <script src="https://daubwhereupon.com/4c/47/09/4c4709843b623f25c474accca1abc4ae.js"></script>
+    <script src="https://daubwhereupon.com/ed/98/cf/ed98cf0ad9e7625589fea17f1d68d91b.js"></script>
+    <script async="async" data-cfasync="false" src="https://daubwhereupon.com/4845853b50959d706e3074623425da77/invoke.js"></script>
+    <script src="https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js"></script>
+    <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
+    <script src="https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js"></script>
+    <script src="https://daubwhereupon.com/205524dc89db034ed70eb6d3c5dfc0ac/invoke.js"></script>
+    <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
+    <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
 </body>
 </html>
