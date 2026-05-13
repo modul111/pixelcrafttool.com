@@ -187,6 +187,33 @@ body {
     --shadow-glow: 0 0 40px rgba(168, 85, 247, 0.3);
 }
 
+/* РЕКЛАМА */
+.sidebar-left {
+    position: fixed;
+    left: 20px;
+    top: 120px;
+    z-index: 100;
+    width: 160px;
+}
+
+.sidebar-right {
+    position: fixed;
+    right: 20px;
+    top: 120px;
+    z-index: 100;
+    width: 160px;
+}
+
+/* На мобільних вимкнути */
+@media (max-width: 1024px) {
+    .sidebar-left, .sidebar-right {
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        width: auto !important;
+}
+   
 /* 🔄 Theme Transition */
 body {
     transition: background-color 0.3s, color 0.3s;
