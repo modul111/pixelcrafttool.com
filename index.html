@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://pixelcrafttool.com/">
+    <title>Pixel Craft Tool — Professional Image Editor</title>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWPWMJK1Q"></script>
@@ -13,479 +13,298 @@
       gtag('js', new Date());
       gtag('config', 'G-FVWPWMJK1Q');
     </script>
- 
-    <!-- FAVICONS & PWA -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#6366f1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="PixelCraft">
 
-    <!-- CSP: дозволено все необхідне -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://storage.ko-fi.com https://daubwhereupon.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self'  blob: https: data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob: https://daubwhereupon.com https://www.google-analytics.com; frame-src https://daubwhereupon.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://storage.ko-fi.com https://daubwhereupon.com https://www.googletagmanager.com https://www.google-analytics.com;">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://storage.ko-fi.com https://daubwhereupon.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob: https://daubwhereupon.com https://www.google-analytics.com; frame-src https://daubwhereupon.com;">
 
-    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <!-- SEO -->
-    <title>Pixel Craft Tool — Professional Image Editor (Paid License)</title>
-    <meta name="description" content="Professional image tools: rename, compress, convert, crop, blur. 100% private, works in your browser. No uploads, no watermarks.">
-    <meta name="keywords" content="image editor, rename images, compress photos, convert format, crop images, blur tool, privacy editor, batch tools">
-    <meta name="author" content="PixelCraft">
-    <meta name="robots" content="index, follow">
-
-    <!-- Social Meta -->
-    <meta property="og:title" content="Pixel Craft Tool — Edit Images Instantly & Privately">
-    <meta property="og:description" content="15 professional image tools. No uploads, no watermarks. Works entirely in your browser.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pixelcrafttool.com">
-    <meta property="og:image" content="https://pixelcrafttool.com/images/og-image.jpg">
-    <meta property="og:site_name" content="Pixel Craft Tool">
-    <meta property="og:locale" content="en_US">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pixelcrafttool.com/">
-    <meta property="twitter:title" content="Pixel Craft Tool - Professional Image Editor">
-    <meta property="twitter:description" content="15+ free browser-based image tools. No uploads, no watermarks. Works entirely in your browser 100% private.">
-    <meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
-
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PixelCraft Tools",
-      "url": "https://pixelcrafttool.com",
-      "description": "Professional image tools: rename, compress, convert, crop, blur. 100% private.",
-      "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Any"
-    }
-    </script>
-
-    <!-- ✅ ВСІ СТИЛІ В ОДНОМУ МІСЦІ (з твого CSS + адаптація для реклами) -->
     <style>
-    /* ============================================
-    🎨 PixelCraft Tools — Design System + Ads Layout
-    ============================================ */
-
-    /* CSS Variables */
     :root {
-        --bg-primary: #f8fafc;
-        --bg-secondary: #ffffff;
-        --bg-glass: rgba(255, 255, 255, 0.7);
+        --primary: #6366f1;
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8fafc;
         --text-primary: #1e293b;
         --text-secondary: #64748b;
         --border-color: #e2e8f0;
-        --primary: #6366f1;
-        --primary-hover: #4f46e5;
-        --secondary: #a855f7;
-        --accent: #06b6d4;
-        --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
-        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
-        --blur: blur(12px);
-        --radius: 16px;
-        --radius-lg: 24px;
-        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
 
-    .theme-dark, body.dark-mode {
+    body.dark-mode {
         --bg-primary: #0f172a;
         --bg-secondary: #1e293b;
-        --bg-glass: rgba(30, 41, 59, 0.7);
         --text-primary: #f1f5f9;
         --text-secondary: #94a3b8;
         --border-color: #334155;
-        --shadow-glow: 0 0 40px rgba(168, 85, 247, 0.3);
     }
 
-    /* Base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: 'Inter', sans-serif;
         background: var(--bg-primary);
         color: var(--text-primary);
         line-height: 1.6;
-        min-height: 100vh;
-        overflow-x: hidden;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
-    /* Glassmorphism */
-    .glass {
-        background: var(--bg-glass);
-        backdrop-filter: var(--blur);
-        -webkit-backdrop-filter: var(--blur);
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-lg);
     }
 
-    /* Animated Background */
-    .bg-animation {
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-        z-index: -1; overflow: hidden; pointer-events: none;
-    }
-    .blob {
-        position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.5;
-        animation: float 20s infinite ease-in-out;
-    }
-    .blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, #6366f1, #8b5cf6); }
-    .blob-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, #a855f7, #ec4899); animation-delay: -5s; }
-    .blob-3 { top: 40%; left: 40%; width: 300px; height: 300px; background: radial-gradient(circle, #3b82f6, #06b6d4); animation-delay: -10s; }
-    @keyframes float {
-        0%, 100% { transform: translate(0, 0) scale(1); }
-        33% { transform: translate(30px, -50px) scale(1.1); }
-        66% { transform: translate(-20px, 20px) scale(0.9); }
-    }
-
-    /* Skip Link */
-    .skip-link {
-        position: absolute; top: -100px; left: 0; background: #6366f1; color: white;
-        padding: 10px 20px; z-index: 9999; transition: top 0.3s; text-decoration: none; font-weight: bold;
-    }
-    .skip-link:focus { top: 10px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* Header */
     .header {
-        position: sticky; top: 20px; margin: 20px; padding: 16px 24px; z-index: 50;
-        background: var(--bg-glass); backdrop-filter: blur(10px);
-        border: 1px solid var(--border-color); border-radius: var(--radius-lg);
+        position: sticky; top: 0; z-index: 1000;
+        background: rgba(255,255,255,0.9);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color);
     }
-    .header-content { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    body.dark-mode .header { background: rgba(15,23,42,0.9); }
+
+    .header-content {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 15px 20px; gap: 20px;
+    }
+
     .logo {
-        display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.4em;
-        color: var(--text-primary); text-decoration: none; transition: transform 0.3s ease;
+        font-size: 1.8em; font-weight: 800;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
     }
-    .logo:hover { transform: scale(1.05); }
-    .logo img { height: 40px; width: auto; transition: all 0.3s ease; }
-    .nav { display: flex; gap: 24px; }
+
+    .nav { display: flex; gap: 30px; }
     .nav a {
-        color: var(--text-secondary); text-decoration: none; font-weight: 500;
-        padding: 10px 20px; border-radius: 8px; transition: var(--transition); position: relative;
+        color: var(--text-primary);
+        text-decoration: none;
+        font-weight: 500;
     }
-    .nav a:hover {
-        background: var(--gradient); color: white; transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-    }
-    .nav a::after {
-        content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-        width: 0; height: 2px; background: linear-gradient(90deg, #6366f1, #a855f7);
-        transition: width 0.3s ease;
-    }
-    .nav a:hover::after { width: 80%; }
+    .nav a:hover { color: var(--primary); }
 
-    /* Theme Toggle */
-    .theme-toggle {
-        width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--border-color);
-        background: var(--bg-secondary); cursor: pointer; display: flex; align-items: center;
-        justify-content: center; font-size: 1.2em; transition: var(--transition);
-    }
-    .theme-toggle .icon-moon { display: none; }
-    .theme-dark .theme-toggle .icon-sun { display: none; }
-    .theme-dark .theme-toggle .icon-moon { display: block; }
-
-    /* Support Button */
-    .btn-support {
-        display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px;
-        background: linear-gradient(135deg, #FF5E5B 0%, #FFA07A 100%); color: white;
-        text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 0.95em;
-        white-space: nowrap; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(255, 94, 91, 0.3);
-        border: none; cursor: pointer;
-    }
-    .btn-support:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 94, 91, 0.4); }
-
-    /* Hero */
-    .hero { padding: 15px 0 30px; text-align: center; }
-    .hero-title {
-        font-size: 3.5em; font-weight: 800; line-height: 1.1; margin-bottom: 24px;
-        animation: fadeInUp 0.6s ease-out forwards;
-    }
-    .gradient-text {
-        background: var(--gradient); -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .hero-desc {
-        font-size: 1.3em; color: var(--text-secondary); max-width: 600px;
-        margin: 0 auto 40px; animation: fadeInUp 0.6s ease-out forwards 0.1s both;
-    }
-
-    /* Quick Actions */
-    .quick-actions {
-        display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 15px; max-width: 900px; margin: 0 auto 30px;
-        animation: fadeInUp 0.6s ease-out forwards 0.2s both;
-    }
-    .action-card {
-        padding: 24px 20px; background: var(--bg-secondary); border: 2px solid var(--border-color);
-        border-radius: var(--radius); cursor: pointer; transition: var(--transition);
-        display: flex; flex-direction: column; align-items: center; gap: 12px;
-    }
-    .action-card:hover {
-        border-color: var(--primary); transform: translateY(-4px); box-shadow: var(--shadow-lg);
-    }
-    .theme-dark .action-card {
-        background: linear-gradient(135deg, #f472b6 0%, #c084fc 50%, #e879f9 100%) !important;
-        border: 2px solid rgba(232, 121, 249, 0.3) !important; color: #1a1a2e !important;
-    }
-    .theme-dark .action-card:hover {
-        background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #d946ef 100%) !important;
-        border-color: rgba(232, 121, 249, 0.6) !important;
-        box-shadow: 0 8px 20px rgba(232, 121, 249, 0.4) !important;
-    }
-    .action-icon { font-size: 2em; }
-    .action-card > span:last-child {
-        font-size: 1.15em; font-weight: 700; letter-spacing: 0.02em;
-    }
-
-    /* Privacy Badge */
-    .privacy-badge {
-        display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px;
-        font-weight: 500; color: var(--text-secondary);
-    }
-
-    /* === 3-COLUMN LAYOUT FOR ADS === */
+    /* Hero Section - 3 Columns */
+    .hero { padding: 60px 20px; }
+    
     .hero-layout-grid {
-        display: grid !important;
-        grid-template-columns: 160px 1fr 160px !important;
+        display: grid;
+        grid-template-columns: 160px 1fr 160px;
         gap: 20px;
         align-items: start;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: left;
     }
-    .sidebar-col {
-        display: flex; flex-direction: column; gap: 15px;
-        /* Sidebars scroll naturally — NO sticky/fixed */
+
+    .sidebar-left, .sidebar-right {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
-    .center-col {
-        display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%;
+
+    .center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 3em;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    .gradient-text {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+        font-size: 1.3em;
+        color: var(--text-secondary);
+        margin-bottom: 40px;
+        max-width: 700px;
+    }
+
+    .quick-actions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+        max-width: 900px;
+        margin: 0 auto 30px;
+    }
+
+    .action-card {
+        background: var(--bg-secondary);
+        border: 2px solid var(--border-color);
+        border-radius: 12px;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .action-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--primary);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    .action-icon { font-size: 2em; }
+
+    .privacy-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--bg-secondary);
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-weight: 600;
+        margin-top: 20px;
     }
 
     /* Ad Slots */
     .ad-slot {
-        background: rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 8px;
-        display: flex; justify-content: center; align-items: center; overflow: hidden;
+        background: rgba(255,255,255,0.05);
+        border-radius: 8px;
+        padding: 8px;
         margin: 10px auto;
+        text-align: center;
     }
-    .ad-slot.sidebar-ad { width: 160px; min-height: 300px; }
-    .ad-slot.center-ad { width: 100%; max-width: 728px; min-height: 90px; }
 
-    /* Tools Section */
-    .tools-section { padding: 20px 0 40px; }
-    .tool-container {
-        background: var(--bg-secondary); border-radius: var(--radius-lg);
-        padding: 40px; margin: 0 auto; max-width: 900px; min-height: 400px;
+    .ad-sidebar { width: 160px; min-height: 300px; }
+    .ad-center { max-width: 728px; min-height: 90px; }
+
+    /* Tools Section - OKREMA STRUKTURA! */
+    .tools-section {
+        display: none; /* Hidden by default */
+        padding: 40px 20px;
+        width: 100%;
     }
-    .tool-placeholder { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+
+    .tools-section.active {
+        display: block;
+    }
+
+    .tools-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .tool-container {
+        background: var(--bg-secondary);
+        border-radius: 16px;
+        padding: 40px;
+        margin-bottom: 30px;
+        min-height: 400px;
+    }
+
+    .tool-placeholder {
+        text-align: center;
+        padding: 60px 20px;
+        color: var(--text-secondary);
+    }
+
     .placeholder-icon { font-size: 4em; display: block; margin-bottom: 20px; }
 
-    /* Stats */
-    .stats { padding: 40px 0; background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
-    .stat-item { padding: 20px; }
-    .stat-number {
-        display: block; font-size: 2.5em; font-weight: 800;
-        background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    .btn-primary {
+        background: var(--primary);
+        color: white;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: inherit;
     }
-    .stat-label { color: var(--text-secondary); font-size: 0.95em; }
+
+    .btn-primary:hover {
+        background: #4f46e5;
+        transform: translateY(-2px);
+    }
+
+    .glass {
+        background: rgba(255,255,255,0.7);
+        backdrop-filter: blur(10px);
+    }
+
+    body.dark-mode .glass { background: rgba(15,23,42,0.7); }
 
     /* Footer */
     .footer {
         background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-        color: #aaa; padding: 40px 20px; text-align: center; margin-top: 60px;
-    }
-    .footer a { color: #6366f1; text-decoration: none; margin: 0 10px; }
-
-    /* Buttons */
-    .btn-primary {
-        background: var(--primary); color: white; border: none; padding: 14px 32px;
-        border-radius: var(--radius-md); font-weight: 600; cursor: pointer;
-        transition: var(--transition); font-family: inherit; font-size: 1em;
-    }
-    .btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-
-    /* Tool-specific styles */
-    .tool-header { text-align: center; margin-bottom: 40px; }
-    .tool-header h2 {
-        font-size: 2em; margin-bottom: 10px;
-        background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .upload-area {
-        border: 3px dashed var(--border-color); border-radius: var(--radius-lg);
-        padding: 60px 40px; text-align: center; cursor: pointer; transition: var(--transition);
-        background: var(--bg-secondary); position: relative; overflow: hidden;
-    }
-    .upload-area:hover, .upload-area.dragover {
-        border-color: var(--primary); background: rgba(99, 102, 241, 0.05); transform: translateY(-2px);
-    }
-    .upload-area input[type="file"] {
-        position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0; cursor: pointer;
-    }
-    .upload-icon { font-size: 4em; display: block; margin-bottom: 20px; }
-
-    /* Canvas/Preview */
-    canvas {
-        max-width: 100%; height: auto; background: white; border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: block;
-    }
-    #selectionArea {
-        background:
-            linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
-            linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
-            linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
-            linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
-        background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-        background-color: white; border: 2px solid var(--border-color); border-radius: 8px; min-height: 300px;
+        color: #aaa;
+        padding: 40px 20px;
+        text-align: center;
+        margin-top: 60px;
     }
 
-    /* Animations */
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Accessibility */
-    @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after {
-            animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-        }
-    }
-    :focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
-
-    /* Scroll margin for anchor links */
-    #how, #tools, #home { scroll-margin-top: 110px; }
-
-    /* === MOBILE RESPONSIVE === */
+    /* Mobile */
     @media (max-width: 1024px) {
-        .hero-layout-grid { grid-template-columns: 1fr !important; }
+        .hero-layout-grid {
+            grid-template-columns: 1fr !important;
+        }
         .sidebar-right { display: none !important; }
         .sidebar-left {
-            position: relative !important; top: 0 !important;
-            flex-direction: row !important; flex-wrap: wrap !important;
-            justify-content: center !important; order: -1 !important;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
         }
-        .ad-slot { min-height: auto !important; width: 100% !important; max-width: 320px !important; }
-        .hero-title { font-size: 2.5em; }
-        .quick-actions { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
-    }
-
-    @media (max-width: 768px) {
-        .header { margin: 10px; padding: 12px 16px; }
-        .header-content { flex-wrap: wrap; gap: 16px; }
-        .nav { order: 3; width: 100%; justify-content: center; padding-top: 16px; border-top: 1px solid var(--border-color); }
+        .ad-sidebar { width: 100%; max-width: 320px; }
         .hero-title { font-size: 2em; }
-        .hero-desc { font-size: 1.1em; }
-        .tool-container { padding: 24px; }
-        .quick-actions { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 600px) {
-        .ad-slot.center-ad[style*="728px"],
-        .ad-slot.center-ad[style*="468px"] { display: none !important; }
+        .ad-center[style*="728px"],
+        .ad-center[style*="468px"] { display: none !important; }
         .sidebar-left { flex-direction: column !important; }
-        .quick-actions { grid-template-columns: 1fr; }
     }
-
-    @media (max-width: 480px) {
-        .hero-title { font-size: 1.8em; }
-        .action-card > span:last-child { font-size: 1em; }
-    }
-
-    /* Hide language selector temporarily */
-    .lang-selector { display: none !important; }
     </style>
-
-    <!-- JSZip -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
 
 <body class="theme-light">
-    <!-- Skip Link -->
-    <a href="#home" class="skip-link">Перейти до основного змісту</a>
-    
-    <!-- Background Animation -->
-    <div class="bg-animation">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
-
     <!-- Header -->
     <header class="header glass">
         <div class="container header-content">
-            <a href="#home" class="logo" style="text-decoration: none;">
-                <img src="images/logo.png" alt="PixelCraft Tools" style="height: 40px; width: auto;">
-            </a>
+            <a href="#home" class="logo">PIXELCRAFT</a>
             <nav class="nav">
-                <a href="#home" data-i18n="nav_home">Home</a>
-                <a href="#tools" data-i18n="nav_tools">Tools</a>
-                <a href="#how" data-i18n="nav_how">How it works</a>
-                <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+                <a href="#home">Home</a>
+                <a href="#" onclick="showToolsFromNav(); return false;">Tools</a>
+                <a href="#how">How it works</a>
+                <a href="privacy.html">Privacy</a>
             </nav>
-            <div style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <span class="icon-sun">☀️</span>
-                    <span class="icon-moon">🌙</span>
-                </button>
-                <a href="https://ko-fi.com/modul1" target="_blank" class="btn-support">
-                    <span style="font-size: 1.2em;">☕</span>
-                    <span>Buy Me a Coffee</span>
-                </a>
+            <div style="display: flex; gap: 12px;">
+                <button class="theme-toggle" onclick="toggleTheme()" style="background: transparent; border: 2px solid var(--border-color); border-radius: 50%; width: 44px; height: 44px; cursor: pointer;">☀️</button>
+                <a href="https://ko-fi.com/modul1" target="_blank" style="background: linear-gradient(135deg, #FF5E5B 0%, #FFA07A 100%); color: white; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 600;">☕ Buy Me a Coffee</a>
             </div>
         </div>
     </header>
 
-    <!-- 🏠 HERO SECTION: 3 Columns + ALL BANNERS -->
-    <section id="home" class="hero" role="main">
+    <!-- 🏠 HERO SECTION (3 Columns with Ads) -->
+    <section id="home" class="hero">
         <div class="hero-layout-grid">
             
-            <!-- 🔷 LEFT SIDEBAR (scrolls naturally) -->
-            <aside class="sidebar-col sidebar-left">
-                <div class="ad-slot sidebar-ad">
+            <!-- Left Sidebar -->
+            <aside class="sidebar-left">
+                <div class="ad-slot ad-sidebar">
                     <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
                     <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
                 </div>
-                <div class="ad-slot sidebar-ad">
+                <div class="ad-slot ad-sidebar">
                     <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
                     <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
                 </div>
             </aside>
 
-            <!-- 🔷 CENTER CONTENT -->
-            <main class="center-col">
-                <!-- Banner 728x90 (Top) -->
-                <div class="ad-slot center-ad">
+            <!-- Center Content -->
+            <main class="center-content">
+                <div class="ad-slot ad-center">
                     <script>atOptions={'key':'205524dc89db034ed70eb6d3c5dfc0ac','format':'iframe','height':90,'width':728,'params':{}};</script>
                     <script src="https://daubwhereupon.com/205524dc89db034ed70eb6d3c5dfc0ac/invoke.js"></script>
                 </div>
 
-                <h1 class="hero-title" data-i18n="hero_title">
-                    Edit Images <span class="gradient-text">Instantly</span> & <span class="gradient-text">Privately</span>
-                </h1>
-                <p class="hero-desc" data-i18n="hero_desc">
-                    Professional image tools that work entirely in your browser.<br>
-                    No uploads, no watermarks, no compromises.
-                </p>
+                <h1 class="hero-title">Edit Images <span class="gradient-text">Instantly</span> & <span class="gradient-text">Privately</span></h1>
+                <p class="hero-desc">Professional image tools that work entirely in your browser.<br>No uploads, no watermarks, no compromises.</p>
                 
-                <!-- 15 Tools Buttons -->
                 <div class="quick-actions">
                     <button class="action-card" onclick="loadTool('rename')"><span class="action-icon">📁</span><span>Renamer</span></button>
                     <button class="action-card" onclick="loadTool('compress')"><span class="action-icon">🗜️</span><span>Compress</span></button>
@@ -504,38 +323,31 @@
                     <button class="action-card" onclick="loadTool('font')"><span class="action-icon">🔤</span><span>Fonts</span></button>
                 </div>
 
-                <!-- Banner 320x50 (Mobile) -->
-                <div class="ad-slot center-ad" style="max-width:320px; min-height:50px; margin:15px auto;">
+                <div class="ad-slot ad-center" style="max-width:320px; min-height:50px;">
                     <script>atOptions={'key':'fddf2b3e9b3ffbd9f006cc62e9537775','format':'iframe','height':50,'width':320,'params':{}};</script>
                     <script src="https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js"></script>
                 </div>
 
-                <!-- Privacy Badge -->
-                <div class="privacy-badge glass">
-                    <span class="badge-icon">🔐</span>
-                    <span data-i18n="privacy_badge">Your files never leave your device</span>
-                </div>
+                <div class="privacy-badge glass">🔐 Your files never leave your device</div>
 
-                <!-- Banner 468x60 -->
-                <div class="ad-slot center-ad" style="max-width:468px; min-height:60px; margin:15px auto;">
+                <div class="ad-slot ad-center" style="max-width:468px; min-height:60px;">
                     <script>atOptions={'key':'9e4c2f9f08b132bae32b4875e30fa906','format':'iframe','height':60,'width':468,'params':{}};</script>
                     <script src="https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js"></script>
                 </div>
 
-                <!-- Banner 300x250 -->
-                <div class="ad-slot center-ad" style="max-width:300px; min-height:250px; margin:25px auto;">
+                <div class="ad-slot ad-center" style="max-width:300px; min-height:250px;">
                     <script>atOptions={'key':'a5f29426fb5495e569d6d182b6509a9c','format':'iframe','height':250,'width':300,'params':{}};</script>
                     <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
                 </div>
             </main>
 
-            <!-- 🔷 RIGHT SIDEBAR (scrolls naturally) -->
-            <aside class="sidebar-col sidebar-right">
-                <div class="ad-slot sidebar-ad">
+            <!-- Right Sidebar -->
+            <aside class="sidebar-right">
+                <div class="ad-slot ad-sidebar">
                     <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
                     <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
                 </div>
-                <div class="ad-slot sidebar-ad">
+                <div class="ad-slot ad-sidebar">
                     <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
                     <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
                 </div>
@@ -543,206 +355,98 @@
         </div>
     </section>
 
-    <!-- 🛠️ TOOLS SECTION -->
-    <section id="tools" class="tools-section" style="display: none;">
-        <div class="container">
+    <!-- 🛠️ TOOLS SECTION (OKREMA STRUKTURA - NE V GRID!) -->
+    <section id="tools" class="tools-section">
+        <div class="tools-wrapper">
             <div id="tool-container" class="tool-container glass">
                 <div class="tool-placeholder">
                     <span class="placeholder-icon">👆</span>
-                    <p data-i18n="select_tool">Select a tool above to get started</p>
+                    <p>Select a tool above to get started</p>
                 </div>
             </div>
+            
+            <!-- Ads in Tools Section -->
+            <div class="ad-slot ad-center" style="max-width:300px; min-height:250px; margin: 20px auto;">
+                <script>atOptions={'key':'a5f29426fb5495e569d6d182b6509a9c','format':'iframe','height':250,'width':300,'params':{}};</script>
+                <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
+            </div>
+            
+            <button class="btn-primary" onclick="backToHome()" style="display: block; margin: 20px auto;">← Back to Home</button>
         </div>
     </section>
 
-    <!-- 📊 Stats Section -->
-    <section class="stats">
-        <div class="container stats-grid">
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <span class="stat-label" data-i18n="stat_client">Client-side processing</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">0</span>
-                <span class="stat-label" data-i18n="stat_uploads">Files uploaded to server</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">⚡</span>
-                <span class="stat-label">Instant Processing</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">🔒</span>
-                <span class="stat-label">Zero Data Storage</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ℹ️ How It Works Section -->
-    <section id="how" class="tools-section" style="display: none;">
-        <div class="container">
-            <div class="tool-container glass" style="text-align: center; padding: 40px;">
-                <h2 style="margin-bottom: 20px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">How PixelCraft Works</h2>
-                <p style="font-size: 1.2em; margin-bottom: 30px;">1️⃣ Choose a tool → 2️⃣ Upload images → 3️⃣ Edit → 4️⃣ Download</p>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
-                    All processing happens entirely in your browser using WebAssembly and Canvas API. 
-                    Your files never leave your device — guaranteed privacy. 🔒
-                </p>
-                <button onclick="showTools()" class="btn-primary" style="margin-top: 30px; max-width: 250px;">
-                    ← Back to Tools
-                </button>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 🔒 Footer -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 20px;">
-                <span style="font-weight: 700; color: #fff;">Pixel Craft Tool</span>
-            </div>
-            <div style="background: rgba(112, 214, 11, 0.15); padding: 20px 25px; border-radius: 10px; margin-bottom: 20px; border: 2px solid #25bdeb; text-align: center;">
-                <p style="margin: 0 0 10px 0; font-weight: 700; color: #0fb349; font-size: 1.05em;">🔒 COMMERCIAL LICENSE ONLY</p>
-                <p style="margin: 0; line-height: 1.6; font-size: 0.9em;">This software is distributed under a <strong>paid commercial license only</strong>. Unauthorized copying, redistribution, or use without a valid license is strictly prohibited. Each installation requires a separate paid license. Franchise and reseller distribution require explicit written permission. Violations will result in legal action.</p>
-            </div>
-            <div style="background: rgba(99, 102, 241, 0.1); padding: 15px 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
-                <p style="margin: 0 0 12px 0; font-weight: 600; color: #fff;">📋 Available Licenses:</p>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-                    <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;"><strong style="color: #6366f1;">Personal</strong> — Single user</span>
-                    <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;"><strong style="color: #6366f1;">Commercial</strong> — Business use</span>
-                    <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;"><strong style="color: #6366f1;">Enterprise</strong> — Custom terms</span>
-                </div>
-            </div>
-            <p style="background: rgba(255, 193, 7, 0.1); color: #fcd34d; padding: 12px 15px; border-radius: 8px; font-size: 0.85em; margin-bottom: 20px; border-left: 3px solid #ffc107; text-align: center;">⚠️ <strong>License Verification:</strong> This software includes license verification. Use without a valid paid license violates copyright law.</p>
-            <div style="text-align: center; margin-bottom: 15px;">
-                <a href="terms.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-                <span style="color: #555;">|</span>
-                <a href="privacy.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
-                <span style="color: #555;">|</span>
-                <a href="license.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">License Agreement</a>
-                <span style="color: #555;">|</span>
-                <a href="mailto:hello@pixelcrafttool.com" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Purchase License</a>
-            </div>
-            <div style="text-align: center; padding-top: 10px;">
-                <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 1.00em;">Made with ❤️ for creators</p>
-                <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">Pixel Craft Tool Technologies.</p>
-                <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">Version <span id="appVersion">2.0.0</span> | Licensed Software — Not Free</p>
-                <p style="margin: 8px 0 0 0; color: #ffffff; font-size: 1.00em; border-top: none;">© 2026 <strong>Pixel Craft Tool</strong>. All rights reserved worldwide.</p>
-            </div>
+        <div class="container">
+            <p><strong>Pixel Craft Tool</strong> © 2026</p>
+            <p style="margin: 10px 0;">
+                <a href="terms.html">Terms</a> | 
+                <a href="privacy.html">Privacy</a> | 
+                <a href="license.html">License</a>
+            </p>
         </div>
-        <script>document.getElementById('appVersion').textContent = '2.0.0';</script>
     </footer>
 
-   <!-- JSZip -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-
-<!-- Main Tools Scripts -->
-<script src="js/tools.js?v=3"></script>
-<script src="js/app.js?v=3"></script>
-
-<!-- ✅ FIX: Ensure loadTool is available immediately -->
-<script>
-// Перевіряємо чи завантажились скрипти
-if (typeof loadTool !== 'function') {
-    console.error('⚠️ tools.js не завантажився! Перевір файл js/tools.js');
+    <!-- Scripts -->
+    <script src="js/tools.js?v=3"></script>
+    <script src="js/app.js?v=3"></script>
     
-    // Fallback функція
-    window.loadTool = function(toolName) {
-        console.log('Fallback: Loading tool:', toolName);
-        var toolsSection = document.getElementById('tools');
-        if (toolsSection) {
-            toolsSection.style.display = 'block';
-            toolsSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-} else {
-    console.log('✅ tools.js завантажився успішно');
-}
-</script>
-
-    <!-- ✅ Navigation & UI Scripts -->
     <script>
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            var targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            e.preventDefault();
-            var target = document.querySelector(targetId);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-
-    // Show Tools section
-    function showTools() {
-        document.getElementById('how').style.display = 'none';
-        document.getElementById('tools').style.display = 'block';
-        document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Show How It Works section
-    function showHow() {
-        document.getElementById('tools').style.display = 'none';
-        document.getElementById('how').style.display = 'block';
-        document.getElementById('how').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Bind "How it works" button
-    document.querySelector('a[href="#how"]').addEventListener('click', function(e) {
-        e.preventDefault();
-        showHow();
-    });
-
     // Theme Toggle
-    document.getElementById('themeToggle').addEventListener('click', function() {
+    function toggleTheme() {
         document.body.classList.toggle('dark-mode');
-        document.body.classList.toggle('theme-dark');
-    });
+    }
 
-    // Ensure loadTool is globally available (fix for ad conflicts)
-    if (typeof window.loadTool !== 'function') {
-        window.loadTool = function(toolName) {
-            console.log('Loading tool:', toolName);
-            var toolsSection = document.getElementById('tools');
-            var toolContainer = document.getElementById('tool-container');
-            if (toolsSection && toolContainer) {
-                toolsSection.style.display = 'block';
-                setTimeout(function() {
-                    toolsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
-            }
-        };
+    // Show Tools Section
+    function loadTool(toolName) {
+        console.log('Loading tool:', toolName);
+        
+        // Hide hero, show tools
+        document.getElementById('home').style.display = 'none';
+        var toolsSection = document.getElementById('tools');
+        toolsSection.classList.add('active');
+        toolsSection.style.display = 'block';
+        
+        // Scroll to tools
+        setTimeout(function() {
+            toolsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+        
+        // Here tools.js should load the actual tool
+        if (typeof window.loadToolInternal === 'function') {
+            window.loadToolInternal(toolName);
+        }
+    }
+
+    // Back to Home
+    function backToHome() {
+        document.getElementById('tools').style.display = 'none';
+        document.getElementById('tools').classList.remove('active');
+        document.getElementById('home').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show tools from nav
+    function showToolsFromNav() {
+        document.getElementById('home').style.display = 'none';
+        var toolsSection = document.getElementById('tools');
+        toolsSection.classList.add('active');
+        toolsSection.style.display = 'block';
+        toolsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Check if scripts loaded
+    if (typeof loadTool !== 'function') {
+        console.error('⚠️ tools.js not loaded!');
+    } else {
+        console.log('✅ tools.js loaded successfully');
     }
     </script>
 
-    <!-- Ko-fi Widget -->
-    <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:rgba(26,26,46,0.95); color:#fff; padding:15px 20px; display:none; z-index:9999; box-shadow:0 -4px 20px rgba(0,0,0,0.3);">
-      <div class="container" style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
-        <p style="margin:0; font-size:0.9em; flex:1;">
-          🍪 We use cookies to improve the site and analytics. By continuing to use the site, you agree to our
-          <a href="privacy.html" style="color:#a78bfa; text-decoration:underline;">Privacy Policy</a>.
-        </p>
-        <button id="accept-cookies" style="background:#6366f1; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer; font-weight:600;">Accept</button>
-      </div>
-    </div>
-    <script>
-      if (!localStorage.getItem('cookieConsent')) {
-        document.getElementById('cookie-banner').style.display = 'block';
-      }
-      document.getElementById('accept-cookies').addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'true');
-        document.getElementById('cookie-banner').style.display = 'none';
-      });
-    </script>
-
-    <!-- ⚠️ AD SCRIPTS — LOADED LAST TO NOT BLOCK MAIN JS -->
+    <!-- Ad Scripts (loaded last) -->
     <script src="https://daubwhereupon.com/4c/47/09/4c4709843b623f25c474accca1abc4ae.js"></script>
     <script src="https://daubwhereupon.com/ed/98/cf/ed98cf0ad9e7625589fea17f1d68d91b.js"></script>
-    <script async="async" data-cfasync="false" src="https://daubwhereupon.com/4845853b50959d706e3074623425da77/invoke.js"></script>
+    <script async src="https://daubwhereupon.com/4845853b50959d706e3074623425da77/invoke.js"></script>
     <script src="https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js"></script>
     <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
     <script src="https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js"></script>
