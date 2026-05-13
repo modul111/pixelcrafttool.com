@@ -65,8 +65,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Styles -->
-<link rel="stylesheet" href="css/style.css?v=3">
+    <!-- CSS для сітки банерів -->
+    <style>
+    .hero-layout-grid {
+        display: grid;
+        grid-template-columns: 160px 1fr 160px;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .sidebar-left, .sidebar-right {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .ad-slot {
+        text-align: center;
+        margin: 15px auto;
+        background: rgba(255,255,255,0.05);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .ad-sidebar { width: 160px; min-height: 300px; }
+    .ad-center { max-width: 728px; }
+    @media (max-width: 1024px) {
+        .hero-layout-grid { grid-template-columns: 1fr !important; }
+        .sidebar-right { display: none !important; }
+        .sidebar-left { flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; order: -1; }
+        .ad-sidebar { width: 100% !important; max-width: 320px !important; }
+    }
+    </style>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=3">
     
     <!-- JSZip -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -423,5 +459,9 @@
     <meta property="twitter:title" content="Pixel Craft Tool - Professional Image Editor">
     <meta property="twitter:description" content="15+ free browser-based image tools. No uploads, no watermarks. Works entirely in your browser 100% private.">
     <meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
+    
+    <!-- Revolver Maps -->
+    <iframe src="https://revolvermaps2.com/widget/d1e30699-77a1-4e20-bf44-18906a1fc4f9" width="320" height="320" style="border:0;" loading="lazy"></iframe>
+
 </body>
 </html>
