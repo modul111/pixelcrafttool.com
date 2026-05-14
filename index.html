@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="canonical" href="https://pixelcrafttool.com/">
     
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWPWMJK1Q"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,62 +15,81 @@
       gtag('config', 'G-FVWPWMJK1Q');
     </script>
  
-    <!-- FAVICONS -->
+    <!-- ✅ FAVICONS & PWA -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
     <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- PWA / Web App Manifest -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="PixelCraft">
 
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- SEO -->
+    <title>Pixel Craft Tool — Professional Image Editor (Paid License)</title>
+    <meta name="description" content="Professional image tools: rename, compress, convert, crop, blur. 100% private, works in your browser. No uploads, no watermarks.">
+    <meta name="keywords" content="image editor, rename images, compress photos, convert format, crop images, blur tool, privacy editor, batch tools">
+    <meta name="author" content="PixelCraft">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social Meta -->
+    <meta property="og:title" content="Pixel Craft Tool — Edit Images Instantly & Privately">
+    <meta property="og:description" content="15 professional image tools. No uploads, no watermarks. Works entirely in your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixelcrafttool.com">
+    <meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
+    <meta property="og:site_name" content="Pixel Craft Tool">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pixelcrafttool.com/">
+    <meta property="og:title" content="Pixel Craft Tool - Professional Image Editor">
+    <meta property="og:description" content="15+ free browser-based image tools. No uploads, no watermarks. Works entirely in your browser 100% private.">
+    <meta property="og:image" content="https://pixelcrafttool.com/images/og-image.png">
+ 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pixelcrafttool.com/">
+    <meta property="twitter:title" content="Pixel Craft Tool - Professional Image Editor">
+    <meta property="twitter:description" content="15+ free browser-based image tools. No uploads, no watermarks. Works entirely in your browser 100% private.">
+    <meta property="twitter:image" content="https://pixelcrafttool.com/images/og-image.png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
-    <!-- ✅ МІНІМАЛЬНИЙ CSS (НЕ КОНФЛІКТУЄ З style.css) -->
+    <!-- CSS для сітки банерів -->
     <style>
-    :root {
-        --primary: #6366f1;
-        --bg-primary: #ffffff;
-        --bg-secondary: #f8fafc;
-        --text-primary: #1e293b;
-        --text-secondary: #64748b;
-        --border-color: #e2e8f0;
-        --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-    body.dark-mode {
-        --bg-primary: #0f172a;
-        --bg-secondary: #1e293b;
-        --text-primary: #f1f5f9;
-        --text-secondary: #94a3b8;
-        --border-color: #334155;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; }
-
-    /* БЕЗПЕЧНА 3-КОЛОНКОВА ОБГОРТКА */
-    .page-layout {
-        display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
+    .hero-layout-grid {
+        display: grid;
+        grid-template-columns: 160px 1fr 160px;
         gap: 20px;
-        align-items: flex-start;
+        margin-top: 30px;
     }
-    .sidebar {
-        width: 160px;
-        flex-shrink: 0;
+    .sidebar-left, .sidebar-right {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
-    .main-area {
-        flex: 1;
-        min-width: 0; /* Запобігає переповненню */
+    .center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     .ad-slot {
         text-align: center;
@@ -79,47 +100,53 @@
     }
     .ad-sidebar { width: 160px; min-height: 300px; }
     .ad-center { max-width: 728px; }
-
-    /* МОБІЛЬНА АДАПТАЦІЯ */
     @media (max-width: 1024px) {
-        .page-layout { flex-direction: column; }
-        .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center; }
-        .ad-sidebar { width: 100%; max-width: 320px; }
-        .hero-title { font-size: 2em !important; }
-        .quick-actions { grid-template-columns: repeat(2, 1fr) !important; }
-    }
-    @media (max-width: 600px) {
-        .quick-actions { grid-template-columns: 1fr !important; }
-        .ad-center[style*="728px"], .ad-center[style*="468px"] { display: none !important; }
+        .hero-layout-grid { grid-template-columns: 1fr !important; }
+        .sidebar-right { display: none !important; }
+        .sidebar-left { flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; order: -1; }
+        .ad-sidebar { width: 100% !important; max-width: 320px !important; }
     }
     </style>
-
-    <!-- ТВОЇ ОРИГІНАЛЬНІ СТИЛІ (НЕ ВИДАЛЯЙ) -->
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css?v=3">
+    
+    <!-- JSZip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
+    <!-- JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "PixelCraft Tools",
       "url": "https://pixelcrafttool.com",
-      "description": "Professional image tools: rename, compress, convert, crop, blur. 100% private.",
+      "image": "https://pixelcrafttool.com/images/og-image.png",
+      "description": "Professional image tools: rename, compress, convert, crop, blur. 100% private, works in your browser. No uploads.",
       "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Any"
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free to use in browser. Commercial license required for business use."
+      }
     }
     </script>
 </head>
 
 <body class="theme-light">
+    <!-- Skip Link -->
     <a href="#home" class="skip-link">Перейти до основного змісту</a>
     
+    <!-- Animated Background -->
     <div class="bg-animation">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
     </div>
 
-    <!-- HEADER (Твій оригінал) -->
+    <!-- Header -->
     <header class="header glass">
         <div class="container header-content">
             <a href="#home" class="logo" style="text-decoration: none;">
@@ -132,189 +159,298 @@
                 <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
             </nav>
             <div style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
-                <button class="theme-toggle" id="themeToggle">☀️</button>
-                <a href="https://ko-fi.com/modul1" target="_blank" class="btn-support">☕ Buy Me a Coffee</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"
+                        style="background: transparent; border: 2px solid var(--border-color); border-radius: 50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.3em;">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+                <a href="https://ko-fi.com/modul1" target="_blank" 
+                   class="btn-support" 
+                   style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: linear-gradient(135deg, #FF5E5B 0%, #FFA07A 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 0.95em; white-space: nowrap; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(255, 94, 91, 0.3); border: none; cursor: pointer;"
+                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255, 94, 91, 0.4)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(255, 94, 91, 0.3)'">
+                    <span style="font-size: 1.2em;">☕</span>
+                    <span>Buy Me a Coffee</span>
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- 🌐 ОСНОВНА СТРУКТУРА -->
-    <div class="page-layout">
-        
-        <!-- 🔷 ЛІВИЙ САЙДБАР -->
-        <aside class="sidebar sidebar-left">
-            <div class="ad-slot ad-sidebar" id="ad-left-top">
-                <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
-                <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
-            </div>
-            <div class="ad-slot ad-sidebar" id="ad-left-bottom">
-                <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
-                <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
-            </div>
-        </aside>
-
-        <!-- 🔷 ЦЕНТР -->
-        <main class="main-area">
+    <!-- 🏠 HERO SECTION -->
+    <section id="home" class="hero" role="main">
+        <div class="hero-layout-grid">
             
-            <!-- Секція Home -->
-            <section id="home" class="hero" role="main">
-                <h1 class="hero-title" data-i18n="hero_title">Edit Images <span class="gradient-text">Instantly</span> & <span class="gradient-text">Privately</span></h1>
-                <p class="hero-desc" data-i18n="hero_desc">Professional image tools that work entirely in your browser. No uploads, no watermarks, no compromises.</p>
-                
-                <div class="ad-slot ad-center" id="ad-top">
+            <!-- 🔷 LEFT SIDEBAR -->
+            <aside class="sidebar-left">
+                <div id="ad-left-top" class="ad-slot ad-sidebar">
+                    <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
+                </div>
+                <div id="ad-left-bottom" class="ad-slot ad-sidebar">
+                    <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
+                </div>
+            </aside>
+
+            <!-- 🔷 CENTER CONTENT -->
+            <main class="center-content">
+                <!-- Top Banner 728x90 -->
+                <div id="ad-top" class="ad-slot ad-center">
                     <script>atOptions={'key':'205524dc89db034ed70eb6d3c5dfc0ac','format':'iframe','height':90,'width':728,'params':{}};</script>
                     <script src="https://daubwhereupon.com/205524dc89db034ed70eb6d3c5dfc0ac/invoke.js"></script>
                 </div>
 
-                <div class="quick-actions" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
-                    <button class="action-card" onclick="loadTool('rename')"><span class="action-icon">📁</span><span>Renamer</span></button>
-                    <button class="action-card" onclick="loadTool('compress')"><span class="action-icon">🗜️</span><span>Compress</span></button>
-                    <button class="action-card" onclick="loadTool('convert')"><span class="action-icon">🔄</span><span>Converter</span></button>
-                    <button class="action-card" onclick="loadTool('resize')"><span class="action-icon">📏</span><span>Resizer</span></button>
-                    <button class="action-card" onclick="loadTool('corners')"><span class="action-icon">🖼️</span><span>Corners</span></button>
-                    <button class="action-card" onclick="loadTool('watermark')"><span class="action-icon">💧</span><span>Watermark</span></button>
-                    <button class="action-card" onclick="loadTool('faces')"><span class="action-icon">🙈</span><span>Hide Faces</span></button>
-                    <button class="action-card" onclick="loadTool('video')"><span class="action-icon">🎥</span><span>Video</span></button>
-                    <button class="action-card" onclick="loadTool('blur')"><span class="action-icon">🔲</span><span>Blur</span></button>
-                    <button class="action-card" onclick="loadTool('crop')"><span class="action-icon">✂️</span><span>Crop</span></button>
-                    <button class="action-card" onclick="loadTool('rotate')"><span class="action-icon">↺</span><span>Rotate</span></button>
-                    <button class="action-card" onclick="loadTool('faceExtract')"><span class="action-icon">👤</span><span>Face Extract</span></button>
-                    <button class="action-card" onclick="loadTool('protect')"><span class="action-icon">🔒</span><span>Protect</span></button>
-                    <button class="action-card" onclick="loadTool('gif')"><span class="action-icon">🎬</span><span>GIF Split</span></button>
-                    <button class="action-card" onclick="loadTool('font')"><span class="action-icon">🔤</span><span>Fonts</span></button>
+                <div class="container">
+                    <h1 class="hero-title" data-i18n="hero_title">
+                        Edit Images <span class="gradient-text">Instantly</span> & <span class="gradient-text">Privately</span>
+                    </h1>
+                    <p class="hero-desc" data-i18n="hero_desc">
+                        Professional image tools that work entirely in your browser. 
+                        No uploads, no watermarks, no compromises.
+                    </p>
+                    
+                    <!-- Quick Actions (15 Tools) -->
+                    <div class="quick-actions" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+                        <button class="action-card" onclick="loadTool('rename')"><span class="action-icon">📁</span><span>Renamer</span></button>
+                        <button class="action-card" onclick="loadTool('compress')"><span class="action-icon">🗜️</span><span>Compress</span></button>
+                        <button class="action-card" onclick="loadTool('convert')"><span class="action-icon">🔄</span><span>Converter</span></button>
+                        <button class="action-card" onclick="loadTool('resize')"><span class="action-icon">📏</span><span>Resizer</span></button>
+                        <button class="action-card" onclick="loadTool('corners')"><span class="action-icon">🖼️</span><span>Corners</span></button>
+                        <button class="action-card" onclick="loadTool('watermark')"><span class="action-icon">💧</span><span>Watermark</span></button>
+                        <button class="action-card" onclick="loadTool('faces')"><span class="action-icon">🙈</span><span>Hide Faces</span></button>
+                        <button class="action-card" onclick="loadTool('video')"><span class="action-icon">🎥</span><span>Video</span></button>
+                        <button class="action-card" onclick="loadTool('blur')"><span class="action-icon">🔲</span><span>Blur</span></button>
+                        <button class="action-card" onclick="loadTool('crop')"><span class="action-icon">✂️</span><span>Crop</span></button>
+                        <button class="action-card" onclick="loadTool('rotate')"><span class="action-icon">↺</span><span>Rotate</span></button>
+                        <button class="action-card" onclick="loadTool('faceExtract')"><span class="action-icon">👤</span><span>Face Extract</span></button>
+                        <button class="action-card" onclick="loadTool('protect')"><span class="action-icon">🔒</span><span>Protect</span></button>
+                        <button class="action-card" onclick="loadTool('gif')"><span class="action-icon">🎬</span><span>GIF Split</span></button>
+                        <button class="action-card" onclick="loadTool('font')"><span class="action-icon">🔤</span><span>Fonts</span></button>
+                    </div>
+                    
+                    <!-- Privacy Badge -->
+                    <div class="privacy-badge glass">
+                        <span class="badge-icon">🔐</span>
+                        <span data-i18n="privacy_badge">Your files never leave your device</span>
+                    </div>
                 </div>
 
-                <div class="ad-slot ad-center" id="ad-mobile" style="max-width:320px;">
+                <!-- Mobile Banner 320x50 -->
+                <div id="ad-mobile" class="ad-slot ad-center" style="max-width:320px;">
                     <script>atOptions={'key':'fddf2b3e9b3ffbd9f006cc62e9537775','format':'iframe','height':50,'width':320,'params':{}};</script>
                     <script src="https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js"></script>
                 </div>
 
-                <div class="privacy-badge glass">🔐 Your files never leave your device</div>
-
-                <div class="ad-slot ad-center" id="ad-middle" style="max-width:468px;">
+                <!-- Middle Banner 468x60 -->
+                <div id="ad-middle" class="ad-slot ad-center" style="max-width:468px;">
                     <script>atOptions={'key':'9e4c2f9f08b132bae32b4875e30fa906','format':'iframe','height':60,'width':468,'params':{}};</script>
                     <script src="https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js"></script>
                 </div>
 
-                <div class="ad-slot ad-center" id="ad-bottom" style="max-width:300px;">
+                <!-- Bottom Banner 300x250 -->
+                <div id="ad-bottom" class="ad-slot ad-center" style="max-width:300px;">
                     <script>atOptions={'key':'a5f29426fb5495e569d6d182b6509a9c','format':'iframe','height':250,'width':300,'params':{}};</script>
                     <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
                 </div>
-            </section>
+            </main>
 
-            <!-- Секція Tools -->
-            <section id="tools" class="tools-section" style="display: none;">
-                <div class="container">
-                    <div id="tool-container" class="tool-container glass">
-                        <div class="tool-placeholder">
-                            <span class="placeholder-icon">👆</span>
-                            <p data-i18n="select_tool">Select a tool above to get started</p>
-                        </div>
-                    </div>
+            <!-- 🔷 RIGHT SIDEBAR -->
+            <aside class="sidebar-right">
+                <div id="ad-right-top" class="ad-slot ad-sidebar">
+                    <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
                 </div>
-            </section>
-
-        </main>
-
-        <!-- 🔷 ПРАВИЙ САЙДБАР -->
-        <aside class="sidebar sidebar-right">
-            <div class="ad-slot ad-sidebar" id="ad-right-top">
-                <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
-                <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
-            </div>
-            <div class="ad-slot ad-sidebar" id="ad-right-bottom">
-                <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
-                <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
-            </div>
-        </aside>
-
-    </div>
-
-    <!-- Stats & Footer (Твої оригінали) -->
-    <section class="stats">
-        <div class="container stats-grid">
-            <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label" data-i18n="stat_client">Client-side processing</span></div>
-            <div class="stat-item"><span class="stat-number">0</span><span class="stat-label" data-i18n="stat_uploads">Files uploaded to server</span></div>
-            <div class="stat-item"><span class="stat-number">⚡</span><span class="stat-label">Instant Processing</span></div>
-            <div class="stat-item"><span class="stat-number">🔒</span><span class="stat-label">Zero Data Storage</span></div>
+                <div id="ad-right-bottom" class="ad-slot ad-sidebar">
+                    <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
+                    <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
+                </div>
+            </aside>
         </div>
     </section>
 
-    <footer class="footer" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #aaa; padding: 30px 20px 15px; margin-top: 40px; font-size: 0.9em;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 20px;"><span style="font-weight: 700; color: #fff;">Pixel Craft Tool</span></div>
-            <div style="background: rgba(112, 214, 11, 0.15); padding: 20px 25px; border-radius: 10px; margin-bottom: 20px; border: 2px solid #25bdeb; text-align: center;">
-                <p style="margin: 0 0 10px 0; font-weight: 700; color: #0fb349; font-size: 1.05em;">🔒 COMMERCIAL LICENSE ONLY</p>
-                <p style="margin: 0; line-height: 1.6; font-size: 0.9em;">This software is distributed under a <strong>paid commercial license only</strong>. Unauthorized copying, redistribution, or use without a valid license is strictly prohibited.</p>
+    <!-- 🛠️ Tools Section -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <div id="tool-container" class="tool-container glass">
+                <div class="tool-placeholder">
+                    <span class="placeholder-icon">👆</span>
+                    <p data-i18n="select_tool">Select a tool above to get started</p>
+                </div>
             </div>
-            <div style="text-align: center; margin-bottom: 15px;">
-                <a href="terms.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Terms</a>
-                <span style="color: #555;">|</span>
-                <a href="privacy.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Privacy</a>
-                <span style="color: #555;">|</span>
-                <a href="license.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">License</a>
-            </div>
-            <p style="text-align: center; color: #fff;">© 2026 <strong>Pixel Craft Tool</strong>. All rights reserved.</p>
         </div>
+    </section>
+
+    <!-- 📊 Stats Section -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label" data-i18n="stat_client">Client-side processing</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">0</span>
+                <span class="stat-label" data-i18n="stat_uploads">Files uploaded to server</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">⚡</span>
+                <span class="stat-label">Instant Processing</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">🔒</span>
+                <span class="stat-label">Zero Data Storage</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ℹ️ How It Works Section -->
+    <section id="how" class="tools-section" style="display: none;">
+        <div class="container">
+            <div class="tool-container glass" style="text-align: center; padding: 40px;">
+                <h2 style="margin-bottom: 20px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">How PixelCraft Works</h2>
+                <p style="font-size: 1.2em; margin-bottom: 30px;">1️⃣ Choose a tool → 2️⃣ Upload images → 3️⃣ Edit → 4️⃣ Download</p>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                    All processing happens entirely in your browser using WebAssembly and Canvas API. 
+                    Your files never leave your device — guaranteed privacy. 🔒
+                </p>
+                <button onclick="showTools()" class="btn-primary" style="margin-top: 30px; max-width: 250px;">
+                    ← Back to Tools
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 🔒 Footer -->
+    <footer class="footer" style="
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #aaa;
+        padding: 30px 20px 15px;
+        margin-top: 40px;
+        font-size: 0.9em;
+    ">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <span style="font-weight: 700; color: #fff; margin-left: 15px;">Pixel Craft Tool</span>
+            </div>
+            <div style="background: rgba(112, 214, 11, 0.15); padding: 20px 25px; border-radius: 10px; margin-bottom: 20px; border: 2px solid #25bdeb; text-align: center;">
+                <p style="margin: 0 0 10px 0; font-weight: 700; color: #0fb349; font-size: 1.05em;">
+                    🔒 COMMERCIAL LICENSE ONLY
+                </p>
+                <p style="margin: 0; line-height: 1.6; font-size: 0.9em;">
+                    This software is distributed under a <strong>paid commercial license only</strong>. 
+                    Unauthorized copying, redistribution, or use without a valid license is strictly prohibited. 
+                    Each installation requires a separate paid license. Franchise and reseller distribution 
+                    require explicit written permission. Violations will result in legal action.
+                </p>
+            </div>
+            <div style="background: rgba(99, 102, 241, 0.1); padding: 15px 20px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                <p style="margin: 0 0 12px 0; font-weight: 600; color: #fff;">
+                    📋 Available Licenses:
+                </p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;">
+                        <strong style="color: #6366f1;">Personal</strong> — Single user
+                    </span>
+                    <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;">
+                        <strong style="color: #6366f1;">Commercial</strong> — Business use
+                    </span>
+                    <span style="background: rgba(255,255,255,0.05); padding: 8px 15px; border-radius: 6px;">
+                        <strong style="color: #6366f1;">Enterprise</strong> — Custom terms
+                    </span>
+                </div>
+            </div>
+            <p style="background: rgba(255, 193, 7, 0.1); color: #fcd34d; padding: 12px 15px; border-radius: 8px; font-size: 0.85em; margin-bottom: 20px; border-left: 3px solid #ffc107; text-align: center;">
+                ⚠️ <strong>License Verification:</strong> This software includes license verification. 
+                Use without a valid paid license violates copyright law.
+            </p>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <a href="terms.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+                <span style="color: #555;">|</span>
+                <a href="privacy.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+                <span style="color: #555;">|</span>
+                <a href="license.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">License Agreement</a>
+                <span style="color: #555;">|</span>
+                <a href="mailto:hello@pixelcraft.tools" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Purchase License</a>
+            </div>
+            <div style="text-align: center; padding-top: 10px;">
+                <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 1.00em;">
+                    Made with ❤️ for creators
+                </p>
+                <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">
+                    Pixel Craft Tool Technologies.
+                </p>
+                <p style="margin: 0 0 5px 0; color: #ffffff; font-size: 1.00em;">
+                    Version <span id="appVersion">2.0.0</span> | Licensed Software — Not Free
+                </p>
+                <p style="margin: 8px 0 0 0; color: #ffffff; font-size: 1.00em; border-top: none;">
+                    © 2026 <strong>Pixel Craft Tool</strong>. All rights reserved worldwide.
+                </p>
+            </div>
+        </div>
+        <script>document.getElementById('appVersion').textContent = '2.0.0';</script>
     </footer>
 
-    <!-- ✅ СКРИПТИ (В ПРАВИЛЬНОМУ ПОРЯДКУ) -->
-    <script src="js/tools.js?v=2"></script>
-    <script src="js/app.js?v=2"></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+    <script src="js/tools.js?v=2" defer></script>
+    <script src="js/app.js?v=2" defer></script>
 
+    <!-- Navigation Scripts -->
     <script>
-    // Theme Toggle
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            e.preventDefault();
+            var target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+    
+    function showTools() {
+        document.getElementById('how').style.display = 'none';
+        document.getElementById('tools').style.display = 'block';
+        document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    function showHow() {
+        document.getElementById('tools').style.display = 'none';
+        document.getElementById('how').style.display = 'block';
+        document.getElementById('how').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    document.querySelector('a[href="#how"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        showHow();
+    });
+
     document.getElementById('themeToggle').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
-        this.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-    });
-
-    // ✅ БЕЗПЕЧНЕ ПЕРЕМИКАННЯ ІНСТРУМЕНТІВ
-    function loadTool(toolName) {
-        console.log('🔧 Loading:', toolName);
-        document.getElementById('home').style.display = 'none';
-        var toolsEl = document.getElementById('tools');
-        toolsEl.style.display = 'block';
-        
-        // Якщо в tools.js є функція ініціалізації - викликаємо її
-        if (typeof window.initTool === 'function') {
-            window.initTool(toolName);
-        } else if (typeof window.loadToolInternal === 'function') {
-            window.loadToolInternal(toolName);
-        }
-        
-        setTimeout(() => toolsEl.scrollIntoView({ behavior: 'smooth' }), 100);
-    }
-
-    // Повернення на головну
-    document.querySelector('a[href="#home"]').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.getElementById('tools').style.display = 'none';
-        document.getElementById('home').style.display = 'block';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Cookie Banner
-    if (!localStorage.getItem('cookieConsent')) {
-        var banner = document.getElementById('cookie-banner');
-        if(banner) banner.style.display = 'block';
-    }
-    var acceptBtn = document.getElementById('accept-cookies');
-    if(acceptBtn) acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'true');
-        document.getElementById('cookie-banner').style.display = 'none';
     });
     </script>
 
-    <!-- Ko-fi -->
+    <!-- Ko-fi Widget -->
     <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
 
-    <!-- Cookie HTML -->
-    <div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:rgba(26,26,46,0.95); color:#fff; padding:15px 20px; display:none; z-index:9999;">
-      <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
-        <p style="margin:0; font-size:0.9em; flex:1;">🍪 We use cookies. <a href="privacy.html" style="color:#a78bfa;">Privacy Policy</a></p>
-        <button id="accept-cookies" style="background:#6366f1; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer;">Accept</button>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:rgba(26,26,46,0.95); color:#fff; padding:15px 20px; display:none; z-index:9999; box-shadow:0 -4px 20px rgba(0,0,0,0.3);">
+      <div class="container" style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+        <p style="margin:0; font-size:0.9em; flex:1;">
+          🍪 We use cookies to improve the site and analytics. By continuing to use the site, you agree to our
+          <a href="privacy.html" style="color:#a78bfa; text-decoration:underline;">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies" style="background:#6366f1; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer; font-weight:600;">Accept</button>
       </div>
     </div>
+    <script>
+      if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+      document.getElementById('accept-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+      });
+    </script>
 </body>
 </html>
