@@ -67,54 +67,145 @@
 
 <!-- CSS для сітки банерів -->
 <style>
-/* 🌐 Головна сітка на всю висоту сторінки */
-.main-layout-grid {
-    display: grid;
-    grid-template-columns: 160px 1fr 160px;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    align-items: start; /* Ключове! Сайдбари не розтягуються на всю висоту */
+/* Базові стилі */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
 }
 
-/* 📌 Сайдбари "липкі" (слідують за скролом) */
-.sidebar-left, .sidebar-right {
+/* Header */
+.header {
     position: sticky;
-    top: 100px; /* Відступ від верху під час прокрутки */
-    height: fit-content;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    gap: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Hero */
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+    font-size: 1.3em;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+/* Action Cards */
+.action-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Центральна колонка */
-.center-content {
-    display: block; /* ← ЗМІНИЛИ з flex на block */
-    width: 100%;
+.action-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
 
-/* Секції всередині center-content */
-#home, #tools {
-    width: 100%;
+.action-icon { font-size: 2em; }
+
+/* Ad Slots */
+.ad-slot {
+    text-align: center;
+    margin: 15px auto;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-#tools {
-    display: none; /* Приховано за замовчуванням */
+.ad-sidebar { width: 160px; min-height: 300px; }
+.ad-center { max-width: 728px; }
+
+/* Мобільна адаптація */
+@media (max-width: 1024px) {
+    .sidebar-left, .sidebar-right {
+        position: static !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        margin: 20px 0 !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .ad-sidebar {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+    
+    .hero-title { font-size: 2em; }
+    
+    .quick-actions {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
 }
 
-#tools.active {
-    display: block; /* Показуємо коли активний */
-}
-
-/* Інструменти контейнер */
-.tool-container {
-    background: var(--bg-secondary);
-    border-radius: 16px;
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 900px;
-    min-height: 400px;
+@media (max-width: 600px) {
+    .header-content { flex-wrap: wrap; }
+    .nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .quick-actions {
+        grid-template-columns: 1fr !important;
+    }
 }
 </style>
     
