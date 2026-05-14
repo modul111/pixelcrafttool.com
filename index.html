@@ -67,77 +67,51 @@
 
 <!-- CSS для сітки банерів -->
 <style>
-/* --- Сітка та Банери --- */
-.hero-layout-grid {
+/* 🌐 Головна сітка на всю висоту сторінки */
+.main-layout-grid {
     display: grid;
     grid-template-columns: 160px 1fr 160px;
     gap: 20px;
-    margin-top: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: start; /* Ключове! Сайдбари не розтягуються на всю висоту */
 }
 
+/* 📌 Сайдбари "липкі" (слідують за скролом) */
 .sidebar-left, .sidebar-right {
+    position: sticky;
+    top: 100px; /* Відступ від верху під час прокрутки */
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+/* Центральна колонка */
 .center-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    width: 100%;
 }
 
-.ad-slot {
-    text-align: center;
-    margin: 15px auto;
-    background: rgba(255,255,255,0.05);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.ad-sidebar { width: 160px; min-height: 300px; }
-.ad-center { max-width: 728px; }
-
-/* --- Планшет (до 1024px) --- */
+/* 📱 Мобільна адаптація */
 @media (max-width: 1024px) {
-    .hero-layout-grid { grid-template-columns: 1fr !important; }
+    .main-layout-grid { 
+        grid-template-columns: 1fr !important; 
+        padding: 10px; 
+    }
     .sidebar-right { display: none !important; }
-    .sidebar-left { flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; order: -1; }
-    .ad-sidebar { width: 100% !important; max-width: 320px !important; }
-}
-
-/* --- Мобільний хедер (до 768px) --- */
-@media (max-width: 768px) {
-    .header-content {
-        flex-wrap: wrap;
-        padding: 10px 15px;
+    .sidebar-left { 
+        position: static !important; 
+        flex-direction: row !important; 
+        flex-wrap: wrap !important; 
+        justify-content: center !important; 
+        order: -1; 
     }
-
-    /* Логотип зліва */
-    .logo {
-        order: 1;
-        flex: 1;
-    }
-
-    /* Кнопка та тема справа від лого */
-    .header-content > div:last-child {
-        order: 2;
-        flex: 1;
-        margin-left: 0 !important;
-        justify-content: flex-end;
-        gap: 10px;
-    }
-
-    /* Меню йде вниз */
-    .nav {
-        order: 3;
-        width: 100%;
-        margin-top: 15px;
-        padding-top: 10px;
-        border-top: 1px solid var(--border-color);
-        justify-content: center;
-        gap: 20px;
+    .ad-sidebar { 
+        width: 100% !important; 
+        max-width: 320px !important; 
     }
 }
 </style>
