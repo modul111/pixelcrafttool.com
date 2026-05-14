@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://pixelcrafttool.com/">
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWPWMJK1Q"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -24,19 +23,16 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#6366f1">
 
-    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- JSZip -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
-    <!-- ✅ CSS ЗМІННІ (ТЕПЕР ВИЗНАЧЕНІ!) -->
+    <!-- ✅ МІНІМАЛЬНИЙ CSS (НЕ КОНФЛІКТУЄ З style.css) -->
     <style>
     :root {
         --primary: #6366f1;
-        --primary-dark: #4f46e5;
         --bg-primary: #ffffff;
         --bg-secondary: #f8fafc;
         --text-primary: #1e293b;
@@ -44,7 +40,6 @@
         --border-color: #e2e8f0;
         --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
-
     body.dark-mode {
         --bg-primary: #0f172a;
         --bg-secondary: #1e293b;
@@ -52,221 +47,29 @@
         --text-secondary: #94a3b8;
         --border-color: #334155;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; }
 
-    body {
-        font-family: 'Inter', sans-serif;
-        background: var(--bg-primary);
-        color: var(--text-primary);
-        line-height: 1.6;
-    }
-
-    /* Skip Link */
-    .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 0;
-        background: var(--primary);
-        color: white;
-        padding: 8px;
-        text-decoration: none;
-        z-index: 100;
-    }
-    .skip-link:focus { top: 0; }
-
-    /* Background Animation */
-    .bg-animation {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        z-index: -1;
-        overflow: hidden;
-        pointer-events: none;
-    }
-
-    .blob {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(80px);
-        opacity: 0.4;
-        animation: float 20s infinite ease-in-out;
-    }
-
-    .blob-1 {
-        width: 400px; height: 400px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        top: -100px; left: -100px;
-    }
-
-    .blob-2 {
-        width: 300px; height: 300px;
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        top: 50%; right: -50px;
-        animation-delay: -5s;
-    }
-
-    .blob-3 {
-        width: 350px; height: 350px;
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        bottom: -100px; left: 50%;
-        animation-delay: -10s;
-    }
-
-    @keyframes float {
-        0%, 100% { transform: translate(0, 0) scale(1); }
-        33% { transform: translate(30px, -50px) scale(1.1); }
-        66% { transform: translate(-20px, 30px) scale(0.9); }
-    }
-
-    /* Header */
-    .header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    body.dark-mode .header { background: rgba(15,23,42,0.95); }
-
-    .header-content {
+    /* БЕЗПЕЧНА 3-КОЛОНКОВА ОБГОРТКА */
+    .page-layout {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px 20px;
-        gap: 20px;
         max-width: 1200px;
         margin: 0 auto;
-    }
-
-    .logo {
-        font-size: 1.8em;
-        font-weight: 800;
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-decoration: none;
-    }
-
-    .nav {
-        display: flex;
-        gap: 30px;
-    }
-
-    .nav a {
-        color: var(--text-primary);
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .nav a:hover { color: var(--primary); }
-
-    /* Theme Toggle */
-    .theme-toggle {
-        background: transparent;
-        border: 2px solid var(--border-color);
-        border-radius: 50%;
-        width: 44px; height: 44px;
-        cursor: pointer;
-        font-size: 1.3em;
-    }
-
-    /* Support Button */
-    .btn-support {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 24px;
-        background: linear-gradient(135deg, #FF5E5B 0%, #FFA07A 100%);
-        color: white;
-        text-decoration: none;
-        border-radius: 12px;
-        font-weight: 600;
-        transition: all 0.3s;
-    }
-
-    .btn-support:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(255, 94, 91, 0.4);
-    }
-
-    /* Glass Effect */
-    .glass {
-        background: rgba(255,255,255,0.7);
-        backdrop-filter: blur(10px);
-    }
-
-    body.dark-mode .glass { background: rgba(15,23,42,0.7); }
-
-    /* Hero Section */
-    .hero {
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .hero-title {
-        font-size: 3em;
-        font-weight: 800;
-        margin-bottom: 20px;
-    }
-
-    .gradient-text {
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .hero-desc {
-        font-size: 1.3em;
-        color: var(--text-secondary);
-        margin-bottom: 40px;
-    }
-
-    /* Action Cards */
-    .quick-actions {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 15px;
-        max-width: 900px;
-        margin: 30px auto;
-    }
-
-    .action-card {
-        background: var(--bg-secondary);
-        border: 2px solid var(--border-color);
-        border-radius: 12px;
         padding: 20px;
-        cursor: pointer;
-        transition: all 0.3s;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .sidebar {
+        width: 160px;
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        gap: 15px;
     }
-
-    .action-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--primary);
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    .main-area {
+        flex: 1;
+        min-width: 0; /* Запобігає переповненню */
     }
-
-    .action-icon { font-size: 2em; }
-
-    /* Privacy Badge */
-    .privacy-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 24px;
-        background: var(--bg-secondary);
-        border-radius: 50px;
-        font-weight: 600;
-        margin: 20px auto;
-    }
-
-    /* Ad Slots */
     .ad-slot {
         text-align: center;
         margin: 15px auto;
@@ -274,172 +77,96 @@
         border-radius: 8px;
         overflow: hidden;
     }
-
     .ad-sidebar { width: 160px; min-height: 300px; }
     .ad-center { max-width: 728px; }
 
-    /* Tools Section */
-    .tools-section {
-        padding: 40px 20px;
-    }
-
-    .tool-container {
-        background: var(--bg-secondary);
-        border-radius: 16px;
-        padding: 40px;
-        max-width: 900px;
-        margin: 0 auto;
-        min-height: 400px;
-    }
-
-    .tool-placeholder {
-        text-align: center;
-        padding: 60px 20px;
-        color: var(--text-secondary);
-    }
-
-    .placeholder-icon {
-        font-size: 4em;
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    /* Stats */
-    .stats {
-        padding: 60px 20px;
-        background: var(--bg-secondary);
-    }
-
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 30px;
-        max-width: 1000px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .stat-number {
-        display: block;
-        font-size: 2.5em;
-        font-weight: 800;
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    /* Footer */
-    .footer {
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-        color: #aaa;
-        padding: 30px 20px 15px;
-        margin-top: 60px;
-        text-align: center;
-    }
-
-    .footer a {
-        color: #6366f1;
-        text-decoration: none;
-        margin: 0 10px;
-    }
-
-    /* Mobile */
+    /* МОБІЛЬНА АДАПТАЦІЯ */
     @media (max-width: 1024px) {
-        .sidebar-left, .sidebar-right {
-            position: static !important;
-            display: flex !important;
-            flex-direction: row !important;
-            flex-wrap: wrap !important;
-            justify-content: center !important;
-            gap: 15px !important;
-            margin: 20px 0 !important;
-        }
-        
-        .ad-sidebar {
-            width: 100% !important;
-            max-width: 320px !important;
-        }
-        
-        .hero-title { font-size: 2em; }
+        .page-layout { flex-direction: column; }
+        .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+        .ad-sidebar { width: 100%; max-width: 320px; }
+        .hero-title { font-size: 2em !important; }
         .quick-actions { grid-template-columns: repeat(2, 1fr) !important; }
     }
-
     @media (max-width: 600px) {
-        .header-content { flex-wrap: wrap; }
-        .nav {
-            order: 3;
-            width: 100%;
-            justify-content: center;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
-        }
         .quick-actions { grid-template-columns: 1fr !important; }
-        .ad-center[style*="728px"],
-        .ad-center[style*="468px"] { display: none !important; }
+        .ad-center[style*="728px"], .ad-center[style*="468px"] { display: none !important; }
     }
     </style>
+
+    <!-- ТВОЇ ОРИГІНАЛЬНІ СТИЛІ (НЕ ВИДАЛЯЙ) -->
+    <link rel="stylesheet" href="css/style.css?v=3">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PixelCraft Tools",
+      "url": "https://pixelcrafttool.com",
+      "description": "Professional image tools: rename, compress, convert, crop, blur. 100% private.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any"
+    }
+    </script>
 </head>
 
 <body class="theme-light">
-    <!-- Skip Link -->
     <a href="#home" class="skip-link">Перейти до основного змісту</a>
     
-    <!-- Background -->
     <div class="bg-animation">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
     </div>
 
-    <!-- Header -->
+    <!-- HEADER (Твій оригінал) -->
     <header class="header glass">
-        <div class="header-content">
-            <a href="#home" class="logo">PIXELCRAFT</a>
+        <div class="container header-content">
+            <a href="#home" class="logo" style="text-decoration: none;">
+                <img src="images/logo.png" alt="PixelCraft Tools" style="height: 40px; width: auto;">
+            </a>
             <nav class="nav">
-                <a href="#home">Home</a>
-                <a href="#tools">Tools</a>
-                <a href="#how">How it works</a>
-                <a href="privacy.html">Privacy</a>
+                <a href="#home" data-i18n="nav_home">Home</a>
+                <a href="#tools" data-i18n="nav_tools">Tools</a>
+                <a href="#how" data-i18n="nav_how">How it works</a>
+                <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
             </nav>
-            <div style="display: flex; gap: 12px; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
                 <button class="theme-toggle" id="themeToggle">☀️</button>
                 <a href="https://ko-fi.com/modul1" target="_blank" class="btn-support">☕ Buy Me a Coffee</a>
             </div>
         </div>
     </header>
 
-    <!-- 🌐 ГОЛОВНИЙ КОНТЕЙНЕР -->
-    <div style="max-width: 1200px; margin: 0 auto; padding: 20px; position: relative;">
+    <!-- 🌐 ОСНОВНА СТРУКТУРА -->
+    <div class="page-layout">
         
         <!-- 🔷 ЛІВИЙ САЙДБАР -->
-        <aside class="sidebar-left" style="position: fixed; left: 20px; top: 120px; width: 160px; z-index: 100;">
-            <div id="ad-left-top" class="ad-slot ad-sidebar">
+        <aside class="sidebar sidebar-left">
+            <div class="ad-slot ad-sidebar" id="ad-left-top">
                 <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
                 <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
             </div>
-            <div id="ad-left-bottom" class="ad-slot ad-sidebar">
+            <div class="ad-slot ad-sidebar" id="ad-left-bottom">
                 <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
                 <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
             </div>
         </aside>
 
-        <!-- 🔷 ЦЕНТРАЛЬНИЙ КОНТЕНТ -->
-        <main style="margin-left: 200px; margin-right: 200px;">
+        <!-- 🔷 ЦЕНТР -->
+        <main class="main-area">
             
             <!-- Секція Home -->
-            <section id="home" class="hero">
-                <h1 class="hero-title">Edit Images <span class="gradient-text">Instantly</span> & <span class="gradient-text">Privately</span></h1>
-                <p class="hero-desc">Professional image tools that work entirely in your browser. No uploads, no watermarks, no compromises.</p>
+            <section id="home" class="hero" role="main">
+                <h1 class="hero-title" data-i18n="hero_title">Edit Images <span class="gradient-text">Instantly</span> & <span class="gradient-text">Privately</span></h1>
+                <p class="hero-desc" data-i18n="hero_desc">Professional image tools that work entirely in your browser. No uploads, no watermarks, no compromises.</p>
                 
-                <!-- Top Banner -->
-                <div id="ad-top" class="ad-slot ad-center" style="max-width: 728px; margin: 20px auto;">
+                <div class="ad-slot ad-center" id="ad-top">
                     <script>atOptions={'key':'205524dc89db034ed70eb6d3c5dfc0ac','format':'iframe','height':90,'width':728,'params':{}};</script>
                     <script src="https://daubwhereupon.com/205524dc89db034ed70eb6d3c5dfc0ac/invoke.js"></script>
                 </div>
 
-                <!-- 15 Tools -->
-                <div class="quick-actions">
+                <div class="quick-actions" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
                     <button class="action-card" onclick="loadTool('rename')"><span class="action-icon">📁</span><span>Renamer</span></button>
                     <button class="action-card" onclick="loadTool('compress')"><span class="action-icon">🗜️</span><span>Compress</span></button>
                     <button class="action-card" onclick="loadTool('convert')"><span class="action-icon">🔄</span><span>Converter</span></button>
@@ -457,22 +184,19 @@
                     <button class="action-card" onclick="loadTool('font')"><span class="action-icon">🔤</span><span>Fonts</span></button>
                 </div>
 
-                <!-- Mobile Banner -->
-                <div id="ad-mobile" class="ad-slot ad-center" style="max-width: 320px; margin: 20px auto;">
+                <div class="ad-slot ad-center" id="ad-mobile" style="max-width:320px;">
                     <script>atOptions={'key':'fddf2b3e9b3ffbd9f006cc62e9537775','format':'iframe','height':50,'width':320,'params':{}};</script>
                     <script src="https://daubwhereupon.com/fddf2b3e9b3ffbd9f006cc62e9537775/invoke.js"></script>
                 </div>
 
                 <div class="privacy-badge glass">🔐 Your files never leave your device</div>
 
-                <!-- Middle Banner -->
-                <div id="ad-middle" class="ad-slot ad-center" style="max-width: 468px; margin: 20px auto;">
+                <div class="ad-slot ad-center" id="ad-middle" style="max-width:468px;">
                     <script>atOptions={'key':'9e4c2f9f08b132bae32b4875e30fa906','format':'iframe','height':60,'width':468,'params':{}};</script>
                     <script src="https://daubwhereupon.com/9e4c2f9f08b132bae32b4875e30fa906/invoke.js"></script>
                 </div>
 
-                <!-- Bottom Banner -->
-                <div id="ad-bottom" class="ad-slot ad-center" style="max-width: 300px; margin: 20px auto;">
+                <div class="ad-slot ad-center" id="ad-bottom" style="max-width:300px;">
                     <script>atOptions={'key':'a5f29426fb5495e569d6d182b6509a9c','format':'iframe','height':250,'width':300,'params':{}};</script>
                     <script src="https://daubwhereupon.com/a5f29426fb5495e569d6d182b6509a9c/invoke.js"></script>
                 </div>
@@ -480,10 +204,12 @@
 
             <!-- Секція Tools -->
             <section id="tools" class="tools-section" style="display: none;">
-                <div id="tool-container" class="tool-container glass">
-                    <div class="tool-placeholder">
-                        <span class="placeholder-icon">👆</span>
-                        <p>Select a tool above to get started</p>
+                <div class="container">
+                    <div id="tool-container" class="tool-container glass">
+                        <div class="tool-placeholder">
+                            <span class="placeholder-icon">👆</span>
+                            <p data-i18n="select_tool">Select a tool above to get started</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -491,12 +217,12 @@
         </main>
 
         <!-- 🔷 ПРАВИЙ САЙДБАР -->
-        <aside class="sidebar-right" style="position: fixed; right: 20px; top: 120px; width: 160px; z-index: 100;">
-            <div id="ad-right-top" class="ad-slot ad-sidebar">
+        <aside class="sidebar sidebar-right">
+            <div class="ad-slot ad-sidebar" id="ad-right-top">
                 <script>atOptions={'key':'8ddb4b91889423b36431a72105303245','format':'iframe','height':600,'width':160,'params':{}};</script>
                 <script src="https://daubwhereupon.com/8ddb4b91889423b36431a72105303245/invoke.js"></script>
             </div>
-            <div id="ad-right-bottom" class="ad-slot ad-sidebar">
+            <div class="ad-slot ad-sidebar" id="ad-right-bottom">
                 <script>atOptions={'key':'0e4c001440fee7d648d0150df40eb138','format':'iframe','height':300,'width':160,'params':{}};</script>
                 <script src="https://daubwhereupon.com/0e4c001440fee7d648d0150df40eb138/invoke.js"></script>
             </div>
@@ -504,36 +230,37 @@
 
     </div>
 
-    <!-- Stats Section -->
+    <!-- Stats & Footer (Твої оригінали) -->
     <section class="stats">
-        <div class="stats-grid">
-            <div><span class="stat-number">100%</span><span>Client-side processing</span></div>
-            <div><span class="stat-number">0</span><span>Files uploaded to server</span></div>
-            <div><span class="stat-number">⚡</span><span>Instant Processing</span></div>
-            <div><span class="stat-number">🔒</span><span>Zero Data Storage</span></div>
+        <div class="container stats-grid">
+            <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label" data-i18n="stat_client">Client-side processing</span></div>
+            <div class="stat-item"><span class="stat-number">0</span><span class="stat-label" data-i18n="stat_uploads">Files uploaded to server</span></div>
+            <div class="stat-item"><span class="stat-number">⚡</span><span class="stat-label">Instant Processing</span></div>
+            <div class="stat-item"><span class="stat-number">🔒</span><span class="stat-label">Zero Data Storage</span></div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="margin-bottom: 20px;"><strong style="color: #fff;">Pixel Craft Tool</strong></div>
-            <div style="background: rgba(112, 214, 11, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 2px solid #25bdeb;">
-                <p style="margin: 0 0 10px; font-weight: 700; color: #0fb349;">🔒 COMMERCIAL LICENSE ONLY</p>
-                <p style="margin: 0; font-size: 0.9em;">This software is distributed under a <strong>paid commercial license only</strong>.</p>
+    <footer class="footer" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #aaa; padding: 30px 20px 15px; margin-top: 40px; font-size: 0.9em;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 20px;"><span style="font-weight: 700; color: #fff;">Pixel Craft Tool</span></div>
+            <div style="background: rgba(112, 214, 11, 0.15); padding: 20px 25px; border-radius: 10px; margin-bottom: 20px; border: 2px solid #25bdeb; text-align: center;">
+                <p style="margin: 0 0 10px 0; font-weight: 700; color: #0fb349; font-size: 1.05em;">🔒 COMMERCIAL LICENSE ONLY</p>
+                <p style="margin: 0; line-height: 1.6; font-size: 0.9em;">This software is distributed under a <strong>paid commercial license only</strong>. Unauthorized copying, redistribution, or use without a valid license is strictly prohibited.</p>
             </div>
-            <div style="margin-bottom: 15px;">
-                <a href="terms.html">Terms</a> | 
-                <a href="privacy.html">Privacy</a> | 
-                <a href="license.html">License</a>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <a href="terms.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Terms</a>
+                <span style="color: #555;">|</span>
+                <a href="privacy.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">Privacy</a>
+                <span style="color: #555;">|</span>
+                <a href="license.html" style="color: #6366f1; text-decoration: none; margin: 0 10px;">License</a>
             </div>
-            <p style="color: #fff;">© 2026 <strong>Pixel Craft Tool</strong>. All rights reserved.</p>
+            <p style="text-align: center; color: #fff;">© 2026 <strong>Pixel Craft Tool</strong>. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/tools.js?v=2" defer></script>
-    <script src="js/app.js?v=2" defer></script>
+    <!-- ✅ СКРИПТИ (В ПРАВИЛЬНОМУ ПОРЯДКУ) -->
+    <script src="js/tools.js?v=2"></script>
+    <script src="js/app.js?v=2"></script>
 
     <script>
     // Theme Toggle
@@ -542,52 +269,52 @@
         this.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
     });
 
-    // Load Tool Function
+    // ✅ БЕЗПЕЧНЕ ПЕРЕМИКАННЯ ІНСТРУМЕНТІВ
     function loadTool(toolName) {
-        console.log('Loading tool:', toolName);
-        
-        // Hide home, show tools
+        console.log('🔧 Loading:', toolName);
         document.getElementById('home').style.display = 'none';
-        var toolsSection = document.getElementById('tools');
-        toolsSection.style.display = 'block';
+        var toolsEl = document.getElementById('tools');
+        toolsEl.style.display = 'block';
         
-        // Scroll to tools
-        setTimeout(function() {
-            toolsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-        
-        // Try to load actual tool if function exists
-        if (typeof window.loadToolInternal === 'function') {
+        // Якщо в tools.js є функція ініціалізації - викликаємо її
+        if (typeof window.initTool === 'function') {
+            window.initTool(toolName);
+        } else if (typeof window.loadToolInternal === 'function') {
             window.loadToolInternal(toolName);
         }
+        
+        setTimeout(() => toolsEl.scrollIntoView({ behavior: 'smooth' }), 100);
     }
 
-    // Show Home
-    function showHome() {
+    // Повернення на головну
+    document.querySelector('a[href="#home"]').addEventListener('click', function(e) {
+        e.preventDefault();
         document.getElementById('tools').style.display = 'none';
         document.getElementById('home').style.display = 'block';
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Cookie Banner
+    if (!localStorage.getItem('cookieConsent')) {
+        var banner = document.getElementById('cookie-banner');
+        if(banner) banner.style.display = 'block';
     }
+    var acceptBtn = document.getElementById('accept-cookies');
+    if(acceptBtn) acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+    });
     </script>
 
-    <!-- Ko-fi Widget -->
+    <!-- Ko-fi -->
     <script src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
 
-    <!-- Cookie Banner -->
+    <!-- Cookie HTML -->
     <div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; background:rgba(26,26,46,0.95); color:#fff; padding:15px 20px; display:none; z-index:9999;">
-      <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;">
-        <p style="margin:0; font-size:0.9em;">🍪 We use cookies. <a href="privacy.html" style="color:#a78bfa;">Privacy Policy</a></p>
+      <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+        <p style="margin:0; font-size:0.9em; flex:1;">🍪 We use cookies. <a href="privacy.html" style="color:#a78bfa;">Privacy Policy</a></p>
         <button id="accept-cookies" style="background:#6366f1; color:white; border:none; padding:8px 20px; border-radius:8px; cursor:pointer;">Accept</button>
       </div>
     </div>
-    <script>
-      if (!localStorage.getItem('cookieConsent')) {
-        document.getElementById('cookie-banner').style.display = 'block';
-      }
-      document.getElementById('accept-cookies').addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'true');
-        document.getElementById('cookie-banner').style.display = 'none';
-      });
-    </script>
 </body>
 </html>
