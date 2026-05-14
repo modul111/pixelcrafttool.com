@@ -90,29 +90,31 @@
 
 /* Центральна колонка */
 .center-content {
-    display: flex;
-    flex-direction: column;
+    display: block; /* ← ЗМІНИЛИ з flex на block */
     width: 100%;
 }
 
-/* 📱 Мобільна адаптація */
-@media (max-width: 1024px) {
-    .main-layout-grid { 
-        grid-template-columns: 1fr !important; 
-        padding: 10px; 
-    }
-    .sidebar-right { display: none !important; }
-    .sidebar-left { 
-        position: static !important; 
-        flex-direction: row !important; 
-        flex-wrap: wrap !important; 
-        justify-content: center !important; 
-        order: -1; 
-    }
-    .ad-sidebar { 
-        width: 100% !important; 
-        max-width: 320px !important; 
-    }
+/* Секції всередині center-content */
+#home, #tools {
+    width: 100%;
+}
+
+#tools {
+    display: none; /* Приховано за замовчуванням */
+}
+
+#tools.active {
+    display: block; /* Показуємо коли активний */
+}
+
+/* Інструменти контейнер */
+.tool-container {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 900px;
+    min-height: 400px;
 }
 </style>
     
